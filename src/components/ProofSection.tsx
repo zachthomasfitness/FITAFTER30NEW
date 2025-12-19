@@ -3,44 +3,49 @@ const clients = [
     name: "Mark S.",
     result: "Lost 12lbs",
     description:
-      "Managing Director working 50+ hours. We used habit layering to ensure his progress stayed on track despite high-stress weeks and frequent travel.",
+      "High-level director. We focused on tactical 20-minute sessions he could do anywhere.",
   },
   {
     name: "James R.",
     result: "Lost 15lbs",
     description:
-      'Used the "Social Ledger" system to navigate weekend social events without having to restrict himself or skip Friday beers.',
+      'Used our "Social Ledger" to keep his social life while dropping the gut.',
   },
   {
     name: "David L.",
-    result: "8% Body Fat Loss",
+    result: "8% Fat Loss",
     description:
-      "Built a bulletproof routine that prioritized sleep and tactical nutrition, allowing him to regain his energy levels and mental focus.",
+      "Prioritized sleep micro-habits to regain energy and mental focus.",
   },
   {
     name: "Chris B.",
-    result: "Consistent Results",
+    result: "Peak Health",
     description:
-      'Implemented the exactly tactical habits to move from "constantly tired" to high-performance health in less than 6 weeks.',
+      'Moved from "office-tired" to high-performance in under 6 weeks.',
   },
 ];
 
 const ProofSection = () => {
   return (
-    <section className="py-24 px-6 border-y border-border">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-16 max-w-4xl mx-auto leading-tight">
-          Meet the clients who have transformed their habits with this exact system
-        </h2>
+    <section className="py-24 border-y border-border">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center px-6 mb-10">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 max-w-4xl mx-auto leading-tight">
+            Meet the clients who have transformed their habits
+          </h2>
+          <p className="text-muted-foreground text-sm md:hidden">
+            Swipe to see transformations
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
           {clients.map((client, index) => (
             <div key={index} className="client-card">
-              <div className="aspect-video bg-secondary flex items-center justify-center border-b border-border text-muted-foreground italic">
-                [Before / After Image {index + 1}]
+              <div className="aspect-[4/5] bg-secondary flex items-center justify-center border-b border-border text-muted-foreground italic">
+                [Before/After {index + 1}]
               </div>
-              <div className="p-8 text-left">
-                <h4 className="text-xl font-bold text-foreground mb-2">
+              <div className="p-6 text-left">
+                <h4 className="text-lg font-bold text-foreground mb-2">
                   {client.name} — <span className="brand-text">{client.result}</span>
                 </h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">
