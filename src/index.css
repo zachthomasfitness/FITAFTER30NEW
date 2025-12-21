@@ -137,6 +137,28 @@
     }
   }
 
+  /* Feature cards - snap slider on mobile, static on desktop */
+  .feature-card {
+    background: hsl(0 0% 100% / 0.03);
+    border: 1px solid hsl(0 0% 100% / 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    width: 85%;
+    scroll-snap-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .feature-card {
+      width: auto;
+      flex-shrink: 1;
+    }
+    .feature-card:hover {
+      border-color: hsl(var(--primary) / 0.4);
+    }
+  }
+
   .animate-ping-slow {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
