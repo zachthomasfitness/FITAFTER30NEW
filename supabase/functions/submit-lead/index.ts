@@ -36,30 +36,61 @@ serve(async (req) => {
       );
     }
 
-    // === SECRET VERIFICATION ===
+    // === SECRET VERIFICATION & CLEANING ===
     console.log("=== SECRET VERIFICATION ===");
-    const PULSE_API_KEY = Deno.env.get("PULSE_API_KEY");
+    const rawKey = Deno.env.get("PULSE_API_KEY") || "";
     
-    if (PULSE_API_KEY === undefined) {
-      console.error("CRITICAL: PULSE_API_KEY is UNDEFINED (not set in secrets)");
+    if (!rawKey) {
+      console.error("CRITICAL: PULSE_API_KEY is MISSING or EMPTY");
       return new Response(
-        JSON.stringify({ error: "API key not configured", details: { message: "PULSE_API_KEY secret is missing" } }),
-        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-    
-    if (PULSE_API_KEY === "") {
-      console.error("CRITICAL: PULSE_API_KEY is EMPTY STRING");
-      return new Response(
-        JSON.stringify({ error: "API key is empty", details: { message: "PULSE_API_KEY secret has no value" } }),
+        JSON.stringify({ error: "API key not configured", details: { message: "PULSE_API_KEY secret is missing or empty" } }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    console.log("PULSE_API_KEY status: PRESENT");
-    console.log("PULSE_API_KEY length:", PULSE_API_KEY.length, "characters");
-    console.log("PULSE_API_KEY starts with:", PULSE_API_KEY.substring(0, 4) + "...");
-    console.log("PULSE_API_KEY ends with:", "..." + PULSE_API_KEY.substring(PULSE_API_KEY.length - 4));
+    // === KEY CLEANING ===
+    // 1. Trim whitespace/newlines
+    // 2. Remove 'Bearer ' prefix if accidentally included
+    // 3. Remove any quotes that might have been copied
+    let cleanKey = rawKey.trim();
+    
+    // Check for accidental 'Bearer ' prefix in the secret
+    if (cleanKey.startsWith("Bearer ")) {
+      console.warn("WARNING: Secret contained 'Bearer ' prefix - removing it");
+      cleanKey = cleanKey.replace("Bearer ", "");
+    }
+    if (cleanKey.startsWith("bearer ")) {
+      console.warn("WARNING: Secret contained 'bearer ' prefix - removing it");
+      cleanKey = cleanKey.replace("bearer ", "");
+    }
+    
+    // Remove any surrounding quotes
+    if ((cleanKey.startsWith('"') && cleanKey.endsWith('"')) || 
+        (cleanKey.startsWith("'") && cleanKey.endsWith("'"))) {
+      console.warn("WARNING: Secret contained surrounding quotes - removing them");
+      cleanKey = cleanKey.slice(1, -1);
+    }
+    
+    // Final trim after all cleaning
+    cleanKey = cleanKey.trim();
+
+    // === KEY LENGTH VALIDATION ===
+    console.log("=== API KEY DIAGNOSTICS ===");
+    console.log("Raw key length:", rawKey.length, "characters");
+    console.log("Clean key length:", cleanKey.length, "characters");
+    console.log("Key starts with:", cleanKey.substring(0, 4) + "****");
+    console.log("Key ends with:", "****" + cleanKey.substring(cleanKey.length - 4));
+    
+    // Check for valid key length (Pulse PIT tokens are typically 500+ chars)
+    if (cleanKey.length < 100) {
+      console.error("WARNING: Key is very short (" + cleanKey.length + " chars)");
+      console.error("Valid Pulse V2 PIT tokens are usually 500+ characters");
+      console.error("If your key is 32-64 characters, it may be an OLD V1 API key");
+    } else if (cleanKey.length >= 500) {
+      console.log("✓ Key length looks correct for a V2 PIT token");
+    } else {
+      console.log("Key length is moderate - may be valid");
+    }
 
     // Clean phone number
     const cleanPhone = phone.replace(/[^\d+]/g, "");
@@ -74,20 +105,18 @@ serve(async (req) => {
       locationId: "FmSt47hINB4PxwmdJ5Ik"
     };
 
-    // === HEADER LOGGING ===
-    console.log("=== HEADERS BEING SENT ===");
-    console.log("Authorization: Bearer ****" + PULSE_API_KEY.substring(PULSE_API_KEY.length - 8));
-    console.log("Version: 2021-07-28");
-    console.log("Content-Type: application/json");
-    console.log("Accept: application/json");
-
-    // Build headers
+    // === BUILD HEADERS ===
     const headers = {
-      "Authorization": "Bearer " + PULSE_API_KEY,
+      "Authorization": `Bearer ${cleanKey}`,
       "Version": "2021-07-28",
       "Content-Type": "application/json",
       "Accept": "application/json"
     };
+
+    // === HEADER LOGGING ===
+    console.log("=== HEADERS BEING SENT ===");
+    console.log("Authorization: Bearer ****" + cleanKey.substring(cleanKey.length - 8));
+    console.log("Version: 2021-07-28");
 
     console.log("=== PULSE API REQUEST ===");
     console.log("Endpoint: https://services.leadconnectorhq.com/contacts/");
