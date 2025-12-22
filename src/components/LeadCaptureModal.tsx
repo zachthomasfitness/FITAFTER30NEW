@@ -34,16 +34,25 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
       // Check if the response indicates an error from the edge function
       if (data?.error) {
         console.error("API error:", data.error, data.details);
-        throw new Error(data.error);
+        // Show specific CRM error with status code
+        toast({
+          title: data.error,
+          description: data.details?.message || "Please check your details and try again.",
+          variant: "destructive",
+        });
+        return;
       }
 
-      // Redirect to thank you page on success
-      navigate("/thank-you");
+      // Only redirect on success (200/201)
+      if (data?.success) {
+        navigate("/thank-you");
+      }
     } catch (error) {
       console.error("Error submitting lead:", error);
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
       toast({
         title: "Something went wrong",
-        description: "Please try again or contact support.",
+        description: errorMessage.includes("CRM Error") ? errorMessage : "Please try again or contact support.",
         variant: "destructive",
       });
     } finally {
