@@ -9,7 +9,8 @@ interface LeadCaptureModalProps {
 }
 
 const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -22,11 +23,18 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
 
     try {
       const { data, error } = await supabase.functions.invoke("submit-lead", {
-        body: { name, email, phone },
+        body: { firstName, lastName, email, phone },
       });
 
       if (error) {
+        console.error("Supabase function error:", error);
         throw error;
+      }
+
+      // Check if the response indicates an error from the edge function
+      if (data?.error) {
+        console.error("API error:", data.error, data.details);
+        throw new Error(data.error);
       }
 
       // Redirect to thank you page on success
@@ -89,19 +97,36 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label htmlFor="name" className="block text-white/80 text-sm font-medium mb-1.5">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              placeholder="Your first name"
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#ffde59]/50 focus:ring-1 focus:ring-[#ffde59]/50 transition"
-            />
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label htmlFor="firstName" className="block text-white/80 text-sm font-medium mb-1.5">
+                First Name
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+                placeholder="John"
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#ffde59]/50 focus:ring-1 focus:ring-[#ffde59]/50 transition"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="lastName" className="block text-white/80 text-sm font-medium mb-1.5">
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+                placeholder="Smith"
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#ffde59]/50 focus:ring-1 focus:ring-[#ffde59]/50 transition"
+              />
+            </div>
           </div>
 
           <div>
