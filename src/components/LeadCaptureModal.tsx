@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { useToast } from "@/hooks/use-toast";
+import { useEffect } from "react";
+import { X } from "lucide-react";
 
 interface LeadCaptureModalProps {
   isOpen: boolean;
@@ -9,63 +7,19 @@ interface LeadCaptureModalProps {
 }
 
 const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      const { data, error } = await supabase.functions.invoke("submit-lead", {
-        body: { firstName, lastName, email, phone },
-      });
-
-      if (error) {
-        console.error("Supabase function error:", error);
-        throw error;
+  // Load the form embed script when modal opens
+  useEffect(() => {
+    if (isOpen) {
+      // Check if script is already loaded
+      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = 'https://link.msgsndr.com/js/form_embed.js';
+        script.async = true;
+        document.body.appendChild(script);
       }
-
-      // Check if the response indicates an error from the edge function
-      if (data?.error) {
-        console.error("=== CRM ERROR DETAILS ===");
-        console.error("Error:", data.error);
-        console.error("Details:", JSON.stringify(data.details, null, 2));
-        console.error("Status Code:", data.statusCode);
-        console.error("Pulse Message:", data.pulseMessage);
-        
-        // Show EXACT error from Pulse CRM to user
-        const pulseError = data.pulseMessage || data.details?.message || data.details?.error || "Unknown error";
-        toast({
-          title: `${data.error}`,
-          description: `Pulse says: "${pulseError}"`,
-          variant: "destructive",
-        });
-        return;
-      }
-
-      // Only redirect on success (200/201)
-      if (data?.success) {
-        navigate("/thank-you");
-      }
-    } catch (error) {
-      console.error("=== FRONTEND ERROR ===");
-      console.error("Error:", error);
-      const errorMessage = error instanceof Error ? error.message : "Unknown error";
-      toast({
-        title: "Connection Error",
-        description: errorMessage,
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
     }
-  };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -82,138 +36,64 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white/60 hover:text-white transition"
+          className="absolute top-4 right-4 z-10 text-white/60 hover:text-white transition"
           aria-label="Close modal"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+          <X className="h-6 w-6" />
         </button>
 
         {/* Header */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <h2 className="text-2xl md:text-3xl font-extrabold text-[#ffde59] mb-2">
             Join the Kickstart
           </h2>
           <p className="text-white/70 text-sm md:text-base">
-            Enter your details below to get started
+            Enter your details below to secure your spot
           </p>
         </div>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label htmlFor="firstName" className="block text-white/80 text-sm font-medium mb-1.5">
-                First Name
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                required
-                placeholder="John"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#ffde59]/50 focus:ring-1 focus:ring-[#ffde59]/50 transition"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="lastName" className="block text-white/80 text-sm font-medium mb-1.5">
-                Last Name
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
-                placeholder="Smith"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#ffde59]/50 focus:ring-1 focus:ring-[#ffde59]/50 transition"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block text-white/80 text-sm font-medium mb-1.5">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              placeholder="you@email.com"
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#ffde59]/50 focus:ring-1 focus:ring-[#ffde59]/50 transition"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="phone" className="block text-white/80 text-sm font-medium mb-1.5">
-              Mobile Number
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-              placeholder="+44 7XXX XXXXXX"
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#ffde59]/50 focus:ring-1 focus:ring-[#ffde59]/50 transition"
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={isLoading}
-            className="w-full bg-[#ffde59] hover:bg-[#ffde59]/90 text-black font-black py-4 px-6 rounded-xl transition uppercase text-base md:text-lg btn-shadow disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-          >
-            {isLoading ? (
-              <>
-                <svg
-                  className="animate-spin h-5 w-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
-                </svg>
-                Submitting...
-              </>
-            ) : (
-              "Get Started Now →"
-            )}
-          </button>
-        </form>
+        {/* Embedded Pulse Form */}
+        <div className="pulse-form-container">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
+            style={{
+              width: '100%',
+              height: '400px',
+              border: 'none',
+              borderRadius: '16px'
+            }}
+            id="inline-7DTFHh8ZmEmWrmVpsktd"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Challenge Opt-in"
+            data-height="undefined"
+            data-layout-iframe-id="inline-7DTFHh8ZmEmWrmVpsktd"
+            data-form-id="7DTFHh8ZmEmWrmVpsktd"
+            title="Challenge Opt-in"
+          />
+        </div>
 
         <p className="text-center text-white/40 text-xs mt-4">
           Your information is secure and will never be shared.
         </p>
       </div>
+
+      {/* Custom styles for the embedded form container */}
+      <style>{`
+        .pulse-form-container {
+          background: transparent;
+          border-radius: 16px;
+          overflow: hidden;
+        }
+        .pulse-form-container iframe {
+          background: transparent !important;
+        }
+      `}</style>
     </div>
   );
 };
