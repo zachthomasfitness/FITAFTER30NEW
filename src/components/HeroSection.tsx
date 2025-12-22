@@ -1,4 +1,9 @@
+import { useState } from "react";
+import LeadCaptureModal from "./LeadCaptureModal";
+
 const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       {/* Top Banner - Full width slim banner */}
@@ -46,12 +51,12 @@ const HeroSection = () => {
 
           {/* CTA - smaller on mobile */}
           <div className="flex flex-col items-center gap-4 md:gap-6 mb-10 md:mb-20">
-            <a
-              href="#join"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="brand-bg hover:scale-105 text-primary-foreground text-center text-base md:text-2xl font-black py-4 md:py-6 px-8 md:px-12 rounded-xl transform transition btn-shadow uppercase"
             >
               Join the FREE 14 Day Kickstart →
-            </a>
+            </button>
             {/* Live Status - Green dot */}
             <div className="flex items-center justify-center gap-3 text-muted-foreground font-medium text-xs md:text-sm">
               <span className="relative flex h-3 w-3">
@@ -63,6 +68,9 @@ const HeroSection = () => {
           </div>
         </div>
       </header>
+
+      {/* Lead Capture Modal */}
+      <LeadCaptureModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 };
