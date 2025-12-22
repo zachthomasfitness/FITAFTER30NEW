@@ -33,11 +33,17 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
 
       // Check if the response indicates an error from the edge function
       if (data?.error) {
-        console.error("API error:", data.error, data.details);
-        // Show specific CRM error with status code
+        console.error("=== CRM ERROR DETAILS ===");
+        console.error("Error:", data.error);
+        console.error("Details:", JSON.stringify(data.details, null, 2));
+        console.error("Status Code:", data.statusCode);
+        console.error("Pulse Message:", data.pulseMessage);
+        
+        // Show EXACT error from Pulse CRM to user
+        const pulseError = data.pulseMessage || data.details?.message || data.details?.error || "Unknown error";
         toast({
-          title: data.error,
-          description: data.details?.message || "Please check your details and try again.",
+          title: `${data.error}`,
+          description: `Pulse says: "${pulseError}"`,
           variant: "destructive",
         });
         return;
@@ -48,11 +54,12 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
         navigate("/thank-you");
       }
     } catch (error) {
-      console.error("Error submitting lead:", error);
+      console.error("=== FRONTEND ERROR ===");
+      console.error("Error:", error);
       const errorMessage = error instanceof Error ? error.message : "Unknown error";
       toast({
-        title: "Something went wrong",
-        description: errorMessage.includes("CRM Error") ? errorMessage : "Please try again or contact support.",
+        title: "Connection Error",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
