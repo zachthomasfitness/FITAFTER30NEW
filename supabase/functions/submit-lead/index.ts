@@ -8,6 +8,10 @@ const corsHeaders = {
 };
 
 serve(async (req) => {
+  console.log("=== SUBMIT-LEAD FUNCTION INVOKED ===");
+  console.log("Request method:", req.method);
+  console.log("Timestamp:", new Date().toISOString());
+
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -16,32 +20,50 @@ serve(async (req) => {
   try {
     // Parse request body
     const { firstName, lastName, email, phone } = await req.json();
+    console.log("Received form data:", { firstName, lastName, email, phone: phone ? "***" + phone.slice(-4) : "missing" });
 
     // Validate required fields
     if (!firstName || !lastName || !email || !phone) {
-      console.error("Missing required fields:", { firstName: !!firstName, lastName: !!lastName, email: !!email, phone: !!phone });
+      console.error("VALIDATION FAILED - Missing fields:", { 
+        firstName: !!firstName, 
+        lastName: !!lastName, 
+        email: !!email, 
+        phone: !!phone 
+      });
       return new Response(
         JSON.stringify({ error: "All fields are required" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Retrieve secret and log presence (NOT the actual value)
+    // === SECRET VERIFICATION ===
+    console.log("=== SECRET VERIFICATION ===");
     const PULSE_API_KEY = Deno.env.get("PULSE_API_KEY");
-    console.log("PULSE_API_KEY status:", PULSE_API_KEY ? "Present" : "Missing");
-    console.log("PULSE_API_KEY length:", PULSE_API_KEY ? PULSE_API_KEY.length : 0);
-
-    if (!PULSE_API_KEY) {
-      console.error("PULSE_API_KEY is not configured");
+    
+    if (PULSE_API_KEY === undefined) {
+      console.error("CRITICAL: PULSE_API_KEY is UNDEFINED (not set in secrets)");
       return new Response(
-        JSON.stringify({ error: "Server configuration error" }),
+        JSON.stringify({ error: "API key not configured", details: { message: "PULSE_API_KEY secret is missing" } }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+    
+    if (PULSE_API_KEY === "") {
+      console.error("CRITICAL: PULSE_API_KEY is EMPTY STRING");
+      return new Response(
+        JSON.stringify({ error: "API key is empty", details: { message: "PULSE_API_KEY secret has no value" } }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Clean phone number - remove any spaces or special chars except + and digits
+    console.log("PULSE_API_KEY status: PRESENT");
+    console.log("PULSE_API_KEY length:", PULSE_API_KEY.length, "characters");
+    console.log("PULSE_API_KEY starts with:", PULSE_API_KEY.substring(0, 4) + "...");
+    console.log("PULSE_API_KEY ends with:", "..." + PULSE_API_KEY.substring(PULSE_API_KEY.length - 4));
+
+    // Clean phone number
     const cleanPhone = phone.replace(/[^\d+]/g, "");
-    console.log("Phone cleaned from:", phone, "to:", cleanPhone);
+    console.log("Phone formatted:", phone, "→", cleanPhone);
 
     // Build payload with HARDCODED locationId
     const payload = {
@@ -52,24 +74,25 @@ serve(async (req) => {
       locationId: "FmSt47hINB4PxwmdJ5Ik"
     };
 
-    console.log("=== PULSE API REQUEST ===");
-    console.log("Endpoint: https://services.leadconnectorhq.com/contacts/");
-    console.log("Method: POST");
-    console.log("Payload:", JSON.stringify(payload, null, 2));
+    // === HEADER LOGGING ===
+    console.log("=== HEADERS BEING SENT ===");
+    console.log("Authorization: Bearer ****" + PULSE_API_KEY.substring(PULSE_API_KEY.length - 8));
+    console.log("Version: 2021-07-28");
+    console.log("Content-Type: application/json");
+    console.log("Accept: application/json");
 
-    // Build headers - ensure NO double quotes, exactly one space after Bearer
-    const authHeader = "Bearer " + PULSE_API_KEY;
+    // Build headers
     const headers = {
-      "Authorization": authHeader,
+      "Authorization": "Bearer " + PULSE_API_KEY,
       "Version": "2021-07-28",
       "Content-Type": "application/json",
       "Accept": "application/json"
     };
 
-    console.log("Headers configured:");
-    console.log("- Authorization: Bearer <key> (length:", authHeader.length, ")");
-    console.log("- Version: 2021-07-28");
-    console.log("- Content-Type: application/json");
+    console.log("=== PULSE API REQUEST ===");
+    console.log("Endpoint: https://services.leadconnectorhq.com/contacts/");
+    console.log("Method: POST");
+    console.log("Payload:", JSON.stringify(payload, null, 2));
 
     // Make the API call
     const response = await fetch("https://services.leadconnectorhq.com/contacts/", {
@@ -84,6 +107,7 @@ serve(async (req) => {
     
     console.log("=== PULSE API RESPONSE ===");
     console.log("Status Code:", statusCode);
+    console.log("Status Text:", response.statusText);
     console.log("Response Body:", responseText);
 
     // Parse response
@@ -96,38 +120,63 @@ serve(async (req) => {
 
     // Check for success (200 or 201 only)
     if (statusCode === 200 || statusCode === 201) {
-      console.log("SUCCESS: Lead submitted to Pulse CRM");
+      console.log("✓ SUCCESS: Lead submitted to Pulse CRM");
       return new Response(
         JSON.stringify({ success: true, data: responseData }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Handle errors with specific messages
-    console.error("=== PULSE API ERROR ===");
-    console.error("Status:", statusCode);
-    console.error("Response:", JSON.stringify(responseData, null, 2));
+    // === DETAILED ERROR ANALYSIS ===
+    console.error("=== PULSE API ERROR ANALYSIS ===");
+    console.error("HTTP Status:", statusCode);
+    console.error("Full Response:", JSON.stringify(responseData, null, 2));
 
     if (statusCode === 401) {
-      console.error("401 UNAUTHORIZED - Possible causes:");
-      console.error("1. API key is invalid or expired");
-      console.error("2. API key lacks 'contacts.write' scope");
-      console.error("3. API key doesn't have access to this location");
+      console.error("=== 401 UNAUTHORIZED DIAGNOSTIC ===");
+      console.error("The Pulse/LeadConnector API rejected the token.");
+      console.error("REQUIRED SCOPES for this endpoint:");
+      console.error("  - contacts.write (to create contacts)");
+      console.error("  - contacts.readonly (may also be needed)");
+      console.error("POSSIBLE CAUSES:");
+      console.error("  1. Token is invalid or expired");
+      console.error("  2. Token lacks 'contacts.write' scope");
+      console.error("  3. Token doesn't have access to location: FmSt47hINB4PxwmdJ5Ik");
+      console.error("  4. Token type mismatch (needs Private Integration Token)");
+      console.error("CHECK: Go to Settings > Integrations > Private Integrations in your CRM");
     }
 
+    if (statusCode === 400) {
+      console.error("=== 400 BAD REQUEST DIAGNOSTIC ===");
+      console.error("The request payload was rejected.");
+      console.error("Check if email/phone format is valid.");
+    }
+
+    if (statusCode === 422) {
+      console.error("=== 422 VALIDATION ERROR DIAGNOSTIC ===");
+      console.error("The CRM rejected the data. Check field formats.");
+    }
+
+    // Return detailed error to frontend
     return new Response(
       JSON.stringify({ 
         error: `CRM Error: ${statusCode}`,
         details: responseData,
-        statusCode: statusCode
+        statusCode: statusCode,
+        pulseMessage: responseData?.message || responseData?.error || "Unknown CRM error"
       }),
       { status: statusCode, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
 
   } catch (error) {
-    console.error("Function error:", error);
+    console.error("=== FUNCTION EXCEPTION ===");
+    console.error("Error:", error);
+    console.error("Stack:", error instanceof Error ? error.stack : "N/A");
     return new Response(
-      JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error" }),
+      JSON.stringify({ 
+        error: "Function error", 
+        details: { message: error instanceof Error ? error.message : "Unknown error" }
+      }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
