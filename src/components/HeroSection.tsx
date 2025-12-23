@@ -33,7 +33,7 @@ const HeroSection = () => {
             <div className="relative aspect-video bg-secondary rounded-2xl overflow-hidden border border-border vsl-glow">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
+                src="https://www.youtube.com/embed/2oUb_UBvKeQ?controls=0"
                 title="VSL Video"
                 frameBorder="0"
                 allowFullScreen
