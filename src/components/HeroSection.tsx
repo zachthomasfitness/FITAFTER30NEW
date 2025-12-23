@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LeadCaptureModal from "./LeadCaptureModal";
+import VidalyticsPlayer from "./VidalyticsPlayer";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,17 +28,11 @@ const HeroSection = () => {
             (Whilst navigating work, family & friends)
           </p>
 
-          {/* VSL Player Section - smaller margin on mobile */}
+          {/* VSL Player Section - Vidalytics embed */}
           <div className="relative max-w-3xl mx-auto mb-6 md:mb-12 group">
-            <div className="absolute -inset-1 brand-bg rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
-            <div className="relative aspect-video bg-secondary rounded-2xl overflow-hidden border border-border vsl-glow">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/2oUb_UBvKeQ?controls=0"
-                title="VSL Video"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
+            <div className="absolute -inset-1 brand-bg rounded-[20px] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+            <div className="relative bg-secondary rounded-[20px] overflow-hidden border border-border vsl-glow">
+              <VidalyticsPlayer />
             </div>
           </div>
 
