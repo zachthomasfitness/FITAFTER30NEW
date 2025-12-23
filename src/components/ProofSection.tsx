@@ -1,5 +1,7 @@
 import tomTransformation from "@/assets/tom-transformation.png";
 import henryTransformation from "@/assets/henry-transformation.png";
+import eisaTransformation from "@/assets/eisa-transformation.jpg";
+import cianTransformation from "@/assets/cian-transformation.jpg";
 
 const clients = [
   {
@@ -15,12 +17,12 @@ const clients = [
   {
     name: "Eisa",
     result: "-67lbs",
-    image: null,
+    image: eisaTransformation,
   },
   {
-    name: "Reuben",
-    result: "-16lbs",
-    image: null,
+    name: "Cian",
+    result: "-26lbs",
+    image: cianTransformation,
   },
 ];
 
