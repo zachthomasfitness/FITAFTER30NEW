@@ -1,27 +1,19 @@
 const clients = [
   {
-    name: "Mark S.",
-    result: "Lost 12lbs",
-    description:
-      "High-level director. We focused on tactical 20-minute sessions he could do anywhere.",
+    name: "Tom",
+    result: "-24lbs",
   },
   {
-    name: "James R.",
-    result: "Lost 15lbs",
-    description:
-      'Used our "Social Ledger" to keep his social life while dropping the gut.',
+    name: "Henry",
+    result: "-19lbs",
   },
   {
-    name: "David L.",
-    result: "8% Fat Loss",
-    description:
-      "Prioritized sleep micro-habits to regain energy and mental focus.",
+    name: "Eisa",
+    result: "-67lbs",
   },
   {
-    name: "Chris B.",
-    result: "Peak Health",
-    description:
-      'Moved from "office-tired" to high-performance in under 6 weeks.',
+    name: "Reuben",
+    result: "-16lbs",
   },
 ];
 
@@ -41,16 +33,17 @@ const ProofSection = () => {
         <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
           {clients.map((client, index) => (
             <div key={index} className="client-card">
-              <div className="aspect-[4/5] bg-secondary flex items-center justify-center border-b border-border text-muted-foreground italic">
-                [Before/After {index + 1}]
+              <div className="aspect-[4/5] bg-secondary flex items-center justify-center border-b border-border text-muted-foreground">
+                <div className="text-center">
+                  <div className="text-6xl mb-2">📸</div>
+                  <span className="text-xs uppercase tracking-wider">{client.name}'s Transformation</span>
+                </div>
               </div>
-              <div className="p-6 text-left">
-                <h4 className="text-lg font-bold text-foreground mb-2">
-                  {client.name} — <span className="brand-text">{client.result}</span>
+              <div className="p-6 text-center">
+                <h4 className="text-xl font-bold text-foreground mb-1">
+                  {client.name}
                 </h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {client.description}
-                </p>
+                <span className="text-2xl font-black brand-text">{client.result}</span>
               </div>
             </div>
           ))}
