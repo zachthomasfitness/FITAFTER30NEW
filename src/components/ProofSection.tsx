@@ -40,7 +40,7 @@ const ProofSection = () => {
         <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
           {clients.map((client, index) => (
             <div key={index} className="client-card">
-              <div className="aspect-[4/5] bg-secondary flex items-center justify-center border-b border-border text-muted-foreground overflow-hidden">
+              <div className="aspect-square bg-secondary flex items-center justify-center border-b border-border text-muted-foreground overflow-hidden">
                 {client.image ? (
                   <img 
                     src={client.image} 
