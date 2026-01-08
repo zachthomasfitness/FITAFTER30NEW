@@ -5,9 +5,9 @@ import cianTransformation from "@/assets/cian-transformation.jpg";
 
 const clients = [
   {
-    name: "Tom",
-    result: "-24lbs",
-    image: tomTransformation,
+    name: "Cian",
+    result: "-26lbs",
+    image: cianTransformation,
   },
   {
     name: "Henry",
@@ -20,9 +20,9 @@ const clients = [
     image: eisaTransformation,
   },
   {
-    name: "Cian",
-    result: "-26lbs",
-    image: cianTransformation,
+    name: "Tom",
+    result: "-24lbs",
+    image: tomTransformation,
   },
 ];
 
