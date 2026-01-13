@@ -48,7 +48,7 @@ const HeroSection = () => {
           <div className="flex flex-col items-center gap-3 md:gap-4 mb-10 md:mb-20">
             {/* Challenge Start Date */}
             <p className="text-primary font-bold text-sm md:text-lg uppercase tracking-wide">
-              Challenge Begins: January 26th
+              Start Date: January 26th
             </p>
             <button
               onClick={() => setIsModalOpen(true)}
