@@ -37,7 +37,7 @@ const HeroSection = () => {
           </div>
 
           {/* Description - smaller on mobile */}
-          <p className="text-sm md:text-xl text-foreground/80 leading-relaxed mb-6 md:mb-10 max-w-2xl mx-auto">
+          <p className="text-sm md:text-xl text-foreground/80 leading-relaxed mb-3 md:mb-6 max-w-2xl mx-auto">
             14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations —{" "}
             <span className="text-foreground font-bold">
               without sacrificing their favourite food or their social lives.
@@ -45,7 +45,11 @@ const HeroSection = () => {
           </p>
 
           {/* CTA - smaller on mobile */}
-          <div className="flex flex-col items-center gap-4 md:gap-6 mb-10 md:mb-20">
+          <div className="flex flex-col items-center gap-3 md:gap-4 mb-10 md:mb-20">
+            {/* Challenge Start Date */}
+            <p className="text-primary font-bold text-sm md:text-lg uppercase tracking-wide">
+              Challenge Begins: January 26th
+            </p>
             <button
               onClick={() => setIsModalOpen(true)}
               className="brand-bg hover:scale-105 text-primary-foreground text-center text-base md:text-2xl font-black py-4 md:py-6 px-8 md:px-12 rounded-xl transform transition btn-shadow uppercase"
