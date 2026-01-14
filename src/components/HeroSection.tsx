@@ -37,8 +37,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Description - 10% larger on mobile: 13px -> 14px */}
-          <p className="text-[14px] md:text-xl leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-2 md:px-0">
+          {/* Description - optimized for 3-line mobile layout */}
+          <p className="text-[13px] md:text-xl leading-snug md:leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-1 md:px-0">
             <span className="md:hidden">
               14 days of the exact tactical habits my clients in their<br />
               30s and 40s use to make sustainable transformations<br />
