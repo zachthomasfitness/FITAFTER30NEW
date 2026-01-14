@@ -15,7 +15,7 @@ const features = [
     number: "03",
     title: "Proven Results",
     description:
-      "The same habit system taught to hundreds of clients over 10 years.",
+      "The same habit layering system taught to hundreds of clients over 10 years.",
   },
 ];
 
