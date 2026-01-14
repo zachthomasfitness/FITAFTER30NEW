@@ -92,8 +92,7 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
             data-layout-iframe-id="inline-7DTFHh8ZmEmWrmVpsktd"
             data-form-id="7DTFHh8ZmEmWrmVpsktd"
             title="Challenge Opt-in"
-            sandbox="allow-forms allow-scripts allow-same-origin allow-popups"
-            referrerPolicy="strict-origin-when-cross-origin"
+            sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation"
           />
         </div>
 
