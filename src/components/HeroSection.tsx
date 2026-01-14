@@ -45,27 +45,33 @@ const HeroSection = () => {
             </span>
           </p>
 
-          {/* CTA - smaller on mobile */}
-          <div className="flex flex-col items-center gap-3 md:gap-4 mb-10 md:mb-20">
-            {/* Challenge Start Date */}
-            <p className="text-primary font-bold text-sm md:text-lg uppercase tracking-wide">
-              Start Date: January 26th
-            </p>
-            {/* Countdown Timer */}
-            <CountdownTimer />
+          {/* CTA Section - Reordered: CTA Button -> Start Date -> Countdown */}
+          <div className="flex flex-col items-center mb-10 md:mb-20">
+            {/* CTA Button */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="brand-bg hover:scale-105 text-primary-foreground text-center text-base md:text-2xl font-black py-4 md:py-6 px-8 md:px-12 rounded-xl transform transition btn-shadow uppercase"
+              className="brand-bg hover:scale-105 text-primary-foreground text-center text-base md:text-2xl font-black py-4 md:py-6 px-8 md:px-12 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10"
             >
               Join the FREE 14 Day Kickstart →
             </button>
+
+            {/* Start Date & Countdown Container */}
+            <div className="flex flex-col items-center gap-3 md:gap-4">
+              {/* Challenge Start Date */}
+              <p className="text-primary font-bold text-sm md:text-lg uppercase tracking-wide">
+                Start Date: January 26th
+              </p>
+              {/* Countdown Timer */}
+              <CountdownTimer />
+            </div>
+
             {/* Live Status - Green dot */}
-            <div className="flex items-center justify-center gap-3 text-muted-foreground font-medium text-xs md:text-sm">
+            <div className="flex items-center justify-center gap-3 text-muted-foreground font-medium text-xs md:text-sm mt-4">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22c55e]"></span>
               </span>
-              This is a live challenge and I'll be personally coaching you
+              Live round. Personally coached by Zach.
             </div>
           </div>
         </div>
