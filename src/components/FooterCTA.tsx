@@ -8,8 +8,8 @@ const FooterCTA = () => {
     <>
       <footer id="join" className="py-16 md:py-24 px-6 border-t border-border text-center">
         <div className="max-w-3xl mx-auto">
-          {/* Smaller text on mobile, fits one line */}
-          <h2 className="text-2xl md:text-4xl font-extrabold text-foreground mb-6 md:mb-8 whitespace-nowrap">
+          {/* Section Header - text-5xl on desktop, matching other section headers */}
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-8 md:mb-10">
             Ready to start Day 1?
           </h2>
           <button
@@ -18,8 +18,8 @@ const FooterCTA = () => {
           >
             Join the FREE 14 Day Kickstart
           </button>
-          <p className="mt-6 md:mt-8 text-muted-foreground text-sm italic">
-            Limited spots available
+          <p className="mt-8 md:mt-10 text-muted-foreground text-base italic">
+            Limited spots for the Jan 26th Intake
           </p>
         </div>
       </footer>
