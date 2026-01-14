@@ -39,7 +39,14 @@ const HeroSection = () => {
 
           {/* Description - 10% larger on mobile: 13px -> 14px */}
           <p className="text-[14px] md:text-xl leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-2 md:px-0">
-            14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
+            <span className="md:hidden">
+              14 days of the exact tactical habits my clients in their<br />
+              30s and 40s use to make sustainable transformations<br />
+              — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
+            </span>
+            <span className="hidden md:inline">
+              14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
+            </span>
           </p>
 
           {/* CTA Section */}
