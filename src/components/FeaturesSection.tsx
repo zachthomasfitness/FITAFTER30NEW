@@ -23,12 +23,12 @@ const FeaturesSection = () => {
   return (
     <section className="py-16 md:py-24 px-0 md:px-6 text-center">
       <div className="max-w-5xl mx-auto">
-        {/* Section Header - text-5xl on desktop, matching other section headers */}
+        {/* Section Header */}
         <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-10 md:mb-16 italic px-6 md:px-0">
           Built for the <span className="brand-text uppercase">Busy Man</span>
         </h2>
         
-        {/* Horizontal snap slider on mobile, grid on desktop */}
+        {/* Feature Cards - Horizontal snap slider on mobile, grid on desktop */}
         <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar px-6 md:px-0">
           {features.map((feature, index) => (
             <div key={index} className="p-6 md:p-8 feature-card">

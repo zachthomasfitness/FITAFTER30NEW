@@ -22,7 +22,7 @@ const MissionFilterSection = () => {
     <>
       <section className="py-16 md:py-24 px-4 md:px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Section Header - text-5xl on desktop, matching other section headers */}
+          {/* Section Header */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-10 md:mb-14">
             Who is this for?
           </h2>
@@ -53,10 +53,10 @@ const MissionFilterSection = () => {
             </div>
           </div>
 
-          {/* CTA Button - matches hero button sizing */}
+          {/* CTA Button */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="brand-bg hover:scale-105 text-primary-foreground text-lg md:text-2xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl transform transition btn-shadow uppercase whitespace-nowrap w-full max-w-[90%] md:w-auto md:max-w-none"
+            className="brand-bg hover:scale-105 text-primary-foreground text-lg md:text-2xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl transform transition btn-shadow uppercase"
           >
             Join the FREE 14 Day Kickstart →
           </button>
