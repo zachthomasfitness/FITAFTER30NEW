@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 
 interface LeadCaptureModalProps {
@@ -8,12 +7,9 @@ interface LeadCaptureModalProps {
 }
 
 const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
-  const navigate = useNavigate();
-
   // Load the form embed script when modal opens
   useEffect(() => {
     if (isOpen) {
-      // Check if script is already loaded
       const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
       if (!existingScript) {
         const script = document.createElement('script');
@@ -24,20 +20,23 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
     }
   }, [isOpen]);
 
-  // Listen for Pulse form submission events
+  // Hard redirect listener for Pulse/LeadConnector form submission
   useEffect(() => {
-    if (!isOpen) return;
-
     const handleMessage = (event: MessageEvent) => {
-      if (event.data === 'formSubmitted' || event.data?.type === 'vlsubmitted') {
-        onClose();
-        navigate('/thank-you');
+      // Check for various LeadConnector/Pulse success event types
+      if (
+        event.data === 'formSubmitted' ||
+        event.data?.type === 'vlsubmitted' ||
+        event.data?.type === 'vls-form-submit' ||
+        event.data === 'success'
+      ) {
+        window.location.assign('/thank-you');
       }
     };
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [isOpen, navigate, onClose]);
+  }, []);
 
   if (!isOpen) return null;
 
