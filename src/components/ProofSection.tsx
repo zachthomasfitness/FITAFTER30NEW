@@ -28,14 +28,16 @@ const clients = [
 
 const ProofSection = () => {
   return (
-    <section className="py-24 border-y border-border">
+    <section className="py-20 md:py-24 border-y border-border">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center px-6 mb-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 max-w-4xl mx-auto leading-tight">
+        {/* Section Header - text-5xl on desktop, matching other section headers */}
+        <div className="text-center px-6 mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground leading-tight">
             Meet the clients who have transformed their habits
           </h2>
         </div>
 
+        {/* Client Cards Slider */}
         <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
           {clients.map((client, index) => (
             <div key={index} className="client-card">
