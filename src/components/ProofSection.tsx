@@ -30,9 +30,9 @@ const ProofSection = () => {
   return (
     <section className="py-20 md:py-24 border-y border-border">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header - text-5xl on desktop, max size for 2 lines on mobile */}
+        {/* Section Header - text-5xl on desktop, significantly larger on mobile (2 lines max) */}
         <div className="text-center px-6 mb-12 md:mb-16">
-          <h2 className="text-[23px] leading-[1.15] md:text-5xl md:leading-tight font-extrabold text-foreground">
+          <h2 className="text-[28px] leading-[1.1] md:text-5xl md:leading-tight font-extrabold text-foreground">
             Meet the clients who have transformed their habits
           </h2>
         </div>

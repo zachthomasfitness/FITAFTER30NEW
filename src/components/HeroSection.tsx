@@ -9,8 +9,8 @@ const HeroSection = () => {
   return (
     <>
       {/* Top Banner - Full width slim banner */}
-      <div className="w-full bg-primary/10 border-b border-primary/30 py-2 md:py-3 px-4 text-center">
-        <span className="text-primary text-[10.5px] md:text-sm font-bold uppercase tracking-widest">
+      <div className="w-full bg-primary/10 border-b border-primary/30 py-2.5 md:py-3 px-4 text-center">
+        <span className="text-primary text-[13px] md:text-sm font-bold uppercase tracking-widest">
           Now open: The 14 day habit kickstart
         </span>
       </div>
@@ -37,8 +37,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Description - mobile-3-line class for exact 3 lines on mobile */}
-          <p className="text-[12px] leading-[1.35] md:text-xl md:leading-relaxed text-foreground/80 mb-6 md:mb-10 max-w-3xl mx-auto px-2 md:px-0">
+          {/* Description - reverted to original larger sizes */}
+          <p className="text-base md:text-xl leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-4 md:px-0">
             14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations
             {" "}—{" "}
             <span className="text-foreground font-bold">
@@ -48,10 +48,10 @@ const HeroSection = () => {
 
           {/* CTA Section - CTA Button ABOVE Start Date & Countdown */}
           <div className="flex flex-col items-center px-4 md:px-0">
-            {/* CTA Button - First - 90% width on mobile, large dominant text */}
+            {/* CTA Button - First - large, bold, one line */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="brand-bg hover:scale-105 text-primary-foreground text-[15px] md:text-2xl font-black py-4 md:py-6 px-6 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-6 md:mb-10 whitespace-nowrap w-[90%] md:w-auto"
+              className="brand-bg hover:scale-105 text-primary-foreground text-lg md:text-2xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-6 md:mb-10 whitespace-nowrap w-full max-w-[90%] md:w-auto md:max-w-none"
             >
               Join the FREE 14 Day Kickstart →
             </button>

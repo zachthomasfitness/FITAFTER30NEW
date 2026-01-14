@@ -15,7 +15,7 @@ const FooterCTA = () => {
           {/* CTA Button - matches hero button sizing */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="brand-bg text-primary-foreground text-[15px] md:text-2xl font-black py-4 md:py-6 px-6 md:px-14 rounded-xl shadow-2xl hover:scale-105 transition btn-shadow uppercase whitespace-nowrap w-[90%] md:w-auto"
+            className="brand-bg text-primary-foreground text-lg md:text-2xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl shadow-2xl hover:scale-105 transition btn-shadow uppercase whitespace-nowrap w-full max-w-[90%] md:w-auto md:max-w-none"
           >
             Join the FREE 14 Day Kickstart →
           </button>
