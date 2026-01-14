@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 
 interface LeadCaptureModalProps {
@@ -7,6 +8,8 @@ interface LeadCaptureModalProps {
 }
 
 const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
+  const navigate = useNavigate();
+
   // Load the form embed script when modal opens
   useEffect(() => {
     if (isOpen) {
@@ -20,6 +23,21 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
       }
     }
   }, [isOpen]);
+
+  // Listen for Pulse form submission events
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleMessage = (event: MessageEvent) => {
+      if (event.data === 'formSubmitted' || event.data?.type === 'vlsubmitted') {
+        onClose();
+        navigate('/thank-you');
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, [isOpen, navigate, onClose]);
 
   if (!isOpen) return null;
 
