@@ -103,7 +103,9 @@ const ThankYou = () => {
             guarantees your results.
           </p>
           <a
-            href="#"
+            href="https://wa.me/message/4G7GYPALNFDGD1"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block border-2 border-[#ffde59] text-[#ffde59] hover:bg-[#ffde59] hover:text-[#0a0a0a] text-base md:text-lg font-semibold py-3 px-8 rounded-xl transform transition hover:scale-105"
           >
             Apply for 1-1 Coaching
