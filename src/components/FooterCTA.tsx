@@ -12,11 +12,12 @@ const FooterCTA = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-8 md:mb-10">
             Ready to start Day 1?
           </h2>
+          {/* CTA Button - matches hero button sizing */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="brand-bg text-primary-foreground text-lg md:text-xl font-black py-5 md:py-6 px-10 md:px-14 rounded-2xl shadow-2xl hover:scale-105 transition btn-shadow uppercase"
+            className="brand-bg text-primary-foreground text-[15px] md:text-2xl font-black py-4 md:py-6 px-6 md:px-14 rounded-xl shadow-2xl hover:scale-105 transition btn-shadow uppercase whitespace-nowrap w-[90%] md:w-auto"
           >
-            Join the FREE 14 Day Kickstart
+            Join the FREE 14 Day Kickstart →
           </button>
           <p className="mt-8 md:mt-10 text-muted-foreground text-base italic">
             Limited spots for the Jan 26th Intake

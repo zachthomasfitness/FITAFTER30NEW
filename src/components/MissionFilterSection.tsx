@@ -53,10 +53,10 @@ const MissionFilterSection = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - matches hero button sizing */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="brand-bg hover:scale-105 text-primary-foreground text-lg md:text-xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl transform transition btn-shadow uppercase"
+            className="brand-bg hover:scale-105 text-primary-foreground text-[15px] md:text-2xl font-black py-4 md:py-6 px-6 md:px-14 rounded-xl transform transition btn-shadow uppercase whitespace-nowrap w-[90%] md:w-auto"
           >
             Join the FREE 14 Day Kickstart →
           </button>
