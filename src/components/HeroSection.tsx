@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22c55e]"></span>
               </span>
-              Live round. Personally coached by Zach.
+              This is a live challenge and I'll be personally coaching you
             </div>
           </div>
         </div>
