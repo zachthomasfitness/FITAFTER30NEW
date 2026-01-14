@@ -38,11 +38,11 @@ const HeroSection = () => {
           </div>
 
           {/* Description - optimized for 3-line mobile layout */}
-          <p className="text-[13px] md:text-xl leading-snug md:leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-1 md:px-0">
+          <p className="text-[12px] md:text-xl leading-snug md:leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-1 md:px-0">
             <span className="md:hidden">
               14 days of the exact tactical habits my clients in their<br />
               30s and 40s use to make sustainable transformations<br />
-              — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
+              <span className="whitespace-nowrap">— <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span></span>
             </span>
             <span className="hidden md:inline">
               14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
