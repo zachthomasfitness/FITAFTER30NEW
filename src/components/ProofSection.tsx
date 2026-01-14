@@ -6,7 +6,7 @@ import cianTransformation from "@/assets/cian-transformation.jpg";
 const clients = [
   {
     name: "Cian",
-    result: "-12lbs",
+    result: "-26lbs",
     image: cianTransformation,
   },
   {
@@ -32,7 +32,7 @@ const ProofSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center px-6 mb-10">
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 max-w-4xl mx-auto leading-tight">
-            Meet the clients who have transformed
+            Meet the clients who have transformed their habits
           </h2>
         </div>
 
