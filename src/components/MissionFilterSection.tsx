@@ -12,7 +12,7 @@ const rejectList = [
   "Need abs tomorrow",
   "Enjoy 2-hour daily gym sessions",
   "You hate good food & eating out",
-  "Don't want to stay fit for 3+ months",
+  "Don't want to stay fit for more than 3 months",
 ];
 
 const MissionFilterSection = () => {
