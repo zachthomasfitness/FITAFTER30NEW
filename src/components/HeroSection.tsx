@@ -9,8 +9,8 @@ const HeroSection = () => {
   return (
     <>
       {/* Top Banner */}
-      <div className="w-full bg-primary/10 border-b border-primary/30 py-3 px-4 text-center">
-        <span className="text-primary text-sm font-bold uppercase tracking-widest">
+      <div className="w-full bg-primary/10 border-b border-primary/30 py-2 md:py-3 px-4 text-center">
+        <span className="text-primary text-[11px] md:text-sm font-bold uppercase tracking-widest">
           Now open: The 14 day habit kickstart
         </span>
       </div>
@@ -38,7 +38,7 @@ const HeroSection = () => {
           </div>
 
           {/* Description */}
-          <p className="text-base md:text-xl leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-4 md:px-0">
+          <p className="text-[13px] md:text-xl leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-2 md:px-0">
             14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
           </p>
 
@@ -47,7 +47,7 @@ const HeroSection = () => {
             {/* CTA Button - Above everything */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="brand-bg hover:scale-105 text-primary-foreground text-lg md:text-2xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10"
+              className="brand-bg hover:scale-105 text-primary-foreground text-[14px] md:text-2xl font-black py-5 md:py-6 px-8 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10 whitespace-nowrap"
             >
               Join the FREE 14 Day Kickstart →
             </button>
@@ -61,7 +61,7 @@ const HeroSection = () => {
             </div>
 
             {/* Live Status */}
-            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-sm md:text-base">
+            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[11px] md:text-base whitespace-nowrap">
               <span className="relative flex h-3 w-3 flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22c55e]"></span>

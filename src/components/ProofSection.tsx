@@ -31,8 +31,8 @@ const ProofSection = () => {
     <section className="py-20 md:py-24 border-y border-border">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center px-6 mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground">
+        <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
+          <h2 className="text-[26px] md:text-5xl font-extrabold text-foreground leading-tight">
             Meet the clients who have transformed their habits
           </h2>
         </div>
