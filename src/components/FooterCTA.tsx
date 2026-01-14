@@ -13,10 +13,10 @@ const FooterCTA = () => {
             Ready to start Day 1?
           </h2>
           
-          {/* CTA Button */}
+          {/* CTA Button - Match main CTA sizing */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="brand-bg text-primary-foreground text-lg md:text-2xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl shadow-2xl hover:scale-105 transition btn-shadow uppercase"
+            className="brand-bg text-primary-foreground text-[15px] md:text-2xl font-black py-[22px] md:py-6 px-9 md:px-14 rounded-xl shadow-2xl hover:scale-105 transition btn-shadow uppercase whitespace-nowrap"
           >
             Join the FREE 14 Day Kickstart
           </button>

@@ -37,31 +37,31 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Description */}
-          <p className="text-[13px] md:text-xl leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-2 md:px-0">
+          {/* Description - 10% larger on mobile: 13px -> 14px */}
+          <p className="text-[14px] md:text-xl leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-2 md:px-0">
             14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
           </p>
 
           {/* CTA Section */}
           <div className="flex flex-col items-center px-4 md:px-0">
-            {/* CTA Button - Above everything */}
+            {/* CTA Button - Above everything - 10% larger on mobile: 14px -> 15px, py-5 -> py-5.5 */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="brand-bg hover:scale-105 text-primary-foreground text-[14px] md:text-2xl font-black py-5 md:py-6 px-8 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10 whitespace-nowrap"
+              className="brand-bg hover:scale-105 text-primary-foreground text-[15px] md:text-2xl font-black py-[22px] md:py-6 px-9 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10 whitespace-nowrap"
             >
               Join the FREE 14 Day Kickstart →
             </button>
 
-            {/* Start Date & Countdown */}
+            {/* Start Date & Countdown - 10% larger on mobile: base -> text-[17px] */}
             <div className="flex flex-col items-center gap-4 md:gap-5 mb-6">
-              <p className="text-primary font-bold text-base md:text-lg uppercase tracking-wide">
+              <p className="text-primary font-bold text-[17px] md:text-lg uppercase tracking-wide">
                 Start Date: January 26th
               </p>
               <CountdownTimer />
             </div>
 
-            {/* Live Status */}
-            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[11px] md:text-base whitespace-nowrap">
+            {/* Live Status - 10% larger on mobile: 11px -> 12px */}
+            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[12px] md:text-base whitespace-nowrap">
               <span className="relative flex h-3 w-3 flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22c55e]"></span>
