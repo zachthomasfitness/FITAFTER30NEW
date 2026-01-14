@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LeadCaptureModal from "./LeadCaptureModal";
 import VidalyticsPlayer from "./VidalyticsPlayer";
+import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,6 +51,8 @@ const HeroSection = () => {
             <p className="text-primary font-bold text-sm md:text-lg uppercase tracking-wide">
               Start Date: January 26th
             </p>
+            {/* Countdown Timer */}
+            <CountdownTimer />
             <button
               onClick={() => setIsModalOpen(true)}
               className="brand-bg hover:scale-105 text-primary-foreground text-center text-base md:text-2xl font-black py-4 md:py-6 px-8 md:px-12 rounded-xl transform transition btn-shadow uppercase"
