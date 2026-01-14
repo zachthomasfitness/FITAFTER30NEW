@@ -9,8 +9,8 @@ const HeroSection = () => {
   return (
     <>
       {/* Top Banner - Full width slim banner */}
-      <div className="w-full bg-primary/10 border-b border-primary/30 py-3 px-4 text-center">
-        <span className="text-primary text-sm font-bold uppercase tracking-widest">
+      <div className="w-full bg-primary/10 border-b border-primary/30 py-1.5 md:py-3 px-4 text-center">
+        <span className="text-primary text-[9px] md:text-sm font-bold uppercase tracking-widest">
           Now open: The 14 day habit kickstart
         </span>
       </div>
@@ -37,8 +37,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Description */}
-          <p className="text-base md:text-xl text-foreground/80 leading-relaxed mb-8 md:mb-10 max-w-3xl mx-auto">
+          {/* Description - mobile-3-line class for exact 3 lines on mobile */}
+          <p className="text-[11px] leading-[1.4] md:text-xl md:leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto">
             14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations —{" "}
             <span className="text-foreground font-bold">
               without sacrificing their favourite food or their social lives.
@@ -50,7 +50,7 @@ const HeroSection = () => {
             {/* CTA Button - First */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="brand-bg hover:scale-105 text-primary-foreground text-lg md:text-2xl font-black py-5 md:py-6 px-10 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10"
+              className="brand-bg hover:scale-105 text-primary-foreground text-sm md:text-2xl font-black py-4 md:py-6 px-6 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10 whitespace-nowrap"
             >
               Join the FREE 14 Day Kickstart →
             </button>
