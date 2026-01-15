@@ -1,8 +1,19 @@
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    fbq: (...args: unknown[]) => void;
+  }
+}
+
 const ThankYou = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Track Lead conversion event for Meta Pixel
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead');
+    }
   }, []);
 
   const checklistItems = [
