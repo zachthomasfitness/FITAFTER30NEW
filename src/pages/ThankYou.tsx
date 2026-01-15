@@ -10,9 +10,10 @@ const ThankYou = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Track Lead conversion event for Meta Pixel
+    // Track conversion events for Meta Pixel
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead');
+      window.fbq('track', 'CompleteRegistration');
     }
   }, []);
 
