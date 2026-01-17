@@ -30,7 +30,7 @@ const FooterCTA = () => {
         </p>
 
         {/* Glassmorphism Form Container with brand border */}
-        <div className="glassmorphism-card border-2 border-primary rounded-3xl p-4 md:p-8">
+        <div className="glassmorphism-card rounded-3xl p-4 md:p-8">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
             style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
