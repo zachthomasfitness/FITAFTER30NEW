@@ -1,10 +1,13 @@
-import { useState } from "react";
-import LeadCaptureModal from "./LeadCaptureModal";
 import VidalyticsPlayer from "./VidalyticsPlayer";
 import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const scrollToForm = () => {
+    const formSection = document.getElementById('signup-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -53,7 +56,7 @@ const HeroSection = () => {
           <div className="flex flex-col items-center px-4 md:px-0">
             {/* CTA Button - Above everything - 10% larger on mobile: 14px -> 15px, py-5 -> py-5.5 */}
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={scrollToForm}
               className="brand-bg hover:scale-105 text-primary-foreground text-[15px] md:text-2xl font-black py-[22px] md:py-6 px-9 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10 whitespace-nowrap"
             >
               Join the FREE 14 Day Kickstart →
@@ -78,8 +81,6 @@ const HeroSection = () => {
           </div>
         </div>
       </header>
-
-      <LeadCaptureModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 };
