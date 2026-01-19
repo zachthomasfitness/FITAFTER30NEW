@@ -30,8 +30,8 @@ const HeroSection = () => {
               <PulseFormEmbed id="hero-inline-7DTFHh8ZmEmWrmVpsktd" />
             </div>
 
-            {/* Start Date + Timer container - pulled up toward form */}
-            <div className="flex flex-col items-center -mt-10 md:-mt-12">
+            {/* Start Date + Timer container - pulled up tight to form submit button */}
+            <div className="flex flex-col items-center -mt-20 md:-mt-24">
               <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
                 Start Date: January 26th
               </p>
