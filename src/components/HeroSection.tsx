@@ -22,18 +22,13 @@ const HeroSection = () => {
             14 days of healthy habits designed to get you lean, strong and confident.
           </p>
 
-          {/* ACTION CLUSTER: Start Date + Timer + Form + Live Line grouped tightly */}
+          {/* ACTION CLUSTER: Form -> Start Date -> Timer -> Live Line */}
           <div className="flex flex-col items-center">
-            {/* Start Date - compact, no bottom margin */}
-            <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
-              Start Date: January 26th
-            </p>
-            
-            {/* Countdown Timer - compact version, no bottom margin */}
-            <CountdownTimer compact />
-            
-            {/* Embedded Form - pulled up with negative margin */}
-            <div className="form-embed-wrapper -mt-4 md:-mt-6">
+            {/* Sign-up form wrapper */}
+            <div 
+              id="signup-form"
+              className="form-embed-wrapper w-full max-w-[480px] mx-auto"
+            >
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
                 style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
@@ -55,8 +50,18 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* Live Status - moved directly below form */}
-            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[12px] md:text-base whitespace-nowrap -mt-2">
+            {/* Start Date + Timer container - pulled up toward form */}
+            <div className="flex flex-col items-center -mt-6 md:-mt-8">
+              <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
+                Start Date: January 26th
+              </p>
+              <div className="mb-2">
+                <CountdownTimer compact />
+              </div>
+            </div>
+
+            {/* Live Status - at the bottom of the cluster */}
+            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[12px] md:text-base whitespace-nowrap">
               <span className="relative flex h-3 w-3 flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22c55e]"></span>
