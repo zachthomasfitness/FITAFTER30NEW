@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ProofSection from "@/components/ProofSection";
 import MissionFilterSection from "@/components/MissionFilterSection";
-import FeaturesSection from "@/components/FeaturesSection";
 import FooterCTA from "@/components/FooterCTA";
 
 const Index = () => {
@@ -10,7 +9,6 @@ const Index = () => {
       <HeroSection />
       <MissionFilterSection />
       <ProofSection />
-      <FeaturesSection />
       <FooterCTA />
     </main>
   );
