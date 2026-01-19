@@ -21,9 +21,10 @@ const MissionFilterSection = () => {
           Who is this for?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {/* Mobile: Horizontal snap slider | Desktop: 2-column grid */}
+        <div className="flex md:grid md:grid-cols-2 gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar md:overflow-visible px-[7.5%] md:px-0">
           {/* The Fit Card */}
-          <div className="glassmorphism-card p-6 md:p-8 text-center">
+          <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
             <div className="text-4xl md:text-5xl text-primary mb-4">✓</div>
             <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
               This is perfect for you if:
@@ -38,7 +39,7 @@ const MissionFilterSection = () => {
           </div>
 
           {/* The Rejection Card */}
-          <div className="glassmorphism-card p-6 md:p-8 text-center">
+          <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
             <div className="text-4xl md:text-5xl text-destructive mb-4">✕</div>
             <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
               This isn't for you if:
@@ -52,6 +53,11 @@ const MissionFilterSection = () => {
             </ul>
           </div>
         </div>
+
+        {/* Swipe hint - mobile only */}
+        <p className="md:hidden text-foreground/50 text-sm mt-4">
+          Swipe to see both →
+        </p>
       </div>
     </section>
   );
