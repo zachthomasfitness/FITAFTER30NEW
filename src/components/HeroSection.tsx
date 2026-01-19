@@ -12,8 +12,8 @@ const HeroSection = () => {
 
       <header className="relative pt-12 md:pt-20 pb-12 md:pb-20 px-4 md:px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* Massive Headline - text-4xl mobile, text-8xl desktop, 3 lines */}
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
+          {/* Headline - text-3xl mobile, text-7xl desktop, 3 lines */}
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
             Learn the fundamental habits<br />
             every man over 30 needs to look<br />
             <span className="brand-text whitespace-nowrap">sharp in his shirts and confident without them</span>
