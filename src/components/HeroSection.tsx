@@ -12,16 +12,16 @@ const HeroSection = () => {
 
       <header className="relative pt-12 md:pt-20 pb-12 md:pb-20 px-4 md:px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* Massive Headline - text-4xl mobile, text-8xl desktop */}
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-foreground leading-[1.1] mb-4 md:mb-6">
-            How to lose<br />
-            <span className="brand-text">5-10lbs in 6 weeks</span><br />
-            <span className="whitespace-nowrap">as a guy in your 30's</span>
+          {/* Massive Headline - text-4xl mobile, text-8xl desktop, 3 lines */}
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
+            Learn the fundamental habits<br />
+            every man over 30 needs to look<br />
+            <span className="brand-text whitespace-nowrap">sharp in his shirts and confident without them</span>
           </h1>
 
-          {/* Context Text */}
-          <p className="text-base md:text-xl text-muted-foreground font-medium mb-6 md:mb-8">
-            (Whilst navigating work, family & friends)
+          {/* Subheadline - clean and focused */}
+          <p className="text-base md:text-xl text-foreground/80 font-semibold mb-6 md:mb-8">
+            14 days of healthy habits designed to get you lean, strong and confident.
           </p>
 
           {/* ACTION CLUSTER: Start Date + Timer + Form grouped tightly */}
@@ -57,18 +57,6 @@ const HeroSection = () => {
               />
             </div>
           </div>
-
-          {/* Description - below form as hero footer */}
-          <p className="text-[13px] md:text-xl leading-snug md:leading-relaxed text-foreground/80 mb-6 md:mb-8 max-w-3xl mx-auto px-1 md:px-0">
-            <span className="md:hidden">
-              14 days of the exact tactical habits my clients in their<br />
-              30s and 40s use to make sustainable transformations<br />
-              <span className="whitespace-nowrap">— <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span></span>
-            </span>
-            <span className="hidden md:inline">
-              14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
-            </span>
-          </p>
 
           {/* Live Status */}
           <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[12px] md:text-base whitespace-nowrap">
