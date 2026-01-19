@@ -85,8 +85,8 @@ input, select, textarea {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
     background-color: #000000;
-    /* ZERO NAVY: Neutral Grey (#262626) to Pitch Black (#000000) */
-    background-image: radial-gradient(circle at top, #262626 0%, #000000 80%);
+    /* HIGH-CONTRAST SPOTLIGHT: Dark Steel halo at top, Pure Black below */
+    background-image: radial-gradient(ellipse at 50% 0%, #1a1a1a 0%, #000000 75%);
     background-attachment: scroll;
     min-height: 100vh;
   }
@@ -126,8 +126,9 @@ input, select, textarea {
   }
 
   .client-card {
-    background: rgba(38, 38, 38, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -153,8 +154,8 @@ input, select, textarea {
 
   /* Feature cards - snap slider on mobile, static on desktop */
   .glassmorphism-card {
-    background: rgba(38, 38, 38, 0.5);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
   }
@@ -184,8 +185,9 @@ input, select, textarea {
   }
 
   .feature-card {
-    background: rgba(38, 38, 38, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
