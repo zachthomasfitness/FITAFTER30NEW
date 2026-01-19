@@ -31,7 +31,7 @@ const MissionFilterSection = () => {
             </h3>
             <ul className="space-y-3 md:space-y-4 text-left">
               {fitList.map((item, index) => (
-                <li key={index} className="text-base md:text-lg text-foreground/90">
+                <li key={index} className="text-sm md:text-base text-foreground/90">
                   • {item}
                 </li>
               ))}
@@ -46,7 +46,7 @@ const MissionFilterSection = () => {
             </h3>
             <ul className="space-y-3 md:space-y-4 text-left">
               {rejectList.map((item, index) => (
-                <li key={index} className="text-base md:text-lg text-foreground/90">
+                <li key={index} className="text-sm md:text-base text-foreground/90">
                   • {item}
                 </li>
               ))}
