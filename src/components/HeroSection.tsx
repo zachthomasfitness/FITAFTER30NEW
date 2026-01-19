@@ -1,13 +1,21 @@
-import VidalyticsPlayer from "./VidalyticsPlayer";
+import { useEffect } from "react";
 import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
-  const scrollToForm = () => {
-    const formSection = document.getElementById('signup-form');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  useEffect(() => {
+    // Load the Pulse form embed script
+    const script = document.createElement('script');
+    script.src = 'https://link.msgsndr.com/js/form_embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -32,14 +40,6 @@ const HeroSection = () => {
             (Whilst navigating work, family & friends)
           </p>
 
-          {/* VSL Player Section */}
-          <div className="relative max-w-3xl mx-auto mb-8 md:mb-12 group">
-            <div className="absolute -inset-1 brand-bg rounded-[20px] blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
-            <div className="relative bg-secondary rounded-[20px] overflow-hidden border border-border vsl-glow">
-              <VidalyticsPlayer />
-            </div>
-          </div>
-
           {/* Description - optimized for 3-line mobile layout */}
           <p className="text-[12px] md:text-xl leading-snug md:leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-1 md:px-0">
             <span className="md:hidden">
@@ -52,32 +52,44 @@ const HeroSection = () => {
             </span>
           </p>
 
-          {/* CTA Section */}
-          <div className="flex flex-col items-center px-4 md:px-0">
-            {/* CTA Button - Above everything - 10% larger on mobile: 14px -> 15px, py-5 -> py-5.5 */}
-            <button
-              onClick={scrollToForm}
-              className="brand-bg hover:scale-105 text-primary-foreground text-[15px] md:text-2xl font-black py-[22px] md:py-6 px-9 md:px-14 rounded-xl transform transition btn-shadow uppercase mb-8 md:mb-10 whitespace-nowrap"
-            >
-              Join the FREE 14 Day Kickstart →
-            </button>
-
-            {/* Start Date & Countdown - 10% larger on mobile: base -> text-[17px] */}
-            <div className="flex flex-col items-center gap-4 md:gap-5 mb-6">
-              <p className="text-primary font-bold text-[17px] md:text-lg uppercase tracking-wide">
-                Start Date: January 26th
-              </p>
-              <CountdownTimer />
+          {/* Embedded Form Container */}
+          <div className="max-w-md mx-auto mb-10 md:mb-12">
+            <div className="form-container">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
+                style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
+                id="hero-inline-7DTFHh8ZmEmWrmVpsktd"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Challenge Opt-in"
+                data-height="462"
+                data-layout-iframe-id="hero-inline-7DTFHh8ZmEmWrmVpsktd"
+                data-form-id="7DTFHh8ZmEmWrmVpsktd"
+                title="Challenge Opt-in"
+              />
             </div>
+          </div>
 
-            {/* Live Status - 10% larger on mobile: 11px -> 12px */}
-            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[12px] md:text-base whitespace-nowrap">
-              <span className="relative flex h-3 w-3 flex-shrink-0">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22c55e]"></span>
-              </span>
-              This is a live challenge and I'll be personally coaching you
-            </div>
+          {/* Start Date & Countdown */}
+          <div className="flex flex-col items-center gap-4 md:gap-5 mb-6">
+            <p className="text-primary font-bold text-[17px] md:text-lg uppercase tracking-wide">
+              Start Date: January 26th
+            </p>
+            <CountdownTimer />
+          </div>
+
+          {/* Live Status */}
+          <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[12px] md:text-base whitespace-nowrap">
+            <span className="relative flex h-3 w-3 flex-shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#22c55e]"></span>
+            </span>
+            This is a live challenge and I'll be personally coaching you
           </div>
         </div>
       </header>

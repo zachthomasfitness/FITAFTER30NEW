@@ -13,33 +13,33 @@ input, select, textarea {
     --brand-yellow: 49 100% 67%;
     --brand-yellow-glow: 49 100% 67%;
     
-    /* Background - Dark navy to black gradient */
-    --background: 220 60% 7%;
-    --foreground: 213 31% 85%;
+    /* Background - Gun Metal grey theme */
+    --background: 220 8% 10%;
+    --foreground: 210 20% 85%;
 
-    --card: 220 30% 6%;
-    --card-foreground: 213 31% 85%;
+    --card: 220 10% 12%;
+    --card-foreground: 210 20% 85%;
 
-    --popover: 220 30% 6%;
-    --popover-foreground: 213 31% 85%;
+    --popover: 220 10% 12%;
+    --popover-foreground: 210 20% 85%;
 
     --primary: 49 100% 67%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 217 32% 12%;
-    --secondary-foreground: 213 31% 85%;
+    --secondary: 215 12% 18%;
+    --secondary-foreground: 210 20% 85%;
 
-    --muted: 217 32% 12%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 215 12% 18%;
+    --muted-foreground: 210 10% 55%;
 
-    --accent: 217 32% 17%;
-    --accent-foreground: 213 31% 85%;
+    --accent: 215 12% 22%;
+    --accent-foreground: 210 20% 85%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 100% / 0.08;
-    --input: 217 32% 17%;
+    --border: 0 0% 100% / 0.1;
+    --input: 215 12% 18%;
     --ring: 49 100% 67%;
 
     --radius: 0.75rem;
@@ -50,24 +50,24 @@ input, select, textarea {
   }
 
   .dark {
-    --background: 220 60% 7%;
-    --foreground: 213 31% 85%;
-    --card: 220 30% 6%;
-    --card-foreground: 213 31% 85%;
-    --popover: 220 30% 6%;
-    --popover-foreground: 213 31% 85%;
+    --background: 220 8% 10%;
+    --foreground: 210 20% 85%;
+    --card: 220 10% 12%;
+    --card-foreground: 210 20% 85%;
+    --popover: 220 10% 12%;
+    --popover-foreground: 210 20% 85%;
     --primary: 49 100% 67%;
     --primary-foreground: 0 0% 0%;
-    --secondary: 217 32% 12%;
-    --secondary-foreground: 213 31% 85%;
-    --muted: 217 32% 12%;
-    --muted-foreground: 215 20% 55%;
-    --accent: 217 32% 17%;
-    --accent-foreground: 213 31% 85%;
+    --secondary: 215 12% 18%;
+    --secondary-foreground: 210 20% 85%;
+    --muted: 215 12% 18%;
+    --muted-foreground: 210 10% 55%;
+    --accent: 215 12% 22%;
+    --accent-foreground: 210 20% 85%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 40% 98%;
-    --border: 0 0% 100% / 0.08;
-    --input: 217 32% 17%;
+    --border: 0 0% 100% / 0.1;
+    --input: 215 12% 18%;
     --ring: 49 100% 67%;
   }
 }
@@ -84,8 +84,8 @@ input, select, textarea {
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    background-color: hsl(0 0% 0%);
-    background-image: radial-gradient(circle at top, hsl(220 60% 8%) 0%, hsl(0 0% 0%) 70%);
+    background-color: #121417;
+    background-image: radial-gradient(circle at top, #2c343f 0%, #121417 85%);
     background-attachment: fixed;
   }
 }
@@ -144,10 +144,17 @@ input, select, textarea {
 
   /* Feature cards - snap slider on mobile, static on desktop */
 .glassmorphism-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 24px;
+}
+
+.form-container {
+  border: 2px solid rgba(255, 222, 89, 0.25);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 32px;
+  padding: 20px;
 }
 
 .timer-unit {
