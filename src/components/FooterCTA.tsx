@@ -1,8 +1,9 @@
 import CountdownTimer from "./CountdownTimer";
+import PulseFormEmbed from "./PulseFormEmbed";
 
 const FooterCTA = () => {
   return (
-    <footer id="signup-form" className="py-16 md:py-24 px-6 border-t border-border text-center">
+    <footer id="footer-signup-form" className="py-16 md:py-24 px-6 border-t border-border text-center">
       <div className="max-w-xl mx-auto">
         {/* Section Header - matches other section headers */}
         <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-6">
@@ -19,27 +20,9 @@ const FooterCTA = () => {
           {/* Countdown Timer - compact version */}
           <CountdownTimer compact />
           
-          {/* Embedded Form - with sandbox for isolation */}
-          <div className="form-embed-wrapper mt-2">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
-              style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
-              id="footer-inline-7DTFHh8ZmEmWrmVpsktd"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Challenge Opt-in"
-              data-height="462"
-              data-layout-iframe-id="footer-inline-7DTFHh8ZmEmWrmVpsktd"
-              data-form-id="7DTFHh8ZmEmWrmVpsktd"
-              title="Challenge Opt-in"
-              sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          {/* Embedded Form - using isolated component */}
+          <div className="w-full mt-2">
+            <PulseFormEmbed id="footer-inline-7DTFHh8ZmEmWrmVpsktd" />
           </div>
         </div>
         
