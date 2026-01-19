@@ -1,15 +1,15 @@
 const fitList = [
-  "Busy men in their 30's & 40's",
-  "High-performers and fathers",
-  "Food lovers and pub-goers",
-  "You want results that actually stick",
+  "You've gained weight, but are finally ready to lose the gut.",
+  "You know how to train, but you're inconsistent.",
+  "You love food and don't want to give up your normal life.",
+  "You want to get lean, strong and confident in 2026.",
 ];
 
 const rejectList = [
-  "Need abs tomorrow",
-  "Enjoy 2-hour daily gym sessions",
-  "You hate good food & eating out",
-  "Don't want to stay fit for 3+ months",
+  "You're looking for a short cut/magic pill solution.",
+  "You love 2-hour daily gym sessions.",
+  "You want to eat bland food & discipline is nothing to you.",
+  "You only want short term progress.",
 ];
 
 const MissionFilterSection = () => {
@@ -23,9 +23,12 @@ const MissionFilterSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* The Fit Card */}
-          <div className="glassmorphism-card p-6 md:p-8 text-left flex gap-4 md:gap-6">
-            <div className="text-4xl md:text-5xl text-primary flex-shrink-0">✓</div>
-            <ul className="space-y-3 md:space-y-4">
+          <div className="glassmorphism-card p-6 md:p-8 text-center">
+            <div className="text-4xl md:text-5xl text-primary mb-4">✓</div>
+            <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
+              This is perfect for you if:
+            </h3>
+            <ul className="space-y-3 md:space-y-4 text-left">
               {fitList.map((item, index) => (
                 <li key={index} className="text-base md:text-lg text-foreground/90">
                   • {item}
@@ -35,9 +38,12 @@ const MissionFilterSection = () => {
           </div>
 
           {/* The Rejection Card */}
-          <div className="glassmorphism-card p-6 md:p-8 text-left flex gap-4 md:gap-6">
-            <div className="text-4xl md:text-5xl text-destructive flex-shrink-0">✕</div>
-            <ul className="space-y-3 md:space-y-4">
+          <div className="glassmorphism-card p-6 md:p-8 text-center">
+            <div className="text-4xl md:text-5xl text-destructive mb-4">✕</div>
+            <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
+              This isn't for you if:
+            </h3>
+            <ul className="space-y-3 md:space-y-4 text-left">
               {rejectList.map((item, index) => (
                 <li key={index} className="text-base md:text-lg text-foreground/90">
                   • {item}
