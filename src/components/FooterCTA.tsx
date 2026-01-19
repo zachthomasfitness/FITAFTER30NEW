@@ -29,8 +29,8 @@ const FooterCTA = () => {
           Enter your details below to claim your spot for the January 26th Intake.
         </p>
 
-        {/* Form Container */}
-        <div className="form-container">
+        {/* Embedded Form - naked on background */}
+        <div className="form-embed-wrapper">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
             style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
