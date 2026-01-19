@@ -1,23 +1,6 @@
-import { useEffect } from "react";
 import CountdownTimer from "./CountdownTimer";
 
 const FooterCTA = () => {
-  useEffect(() => {
-    // Load the Pulse form embed script
-    const script = document.createElement('script');
-    script.src = 'https://link.msgsndr.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
-
   return (
     <footer id="signup-form" className="py-16 md:py-24 px-6 border-t border-border text-center">
       <div className="max-w-xl mx-auto">
@@ -36,7 +19,7 @@ const FooterCTA = () => {
           {/* Countdown Timer - compact version */}
           <CountdownTimer compact />
           
-          {/* Embedded Form - naked on background */}
+          {/* Embedded Form - with sandbox for isolation */}
           <div className="form-embed-wrapper mt-2">
             <iframe
               src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
@@ -54,6 +37,8 @@ const FooterCTA = () => {
               data-layout-iframe-id="footer-inline-7DTFHh8ZmEmWrmVpsktd"
               data-form-id="7DTFHh8ZmEmWrmVpsktd"
               title="Challenge Opt-in"
+              sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>

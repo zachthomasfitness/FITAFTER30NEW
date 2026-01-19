@@ -1,22 +1,6 @@
-import { useEffect } from "react";
 import CountdownTimer from "./CountdownTimer";
 
 const HeroSection = () => {
-  useEffect(() => {
-    // Load the Pulse form embed script
-    const script = document.createElement('script');
-    script.src = 'https://link.msgsndr.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
-
   return (
     <>
       {/* Top Banner */}
@@ -50,7 +34,7 @@ const HeroSection = () => {
             {/* Countdown Timer - compact version */}
             <CountdownTimer compact />
             
-            {/* Embedded Form - naked on background */}
+            {/* Embedded Form - with sandbox for isolation */}
             <div className="form-embed-wrapper mt-2">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
@@ -68,6 +52,8 @@ const HeroSection = () => {
                 data-layout-iframe-id="hero-inline-7DTFHh8ZmEmWrmVpsktd"
                 data-form-id="7DTFHh8ZmEmWrmVpsktd"
                 title="Challenge Opt-in"
+                sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </div>
