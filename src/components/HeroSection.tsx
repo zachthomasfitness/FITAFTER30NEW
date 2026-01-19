@@ -36,12 +36,33 @@ const HeroSection = () => {
           </h1>
 
           {/* Context Text */}
-          <p className="text-base md:text-xl text-muted-foreground font-medium mb-8 md:mb-12">
+          <p className="text-base md:text-xl text-muted-foreground font-medium mb-8 md:mb-10">
             (Whilst navigating work, family & friends)
           </p>
 
-          {/* Description - optimized for 3-line mobile layout */}
-          <p className="text-[12px] md:text-xl leading-snug md:leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-1 md:px-0">
+          {/* Embedded Form - naked on background */}
+          <div className="form-embed-wrapper mb-8 md:mb-10">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
+              style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
+              id="hero-inline-7DTFHh8ZmEmWrmVpsktd"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Challenge Opt-in"
+              data-height="462"
+              data-layout-iframe-id="hero-inline-7DTFHh8ZmEmWrmVpsktd"
+              data-form-id="7DTFHh8ZmEmWrmVpsktd"
+              title="Challenge Opt-in"
+            />
+          </div>
+
+          {/* Description - now below form */}
+          <p className="text-[13px] md:text-xl leading-snug md:leading-relaxed text-foreground/80 mb-8 md:mb-10 max-w-3xl mx-auto px-1 md:px-0">
             <span className="md:hidden">
               14 days of the exact tactical habits my clients in their<br />
               30s and 40s use to make sustainable transformations<br />
@@ -51,29 +72,6 @@ const HeroSection = () => {
               14 days of the exact tactical habits my clients in their 30s and 40s use to make sustainable transformations — <span className="text-foreground font-bold">without sacrificing their favourite food or their social lives.</span>
             </span>
           </p>
-
-          {/* Embedded Form Container */}
-          <div className="max-w-md mx-auto mb-10 md:mb-12">
-            <div className="form-container">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
-                style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
-                id="hero-inline-7DTFHh8ZmEmWrmVpsktd"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Challenge Opt-in"
-                data-height="462"
-                data-layout-iframe-id="hero-inline-7DTFHh8ZmEmWrmVpsktd"
-                data-form-id="7DTFHh8ZmEmWrmVpsktd"
-                title="Challenge Opt-in"
-              />
-            </div>
-          </div>
 
           {/* Start Date & Countdown */}
           <div className="flex flex-col items-center gap-4 md:gap-5 mb-6">
