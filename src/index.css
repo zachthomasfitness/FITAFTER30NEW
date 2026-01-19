@@ -87,7 +87,15 @@ input, select, textarea {
     background-color: #000000;
     /* ZERO NAVY: Neutral Grey (#262626) to Pitch Black (#000000) */
     background-image: radial-gradient(circle at top, #262626 0%, #000000 80%);
-    background-attachment: fixed;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+
+  /* Fixed background only on desktop where it's supported */
+  @media (min-width: 1024px) {
+    body {
+      background-attachment: fixed;
+    }
   }
 }
 
