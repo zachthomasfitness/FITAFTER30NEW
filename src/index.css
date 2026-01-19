@@ -13,33 +13,33 @@ input, select, textarea {
     --brand-yellow: 49 100% 67%;
     --brand-yellow-glow: 49 100% 67%;
     
-    /* Background - Gun Metal grey theme */
-    --background: 220 8% 10%;
-    --foreground: 210 20% 85%;
+    /* Background - TRUE NEUTRAL (zero blue/navy) */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 85%;
 
-    --card: 220 10% 12%;
-    --card-foreground: 210 20% 85%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 85%;
 
-    --popover: 220 10% 12%;
-    --popover-foreground: 210 20% 85%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 85%;
 
     --primary: 49 100% 67%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 215 12% 18%;
-    --secondary-foreground: 210 20% 85%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 215 12% 18%;
-    --muted-foreground: 210 10% 55%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 215 12% 22%;
-    --accent-foreground: 210 20% 85%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 85%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 100% / 0.1;
-    --input: 215 12% 18%;
+    --input: 0 0% 15%;
     --ring: 49 100% 67%;
 
     --radius: 0.75rem;
@@ -50,24 +50,24 @@ input, select, textarea {
   }
 
   .dark {
-    --background: 220 8% 10%;
-    --foreground: 210 20% 85%;
-    --card: 220 10% 12%;
-    --card-foreground: 210 20% 85%;
-    --popover: 220 10% 12%;
-    --popover-foreground: 210 20% 85%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 85%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 85%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 85%;
     --primary: 49 100% 67%;
     --primary-foreground: 0 0% 0%;
-    --secondary: 215 12% 18%;
-    --secondary-foreground: 210 20% 85%;
-    --muted: 215 12% 18%;
-    --muted-foreground: 210 10% 55%;
-    --accent: 215 12% 22%;
-    --accent-foreground: 210 20% 85%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 85%;
     --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
     --border: 0 0% 100% / 0.1;
-    --input: 215 12% 18%;
+    --input: 0 0% 15%;
     --ring: 49 100% 67%;
   }
 }
@@ -84,8 +84,9 @@ input, select, textarea {
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    background-color: #121417;
-    background-image: radial-gradient(circle at top, #2c343f 0%, #121417 85%);
+    background-color: #000000;
+    /* ZERO NAVY: Neutral Grey (#262626) to Pitch Black (#000000) */
+    background-image: radial-gradient(circle at top, #262626 0%, #000000 80%);
     background-attachment: fixed;
   }
 }
@@ -117,8 +118,8 @@ input, select, textarea {
   }
 
   .client-card {
-    background: hsl(0 0% 100% / 0.03);
-    border: 1px solid hsl(0 0% 100% / 0.08);
+    background: rgba(38, 38, 38, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -143,40 +144,40 @@ input, select, textarea {
   }
 
   /* Feature cards - snap slider on mobile, static on desktop */
-.glassmorphism-card {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-}
+  .glassmorphism-card {
+    background: rgba(38, 38, 38, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+  }
 
-/* Naked form wrapper - no borders or background */
-.form-embed-wrapper {
-  max-width: 480px;
-  margin: 0 auto;
-  width: 100%;
-}
+  /* Naked form wrapper - no borders or background */
+  .form-embed-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
 
-.timer-unit {
-  border: 1px solid rgba(255, 222, 89, 0.3);
-  background: rgba(255, 222, 89, 0.05);
-  padding: 8px 12px;
-  border-radius: 12px;
-  min-width: 60px;
-}
+  .timer-unit {
+    border: 1px solid rgba(255, 222, 89, 0.3);
+    background: rgba(255, 222, 89, 0.05);
+    padding: 8px 12px;
+    border-radius: 12px;
+    min-width: 60px;
+  }
 
-/* Compact timer for Action Cluster */
-.timer-unit-compact {
-  border: 1px solid rgba(255, 222, 89, 0.2);
-  background: rgba(255, 222, 89, 0.03);
-  padding: 6px;
-  border-radius: 10px;
-  min-width: 50px;
-}
+  /* Compact timer for Action Cluster */
+  .timer-unit-compact {
+    border: 1px solid rgba(255, 222, 89, 0.2);
+    background: rgba(255, 222, 89, 0.03);
+    padding: 6px;
+    border-radius: 10px;
+    min-width: 50px;
+  }
 
-.feature-card {
-    background: hsl(0 0% 100% / 0.03);
-    border: 1px solid hsl(0 0% 100% / 0.08);
+  .feature-card {
+    background: rgba(38, 38, 38, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
