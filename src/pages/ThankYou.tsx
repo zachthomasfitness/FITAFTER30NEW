@@ -25,16 +25,18 @@ const ThankYou = () => {
 
   return (
     <div 
-      className="min-h-screen px-4 py-12 md:py-20 font-sans"
+      className="min-h-screen px-4 py-12 md:py-20 font-sans text-center"
       style={{
-        background: 'radial-gradient(ellipse at center, hsl(225 50% 12%) 0%, hsl(0 0% 4%) 70%)',
+        backgroundColor: '#000000',
+        backgroundImage: 'radial-gradient(ellipse at 50% 0%, #1a1a1a 0%, #000000 75%)',
+        backgroundAttachment: 'fixed',
       }}
     >
       <div className="max-w-3xl mx-auto space-y-8 md:space-y-10">
         
         {/* Section 1: The Confirmation */}
         <section className="text-center space-y-4">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary uppercase tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-[#ffde59] uppercase tracking-tight">
             You're In!
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-lg mx-auto">
@@ -43,15 +45,16 @@ const ThankYou = () => {
           </p>
         </section>
 
-        {/* Step 1 - WhatsApp Group (Primary Card - Outline style) */}
+        {/* Step 1 - WhatsApp Group (Primary Card - Yellow Outline) */}
         <section className="relative">
           {/* Subtle glow effect */}
-          <div className="absolute -inset-1 bg-[#ffde59] rounded-2xl opacity-20 blur-md"></div>
+          <div className="absolute -inset-1 bg-[#ffde59] rounded-3xl opacity-20 blur-md"></div>
           <div 
-            className="relative rounded-2xl p-6 md:p-10 text-center space-y-5"
+            className="relative rounded-3xl p-6 md:p-10 text-center space-y-5"
             style={{
               background: 'rgba(255, 222, 89, 0.05)',
               border: '2px solid #ffde59',
+              backdropFilter: 'blur(12px)',
             }}
           >
             <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
@@ -75,9 +78,9 @@ const ThankYou = () => {
           </div>
         </section>
 
-        {/* Step 2 - Whitelisting (Glassmorphism Card) */}
+        {/* Step 2 - Whitelisting (Steel Grey Glassmorphism Card) */}
         <section 
-          className="rounded-2xl p-6 md:p-10 text-center space-y-6"
+          className="rounded-3xl p-6 md:p-10 text-center space-y-6"
           style={{
             background: 'rgba(255, 255, 255, 0.03)',
             border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -97,9 +100,9 @@ const ThankYou = () => {
           </ul>
         </section>
 
-        {/* Elite Fast-Track Card (Subtle Coaching Offer - No step number) */}
+        {/* Elite Fast-Track Card (Steel Grey Glassmorphism) */}
         <section 
-          className="rounded-2xl p-6 md:p-10 text-center space-y-5"
+          className="rounded-3xl p-6 md:p-10 text-center space-y-5"
           style={{
             background: 'rgba(255, 255, 255, 0.03)',
             border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -124,15 +127,18 @@ const ThankYou = () => {
           </a>
         </section>
 
-        {/* Back link */}
-        <div className="text-center pt-4">
+        {/* Footer */}
+        <footer className="text-center pt-6 space-y-4">
           <a
             href="/"
             className="text-[#ffde59] hover:text-[#ffde59]/80 font-semibold text-sm md:text-base transition underline underline-offset-4"
           >
             ← Back to homepage
           </a>
-        </div>
+          <p className="text-foreground/40 text-sm">
+            © 2026 Zach Thomas Coaching
+          </p>
+        </footer>
       </div>
     </div>
   );
