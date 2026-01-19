@@ -165,6 +165,15 @@ input, select, textarea {
   min-width: 60px;
 }
 
+/* Compact timer for Action Cluster */
+.timer-unit-compact {
+  border: 1px solid rgba(255, 222, 89, 0.2);
+  background: rgba(255, 222, 89, 0.03);
+  padding: 6px;
+  border-radius: 10px;
+  min-width: 50px;
+}
+
 .feature-card {
     background: hsl(0 0% 100% / 0.03);
     border: 1px solid hsl(0 0% 100% / 0.08);

@@ -7,7 +7,11 @@ interface TimeLeft {
   seconds: number;
 }
 
-const CountdownTimer = () => {
+interface CountdownTimerProps {
+  compact?: boolean;
+}
+
+const CountdownTimer = ({ compact = false }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -33,6 +37,25 @@ const CountdownTimer = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  if (compact) {
+    return (
+      <div className="flex items-center justify-center gap-2">
+        <div className="timer-unit-compact flex flex-col items-center">
+          <span className="text-primary font-bold text-lg md:text-xl">{String(timeLeft.days).padStart(2, '0')}</span>
+          <span className="text-muted-foreground text-[8px] md:text-[10px] uppercase tracking-wide">Days</span>
+        </div>
+        <div className="timer-unit-compact flex flex-col items-center">
+          <span className="text-primary font-bold text-lg md:text-xl">{String(timeLeft.hours).padStart(2, '0')}</span>
+          <span className="text-muted-foreground text-[8px] md:text-[10px] uppercase tracking-wide">Hrs</span>
+        </div>
+        <div className="timer-unit-compact flex flex-col items-center">
+          <span className="text-primary font-bold text-lg md:text-xl">{String(timeLeft.minutes).padStart(2, '0')}</span>
+          <span className="text-muted-foreground text-[8px] md:text-[10px] uppercase tracking-wide">Mins</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex items-center justify-center gap-3 md:gap-4">
