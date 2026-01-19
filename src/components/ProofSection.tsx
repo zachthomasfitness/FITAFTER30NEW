@@ -28,7 +28,7 @@ const clients = [
 
 const ProofSection = () => {
   return (
-    <section className="py-20 md:py-24 border-y border-border">
+    <section className="pt-6 md:pt-10 pb-20 md:pb-24 border-y border-border">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
