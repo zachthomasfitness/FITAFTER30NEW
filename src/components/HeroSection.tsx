@@ -11,7 +11,7 @@ const HeroSection = () => {
         </span>
       </div>
 
-      <header className="relative pt-12 md:pt-20 pb-4 md:pb-6 px-4 md:px-6 text-center">
+      <header className="relative pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 text-center">
         <div className="max-w-5xl mx-auto">
           {/* Headline - pure white, natural text wrap */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
@@ -31,7 +31,7 @@ const HeroSection = () => {
             </div>
 
             {/* Start Date + Timer container - pulled up tight to form submit button */}
-            <div className="flex flex-col items-center -mt-20 md:-mt-24">
+            <div className="flex flex-col items-center -mt-24 md:-mt-28">
               <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
                 Start Date: January 26th
               </p>
