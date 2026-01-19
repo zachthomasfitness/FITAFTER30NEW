@@ -25,17 +25,17 @@ const HeroSection = () => {
           </p>
 
           {/* ACTION CLUSTER: Start Date + Timer + Form grouped tightly */}
-          <div className="flex flex-col items-center gap-2 mb-8 md:mb-10">
-            {/* Start Date - compact */}
-            <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider">
+          <div className="flex flex-col items-center mb-8 md:mb-10">
+            {/* Start Date - compact, no bottom margin */}
+            <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
               Start Date: January 26th
             </p>
             
-            {/* Countdown Timer - compact version */}
+            {/* Countdown Timer - compact version, no bottom margin */}
             <CountdownTimer compact />
             
-            {/* Embedded Form - with sandbox for isolation */}
-            <div className="form-embed-wrapper mt-2">
+            {/* Embedded Form - pulled up with negative margin */}
+            <div className="form-embed-wrapper -mt-4 md:-mt-6">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/7DTFHh8ZmEmWrmVpsktd"
                 style={{ width: '100%', height: '462px', border: 'none', borderRadius: '25px' }}
