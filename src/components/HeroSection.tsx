@@ -19,19 +19,19 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline - clean and focused */}
-          <p className="text-base md:text-xl text-foreground/80 font-semibold mb-6 md:mb-8">
+          <p className="text-base md:text-xl text-foreground/80 font-semibold">
             14 days of healthy habits designed to get you lean, strong and confident.
           </p>
 
           {/* ACTION CLUSTER: Form -> Start Date -> Timer -> Live Line */}
           <div className="flex flex-col items-center">
-            {/* Sign-up form wrapper */}
-            <div id="signup-form" className="w-full max-w-[480px] mx-auto">
+            {/* Sign-up form wrapper - pulled up toward subheadline */}
+            <div id="signup-form" className="w-full max-w-[480px] mx-auto -mt-10 md:-mt-12">
               <PulseFormEmbed id="hero-inline-7DTFHh8ZmEmWrmVpsktd" />
             </div>
 
             {/* Start Date + Timer container - pulled up toward form */}
-            <div className="flex flex-col items-center -mt-6 md:-mt-8">
+            <div className="flex flex-col items-center -mt-10 md:-mt-12">
               <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
                 Start Date: January 26th
               </p>
