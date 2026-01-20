@@ -33,7 +33,7 @@ const ProofSection = () => {
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
           <h2 className="text-[26px] md:text-5xl font-extrabold text-foreground leading-tight">
-            Meet the clients who have transformed their habits
+            These guys stopped trying to be perfect, and finally got results by being consistent.
           </h2>
         </div>
 
