@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Top Banner */}
       <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
         <span className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.15em]">
-          A free 14-day kickstart for men over 30 who want to lose the gut - without the 'all-or-nothing' BS.
+          A FREE 14-DAY KICKSTART FOR MEN OVER 30
         </span>
       </div>
 
