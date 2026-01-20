@@ -15,12 +15,12 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto">
           {/* Headline - pure white, natural text wrap */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
-            Learn the fundamental habits every man over 30 needs to look sharp in his shirts and confident without them.
+            Master the habits every guy over 30 needs to look sharp in their shirts and confident without them.
           </h1>
 
           {/* Subheadline - clean and focused */}
           <p className="text-base md:text-xl text-foreground/80 font-semibold">
-            14 days of healthy habits designed to get you lean, strong and confident.
+            Join the Free 14-Day Habit Kickstart to build a foundation of consistency — without giving up the foods you love or living in the gym.
           </p>
 
           {/* ACTION CLUSTER: Form -> Start Date -> Timer -> Live Line */}
