@@ -5,9 +5,9 @@ const HeroSection = () => {
   return (
     <>
       {/* Top Banner */}
-      <div className="w-full bg-primary/10 border-b border-primary/30 py-2 md:py-3 px-4 text-center">
-        <span className="text-primary text-[11px] md:text-sm font-bold uppercase tracking-widest">
-          Now open: The 14 day habit kickstart
+      <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
+        <span className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.15em]">
+          A free 14-day kickstart for men over 30 who want to lose the gut - without the 'all-or-nothing' BS.
         </span>
       </div>
 
