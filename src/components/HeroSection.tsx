@@ -20,7 +20,7 @@ const HeroSection = () => {
 
           {/* Subheadline - clean and focused */}
           <p className="text-base md:text-xl text-foreground/80 font-semibold">
-            Join the Free 14-Day Habit Kickstart to build a foundation of consistency — without giving up the foods you love or living in the gym.
+            Join the Free 14-Day Habit Kickstart to build a foundation of consistency - without giving up the foods you love or living in the gym.
           </p>
 
           {/* ACTION CLUSTER: Form -> Start Date -> Timer -> Live Line */}
