@@ -102,19 +102,17 @@ const SixWeekHabitStack = () => {
                 key={index}
                 className="client-card p-4"
               >
-                <div className="aspect-square bg-foreground/5 rounded-xl mb-4 flex items-center justify-center">
-                  {item.hasImage ? (
-                    <span className="text-foreground/40 text-sm">Client Photo</span>
-                  ) : (
-                    <span className="text-foreground/30 text-lg font-semibold">{item.name}</span>
-                  )}
+                <div className="aspect-square bg-foreground/5 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={`${item.name}'s transformation`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                {item.hasImage && (
-                  <div className="text-center">
-                    <p className="text-primary font-bold text-xl">{item.name}</p>
-                    <p className="text-primary font-black text-2xl">{item.result}</p>
-                  </div>
-                )}
+                <div className="text-center">
+                  <p className="text-primary font-bold text-xl">{item.name}</p>
+                  <p className="text-primary font-black text-2xl">{item.result}</p>
+                </div>
               </div>
             ))}
           </div>
