@@ -1,15 +1,25 @@
 import { Button } from "@/components/ui/button";
+import henryTransformation from "@/assets/henry-stack-transformation.png";
+import cianTransformation from "@/assets/cian-stack-transformation.jpg";
+import jagTransformation from "@/assets/jag-transformation.jpg";
+import tomTransformation from "@/assets/tom-stack-transformation.jpg";
+import sarahTransformation from "@/assets/sarah-transformation.png";
+import reubenTransformation from "@/assets/reuben-transformation.jpg";
+import lawsonTransformation from "@/assets/lawson-transformation.jpg";
+import edTransformation from "@/assets/ed-transformation.jpg";
+import jonTransformation from "@/assets/jon-transformation.jpg";
 
 const SixWeekHabitStack = () => {
   const transformations = [
-    { name: "Cian", result: "-26lbs", hasImage: true },
-    { name: "Henry", result: "-19lbs", hasImage: true },
-    { name: "Eisa", result: "-67lbs", hasImage: true },
-    { name: "Tom", result: "-24lbs", hasImage: true },
-    { name: "Reuben", result: "-16lbs", hasImage: true },
-    { name: "Next Result", result: "", hasImage: false },
-    { name: "Next Result", result: "", hasImage: false },
-    { name: "Next Result", result: "", hasImage: false },
+    { name: "Henry", result: "-19lbs", image: henryTransformation },
+    { name: "Cian", result: "-26lbs", image: cianTransformation },
+    { name: "Jag", result: "-18lbs", image: jagTransformation },
+    { name: "Tom", result: "-24lbs", image: tomTransformation },
+    { name: "Sarah", result: "-32lbs", image: sarahTransformation },
+    { name: "Reuben", result: "-16lbs", image: reubenTransformation },
+    { name: "Lawson", result: "-22lbs", image: lawsonTransformation },
+    { name: "Ed", result: "-45lbs", image: edTransformation },
+    { name: "Jon", result: "-58lbs", image: jonTransformation },
   ];
 
   const blueprintCards = [
@@ -92,19 +102,17 @@ const SixWeekHabitStack = () => {
                 key={index}
                 className="client-card p-4"
               >
-                <div className="aspect-square bg-foreground/5 rounded-xl mb-4 flex items-center justify-center">
-                  {item.hasImage ? (
-                    <span className="text-foreground/40 text-sm">Client Photo</span>
-                  ) : (
-                    <span className="text-foreground/30 text-lg font-semibold">{item.name}</span>
-                  )}
+                <div className="aspect-square bg-foreground/5 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={`${item.name}'s transformation`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                {item.hasImage && (
-                  <div className="text-center">
-                    <p className="text-primary font-bold text-xl">{item.name}</p>
-                    <p className="text-primary font-black text-2xl">{item.result}</p>
-                  </div>
-                )}
+                <div className="text-center">
+                  <p className="text-primary font-bold text-xl">{item.name}</p>
+                  <p className="text-primary font-black text-2xl">{item.result}</p>
+                </div>
               </div>
             ))}
           </div>
