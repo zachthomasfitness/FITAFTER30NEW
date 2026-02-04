@@ -6,7 +6,7 @@ declare global {
   }
 }
 
-const ThankYou = () => {
+const HabitKickstartThankYou = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     
@@ -130,10 +130,10 @@ const ThankYou = () => {
         {/* Footer */}
         <footer className="text-center pt-6 space-y-4">
           <a
-            href="/"
+            href="/habitkickstart"
             className="text-[#ffde59] hover:text-[#ffde59]/80 font-semibold text-sm md:text-base transition underline underline-offset-4"
           >
-            ← Back to homepage
+            ← Back to Habit Kickstart
           </a>
           <p className="text-foreground/40 text-sm">
             © 2026 Zach Thomas Coaching
@@ -144,4 +144,4 @@ const ThankYou = () => {
   );
 };
 
-export default ThankYou;
+export default HabitKickstartThankYou;
