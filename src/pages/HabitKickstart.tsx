@@ -3,7 +3,7 @@ import ProofSection from "@/components/ProofSection";
 import MissionFilterSection from "@/components/MissionFilterSection";
 import FooterCTA from "@/components/FooterCTA";
 
-const Index = () => {
+const HabitKickstart = () => {
   return (
     <main className="min-h-screen">
       <HeroSection />
@@ -14,4 +14,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HabitKickstart;
