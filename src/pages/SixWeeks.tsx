@@ -2,12 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import henryTransformation from "@/assets/henry-stack-transformation.png";
 import cianTransformation from "@/assets/cian-stack-transformation.jpg";
-import jagTransformation from "@/assets/jag-transformation.jpg";
 import tomTransformation from "@/assets/tom-stack-transformation.jpg";
-import sarahTransformation from "@/assets/sarah-transformation.png";
 import reubenTransformation from "@/assets/reuben-transformation.jpg";
-import lawsonTransformation from "@/assets/lawson-transformation.jpg";
-import edTransformation from "@/assets/ed-transformation.jpg";
 
 const SixWeeks = () => {
   const transformations = [
@@ -15,49 +11,49 @@ const SixWeeks = () => {
       name: "Tom", 
       result: "-24lbs", 
       image: tomTransformation,
-      story: "Trained twice per week and loves pizza."
+      story: "Trained 2x per week & loves pizza"
     },
     { 
       name: "Henry", 
       result: "-19lbs", 
       image: henryTransformation,
-      story: "Busy Director who finally found his 'Floor'."
+      story: "Busy Director who found his 'Floor'"
     },
     { 
       name: "Cian", 
       result: "-26lbs", 
       image: cianTransformation,
-      story: "Stopped the 2-hour daily gym grind."
+      story: "Dropped 26lbs without the daily gym grind"
     },
     { 
       name: "Eisa", 
       result: "-67lbs", 
-      image: jagTransformation,
-      story: "Navigated work travel without stalling."
-    },
-    { 
-      name: "Sarah", 
-      result: "-32lbs", 
-      image: sarahTransformation,
-      story: "Busy mum who reclaimed her confidence."
+      image: null,
+      story: "Navigated work travel without stalling"
     },
     { 
       name: "Reuben", 
       result: "-16lbs", 
       image: reubenTransformation,
-      story: "Finally built muscle while losing fat."
+      story: "Gained muscle while eating family takeaways"
     },
     { 
-      name: "Lawson", 
-      result: "-22lbs", 
-      image: lawsonTransformation,
-      story: "Dropped the all-or-nothing mindset."
+      name: "[Next Success]", 
+      result: "Story",
+      image: null,
+      story: "Your transformation could be here"
     },
     { 
-      name: "Ed", 
-      result: "-45lbs", 
-      image: edTransformation,
-      story: "Transformed his relationship with food."
+      name: "[Next Success]", 
+      result: "Story",
+      image: null,
+      story: "Your transformation could be here"
+    },
+    { 
+      name: "[Next Success]", 
+      result: "Story",
+      image: null,
+      story: "Your transformation could be here"
     },
   ];
 
@@ -112,67 +108,74 @@ const SixWeeks = () => {
     console.log("Join clicked - implement payment flow");
   };
 
+  // Duplicate the transformations for seamless infinite scroll
+  const duplicatedTransformations = [...transformations, ...transformations];
+
   return (
     <main className="min-h-screen">
-      {/* Hero Section - The Proof Wall */}
-      <section className="pt-8 md:pt-12 px-4">
+      {/* Above-The-Fold Hero Section */}
+      <section className="pt-4 md:pt-8 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Massive Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase text-center text-white mb-8 md:mb-12">
-            THE HABIT STACK IN ACTION
+          {/* Compact Headline */}
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-black uppercase text-center text-white mb-4 md:mb-8 leading-tight">
+            THE HABIT STACK<br className="md:hidden" /> IN ACTION
           </h1>
-          
-          {/* Transformation Gallery Slider */}
-          <div 
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 no-scrollbar"
-            style={{ scrollPaddingLeft: '7.5%', scrollPaddingRight: '7.5%' }}
-          >
-            {transformations.map((item, index) => (
-              <div 
-                key={index}
-                className="snap-card-peek snap-center flex-shrink-0 w-[85%] md:w-[calc(25%-0.75rem)]"
-              >
-                <div className="glass-card overflow-hidden">
-                  {/* Large Photo */}
-                  <div className="aspect-square overflow-hidden">
+        </div>
+      </section>
+
+      {/* Infinite Proof Carousel */}
+      <section className="overflow-hidden py-2 md:py-4">
+        <div 
+          className="flex animate-marquee hover:[animation-play-state:paused]"
+          style={{ width: 'max-content' }}
+        >
+          {duplicatedTransformations.map((item, index) => (
+            <div 
+              key={index}
+              className="flex-shrink-0 w-[200px] md:w-[240px] mx-2 md:mx-3"
+            >
+              <div className="glass-card overflow-hidden">
+                {/* Photo */}
+                <div className="aspect-square overflow-hidden bg-foreground/5">
+                  {item.image ? (
                     <img 
                       src={item.image} 
                       alt={`${item.name}'s transformation`}
                       className="w-full h-full object-cover"
                     />
-                  </div>
-                  
-                  {/* Name, Result & Story */}
-                  <div className="p-4 text-center">
-                    <p className="text-primary font-black text-xl md:text-2xl">
-                      {item.name}: {item.result}
-                    </p>
-                    <p className="text-foreground/60 text-sm mt-2 italic">
-                      "{item.story}"
-                    </p>
-                  </div>
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-foreground/30 text-xs">
+                      [Photo]
+                    </div>
+                  )}
+                </div>
+                
+                {/* Name, Result & Story */}
+                <div className="p-3 md:p-4 text-center">
+                  <p className="text-primary font-black text-base md:text-lg">
+                    {item.name}: {item.result}
+                  </p>
+                  <p className="text-foreground/60 text-xs md:text-sm mt-1 line-clamp-2">
+                    "{item.story}"
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <p className="text-center text-foreground/50 text-sm mt-4 md:hidden">
-            Swipe to see all proof
-          </p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Immediate CTA Section */}
-      <section className="py-12 md:py-16 px-4">
-        <div className="max-w-xl mx-auto text-center space-y-4">
+      <section className="py-4 md:py-8 px-4">
+        <div className="max-w-xl mx-auto text-center space-y-2">
           <Button 
             onClick={handleJoinClick}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg md:text-xl px-8 py-6 md:py-7 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
           >
             Join The Habit Stack Today <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <p className="text-foreground/50 text-sm">
-            Losing 10lbs in 6 weeks starts here
+          <p className="text-foreground/50 text-xs md:text-sm">
+            Limited spots for the Jan 26th Intake
           </p>
         </div>
       </section>
