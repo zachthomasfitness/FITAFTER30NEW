@@ -4,6 +4,11 @@ import henryTransformation from "@/assets/henry-stack-transformation.png";
 import cianTransformation from "@/assets/cian-stack-transformation.jpg";
 import tomTransformation from "@/assets/tom-stack-transformation.jpg";
 import reubenTransformation from "@/assets/reuben-transformation.jpg";
+import eisaTransformation from "@/assets/eisa-stack-transformation.jpg";
+import immyTransformation from "@/assets/immy-transformation.png";
+import callumTransformation from "@/assets/callum-transformation.jpg";
+import hollieTransformation from "@/assets/hollie-transformation.jpg";
+import jonTransformation from "@/assets/jon-stack-transformation.jpg";
 
 const SixWeeks = () => {
   const transformations = [
@@ -27,8 +32,8 @@ const SixWeeks = () => {
     },
     { 
       name: "Eisa", 
-      result: "-67lbs", 
-      image: null,
+      result: "-82lbs", 
+      image: eisaTransformation,
       story: "Navigated work travel without stalling"
     },
     { 
@@ -38,22 +43,28 @@ const SixWeeks = () => {
       story: "Gained muscle while eating family takeaways"
     },
     { 
-      name: "[Next Success]", 
-      result: "Story",
-      image: null,
-      story: "Your transformation could be here"
+      name: "Immy", 
+      result: "-20lbs",
+      image: immyTransformation,
+      story: "Transformed while balancing a busy schedule"
     },
     { 
-      name: "[Next Success]", 
-      result: "Story",
-      image: null,
-      story: "Your transformation could be here"
+      name: "Callum", 
+      result: "+10kg Muscle",
+      image: callumTransformation,
+      story: "Built lean muscle with minimal gym time"
     },
     { 
-      name: "[Next Success]", 
-      result: "Story",
-      image: null,
-      story: "Your transformation could be here"
+      name: "Hollie", 
+      result: "-23lbs",
+      image: hollieTransformation,
+      story: "Gained strength and confidence"
+    },
+    { 
+      name: "Jon", 
+      result: "-33lbs",
+      image: jonTransformation,
+      story: "Complete body transformation"
     },
   ];
 
