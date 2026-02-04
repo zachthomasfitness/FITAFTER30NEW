@@ -128,9 +128,8 @@ const SixWeeks = () => {
       <section className="pt-4 md:pt-8 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
-          <h1 className="text-xl md:text-4xl lg:text-5xl font-black text-center text-white mb-4 md:mb-8 leading-tight">
-            Give me 6 weeks to install the Habit Stack,<br />
-            <span className="text-primary">and I'll give you a body you're actually proud to own.</span>
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-center text-white mb-4 md:mb-8 leading-[1.05]">
+            Give me 6 weeks to install the Habit Stack, and I'll give you a body you're actually proud to own.
           </h1>
         </div>
       </section>
