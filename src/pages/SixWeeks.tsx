@@ -128,8 +128,9 @@ const SixWeeks = () => {
       <section className="pt-4 md:pt-8 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-black uppercase text-center text-white mb-4 md:mb-8 leading-tight">
-            THE HABIT STACK<br className="md:hidden" /> IN ACTION
+          <h1 className="text-xl md:text-4xl lg:text-5xl font-black text-center text-white mb-4 md:mb-8 leading-tight">
+            Give me 6 weeks to install the Habit Stack,<br />
+            <span className="text-primary">and I'll give you a body you're actually proud to own.</span>
           </h1>
         </div>
       </section>
