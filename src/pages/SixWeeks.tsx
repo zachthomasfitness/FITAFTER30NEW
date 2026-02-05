@@ -9,6 +9,7 @@ import immyTransformation from "@/assets/immy-transformation.png";
 import callumTransformation from "@/assets/callum-transformation.jpg";
 import hollieTransformation from "@/assets/hollie-transformation.jpg";
 import jonTransformation from "@/assets/jon-stack-transformation.jpg";
+import appScreenshot from "@/assets/app-screenshot.png";
 
 const SixWeeks = () => {
   const transformations = [
@@ -216,10 +217,14 @@ const SixWeeks = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
             {/* Phone Mockup */}
             <div className="flex justify-center order-2 lg:order-1">
-              <div className="relative w-64 h-[500px] bg-foreground/5 rounded-[3rem] border-4 border-foreground/20 p-2">
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-foreground/20 rounded-full"></div>
-                <div className="w-full h-full bg-foreground/10 rounded-[2.5rem] flex items-center justify-center">
-                  <span className="text-foreground/40 text-sm text-center px-4">[App Screenshot Mockup]</span>
+              <div className="relative w-64 h-[520px] bg-black rounded-[3rem] border-4 border-foreground/30 p-2 shadow-2xl">
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-black rounded-full z-10"></div>
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                  <img 
+                    src={appScreenshot} 
+                    alt="Habit Stack App" 
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
             </div>
