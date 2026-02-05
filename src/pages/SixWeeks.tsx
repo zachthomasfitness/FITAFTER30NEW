@@ -177,19 +177,29 @@ const SixWeeks = () => {
       {/* Immediate CTA Section */}
       <section className="py-4 md:py-6 px-4">
         <div className="max-w-xl mx-auto text-center space-y-3">
+          {/* Today-Only Bonus Badge */}
+          <div className="inline-block bg-primary/20 border border-primary/40 rounded-full px-4 py-1.5 mb-2">
+            <span className="text-primary text-sm font-semibold">🎁 Today-Only Bonus: 2x 1-1 Coaching Calls</span>
+          </div>
+          
           <a 
             href={PAYMENT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
+            className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
           >
-            <span className="inline-flex items-center justify-center gap-2">
-              Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
-            </span>
+            Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
           </a>
-          <p className="text-foreground/50 text-xs md:text-sm">
-            Limited spots for the Jan 26th Intake
-          </p>
+          
+          {/* Price Anchor */}
+          <div className="pt-2">
+            <p className="text-foreground/50 text-sm">
+              Retail Price: <span className="line-through">£199</span>
+            </p>
+            <p className="text-primary font-black text-2xl md:text-3xl">
+              Your Kickstart Price: £149
+            </p>
+          </div>
           
           {/* Trust Elements */}
           <div className="pt-2 space-y-2">
@@ -301,8 +311,18 @@ const SixWeeks = () => {
             </div>
             
             {/* Price */}
-            <div className="text-primary font-black text-5xl md:text-7xl">
-              ONLY £149
+            <div className="space-y-2">
+              <p className="text-foreground/50 text-lg">
+                Retail Price: <span className="line-through">£199</span>
+              </p>
+              <p className="text-primary font-black text-5xl md:text-7xl">
+                Your Kickstart Price: £149
+              </p>
+            </div>
+            
+            {/* Today-Only Bonus Badge */}
+            <div className="inline-block bg-primary/20 border border-primary/40 rounded-full px-4 py-2">
+              <span className="text-primary text-sm font-semibold">🎁 Today-Only Bonus: 2x 1-1 Coaching Calls</span>
             </div>
             
             <a 
@@ -313,6 +333,33 @@ const SixWeeks = () => {
             >
               Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
             </a>
+            
+            {/* Trust Elements */}
+            <div className="space-y-2">
+              <p className="text-foreground/40 text-xs flex items-center justify-center gap-1.5">
+                <Lock className="h-3 w-3" />
+                Secure payment processed via FastPay
+              </p>
+              <div className="flex items-center justify-center gap-3 opacity-40">
+                {/* Visa */}
+                <svg className="h-6 w-auto" viewBox="0 0 48 32" fill="currentColor">
+                  <rect width="48" height="32" rx="4" fill="currentColor" fillOpacity="0.1"/>
+                  <path d="M19.5 21h-2.7l1.7-10.5h2.7L19.5 21zm-5.1 0h-2.8l-2.4-8.1-.4 2.1-1 5.1c-.1.5-.4.9-1 .9h-4.4l-.1-.4c1.3-.3 2.5-.8 3.3-1.3l2.3 5.2h2.9l4.4-10.5h-2.8l-1 3z" fill="currentColor"/>
+                  <path d="M44.5 21h-2.4l-.4-1.9h-3.3L37.5 21h-2.7l3.8-9.6c.2-.5.6-.9 1.2-.9h2.2L44.5 21zm-3.3-4.3l-1.4-4-.8 4h2.2zM31 13.8l.4-2.3c-.8-.3-2-.6-3.3-.6-1.8 0-3.6.9-3.6 2.7 0 1.2 1 1.9 1.8 2.3.8.4 1.1.7 1.1 1.1 0 .6-.6.9-1.3.9-.9 0-1.7-.2-2.4-.5l-.4 2.4c.6.2 1.6.4 2.7.4 2.1 0 3.8-1 3.8-2.9 0-1-.6-1.8-1.9-2.4-.8-.4-1.2-.6-1.2-1 0-.3.4-.7 1.1-.7.8 0 1.5.2 2 .4l.2.2z" fill="currentColor"/>
+                </svg>
+                {/* Mastercard */}
+                <svg className="h-6 w-auto" viewBox="0 0 48 32" fill="currentColor">
+                  <rect width="48" height="32" rx="4" fill="currentColor" fillOpacity="0.1"/>
+                  <circle cx="19" cy="16" r="8" fill="currentColor" fillOpacity="0.3"/>
+                  <circle cx="29" cy="16" r="8" fill="currentColor" fillOpacity="0.3"/>
+                </svg>
+                {/* Amex */}
+                <svg className="h-6 w-auto" viewBox="0 0 48 32" fill="currentColor">
+                  <rect width="48" height="32" rx="4" fill="currentColor" fillOpacity="0.1"/>
+                  <path d="M10 16h28M24 10v12" stroke="currentColor" strokeWidth="2" strokeOpacity="0.3"/>
+                </svg>
+              </div>
+            </div>
             
             <p className="text-foreground/40 text-sm">
               © 2026 Zach Thomas Coaching
