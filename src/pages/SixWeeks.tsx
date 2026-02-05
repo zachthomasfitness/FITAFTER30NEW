@@ -129,6 +129,11 @@ const SixWeeks = () => {
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-black text-center text-white mb-4 md:mb-6 leading-[1.1] tracking-tight uppercase">
             Give me 6 weeks to install the <span className="text-primary">Habit Stack</span>, and I'll give you a body you're actually <span className="text-primary">proud to own</span>.
           </h1>
+          
+          {/* Sub-heading */}
+          <p className="text-foreground/60 text-base md:text-lg text-center max-w-3xl mx-auto mb-2">
+            These guys stopped trying to be perfect, and finally got results by stacking new habits.
+          </p>
         </div>
       </section>
 
@@ -177,11 +182,6 @@ const SixWeeks = () => {
       {/* Immediate CTA Section */}
       <section className="py-4 md:py-6 px-4">
         <div className="max-w-xl mx-auto text-center space-y-3">
-          {/* Today-Only Bonus Badge */}
-          <div className="inline-block bg-primary/20 border border-primary/40 rounded-full px-4 py-1.5 mb-2">
-            <span className="text-primary text-sm font-semibold">🎁 Today-Only Bonus: 2x 1-1 Coaching Calls</span>
-          </div>
-          
           <a 
             href={PAYMENT_URL}
             target="_blank"
@@ -190,16 +190,6 @@ const SixWeeks = () => {
           >
             Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
           </a>
-          
-          {/* Price Anchor */}
-          <div className="pt-2">
-            <p className="text-foreground/50 text-sm">
-              Retail Price: <span className="line-through">£199</span>
-            </p>
-            <p className="text-primary font-black text-2xl md:text-3xl">
-              Your Kickstart Price: £149
-            </p>
-          </div>
           
           {/* Trust Elements */}
           <div className="pt-2 space-y-2">
@@ -315,14 +305,9 @@ const SixWeeks = () => {
               <p className="text-foreground/50 text-lg">
                 Retail Price: <span className="line-through">£199</span>
               </p>
-              <p className="text-primary font-black text-5xl md:text-7xl">
-                Your Kickstart Price: £149
+              <p className="text-primary font-black text-6xl md:text-8xl">
+                ONLY £149
               </p>
-            </div>
-            
-            {/* Today-Only Bonus Badge */}
-            <div className="inline-block bg-primary/20 border border-primary/40 rounded-full px-4 py-2">
-              <span className="text-primary text-sm font-semibold">🎁 Today-Only Bonus: 2x 1-1 Coaching Calls</span>
             </div>
             
             <a 
