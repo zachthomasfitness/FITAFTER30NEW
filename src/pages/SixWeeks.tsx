@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Lock } from "lucide-react";
 import henryTransformation from "@/assets/henry-stack-transformation.png";
 import cianTransformation from "@/assets/cian-stack-transformation.jpg";
 import tomTransformation from "@/assets/tom-stack-transformation.jpg";
@@ -10,6 +10,8 @@ import callumTransformation from "@/assets/callum-transformation.jpg";
 import hollieTransformation from "@/assets/hollie-transformation.jpg";
 import jonTransformation from "@/assets/jon-stack-transformation.jpg";
 import appScreenshot from "@/assets/app-screenshot.png";
+
+const PAYMENT_URL = "https://link.fastpaydirect.com/payment-link/69845a993533382a86c60462";
 
 const SixWeeks = () => {
   const transformations = [
@@ -115,11 +117,6 @@ const SixWeeks = () => {
     },
   ];
 
-  const handleJoinClick = () => {
-    // Future: redirect to payment/checkout flow
-    console.log("Join clicked - implement payment flow");
-  };
-
   // Duplicate the transformations for seamless infinite scroll
   const duplicatedTransformations = [...transformations, ...transformations];
 
@@ -129,8 +126,8 @@ const SixWeeks = () => {
       <section className="pt-4 md:pt-8 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-center text-white mb-4 md:mb-8 leading-[1.05]">
-            Give me 6 weeks to install the Habit Stack, and I'll give you a body you're actually proud to own.
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-black text-center text-white mb-4 md:mb-6 leading-[1.1] tracking-tight uppercase">
+            Give me 6 weeks to install the <span className="text-primary">Habit Stack</span>, and I'll give you a body you're actually <span className="text-primary">proud to own</span>.
           </h1>
         </div>
       </section>
@@ -178,17 +175,48 @@ const SixWeeks = () => {
       </section>
 
       {/* Immediate CTA Section */}
-      <section className="py-4 md:py-8 px-4">
-        <div className="max-w-xl mx-auto text-center space-y-2">
-          <Button 
-            onClick={handleJoinClick}
+      <section className="py-4 md:py-6 px-4">
+        <div className="max-w-xl mx-auto text-center space-y-3">
+          <a 
+            href={PAYMENT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
           >
-            Join The Habit Stack Today <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+            <span className="inline-flex items-center justify-center gap-2">
+              Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
+            </span>
+          </a>
           <p className="text-foreground/50 text-xs md:text-sm">
             Limited spots for the Jan 26th Intake
           </p>
+          
+          {/* Trust Elements */}
+          <div className="pt-2 space-y-2">
+            <p className="text-foreground/40 text-xs flex items-center justify-center gap-1.5">
+              <Lock className="h-3 w-3" />
+              Secure payment processed via FastPay
+            </p>
+            <div className="flex items-center justify-center gap-3 opacity-40">
+              {/* Visa */}
+              <svg className="h-6 w-auto" viewBox="0 0 48 32" fill="currentColor">
+                <rect width="48" height="32" rx="4" fill="currentColor" fillOpacity="0.1"/>
+                <path d="M19.5 21h-2.7l1.7-10.5h2.7L19.5 21zm-5.1 0h-2.8l-2.4-8.1-.4 2.1-1 5.1c-.1.5-.4.9-1 .9h-4.4l-.1-.4c1.3-.3 2.5-.8 3.3-1.3l2.3 5.2h2.9l4.4-10.5h-2.8l-1 3z" fill="currentColor"/>
+                <path d="M44.5 21h-2.4l-.4-1.9h-3.3L37.5 21h-2.7l3.8-9.6c.2-.5.6-.9 1.2-.9h2.2L44.5 21zm-3.3-4.3l-1.4-4-.8 4h2.2zM31 13.8l.4-2.3c-.8-.3-2-.6-3.3-.6-1.8 0-3.6.9-3.6 2.7 0 1.2 1 1.9 1.8 2.3.8.4 1.1.7 1.1 1.1 0 .6-.6.9-1.3.9-.9 0-1.7-.2-2.4-.5l-.4 2.4c.6.2 1.6.4 2.7.4 2.1 0 3.8-1 3.8-2.9 0-1-.6-1.8-1.9-2.4-.8-.4-1.2-.6-1.2-1 0-.3.4-.7 1.1-.7.8 0 1.5.2 2 .4l.2.2z" fill="currentColor"/>
+              </svg>
+              {/* Mastercard */}
+              <svg className="h-6 w-auto" viewBox="0 0 48 32" fill="currentColor">
+                <rect width="48" height="32" rx="4" fill="currentColor" fillOpacity="0.1"/>
+                <circle cx="19" cy="16" r="8" fill="currentColor" fillOpacity="0.3"/>
+                <circle cx="29" cy="16" r="8" fill="currentColor" fillOpacity="0.3"/>
+              </svg>
+              {/* Amex */}
+              <svg className="h-6 w-auto" viewBox="0 0 48 32" fill="currentColor">
+                <rect width="48" height="32" rx="4" fill="currentColor" fillOpacity="0.1"/>
+                <path d="M10 16h28M24 10v12" stroke="currentColor" strokeWidth="2" strokeOpacity="0.3"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -277,12 +305,14 @@ const SixWeeks = () => {
               ONLY £149
             </div>
             
-            <Button 
-              onClick={handleJoinClick}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
+            <a 
+              href={PAYMENT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
             >
-              Join The Habit Stack Today <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+              Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
+            </a>
             
             <p className="text-foreground/40 text-sm">
               © 2026 Zach Thomas Coaching
