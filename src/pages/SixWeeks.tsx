@@ -48,7 +48,7 @@ const SixWeeks = () => {
     {
       number: "03",
       title: "Confident Lifter Blueprint",
-      description: "Stop feeling lost in the gym — learn the mechanics to lift effectively and maximise muscle gain.",
+      description: "Stop feeling lost in the gym - learn the mechanics to lift effectively and maximise muscle gain.",
     },
     {
       number: "04",
