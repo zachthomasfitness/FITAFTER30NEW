@@ -60,23 +60,23 @@ const SixWeeks = () => {
   const appFeatures = [
     {
       number: "01",
-      title: "Personal Programme & Exercise Videos",
-      description: "Step-by-step guidance on every lift.",
+      title: "Personalised Programme & Workout Videos",
+      description: "Training optimised to fit your ability, schedule, and equipment access. No random workouts. No guesswork.",
     },
     {
       number: "02",
-      title: "Live Coaching Adjustments",
-      description: "I tweak your plan as you progress.",
+      title: "Open Door Accountability",
+      description: "I coach you, check in on you, and support you with live adjustments as and when needed.",
     },
     {
       number: "03",
-      title: "Private Group Accountability",
-      description: "High-performing community for the 6 weeks.",
+      title: "Private Group Support",
+      description: "Weekly group calls hosted to answer questions and overcome immediate hurdles.",
     },
     {
       number: "04",
-      title: "Weekly Live Coaching Calls",
-      description: "Direct access to me to solve your hurdles.",
+      title: "Food Journal",
+      description: "Implement the foodie-flex framework in the app to keep you accountable to the plan we create.",
     },
   ];
 
@@ -240,7 +240,7 @@ const SixWeeks = () => {
                   <div key={feature.number} className="flex gap-4 justify-center lg:justify-start">
                     <span className="text-primary font-black text-xl">{feature.number}</span>
                     <div className="text-left">
-                      <h3 className="text-white font-bold text-lg">{feature.title}</h3>
+                      <h3 className="text-white font-bold text-lg uppercase">{feature.title}</h3>
                       <p className="text-foreground/60">{feature.description}</p>
                     </div>
                   </div>
