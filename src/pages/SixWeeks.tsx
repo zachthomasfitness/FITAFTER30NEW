@@ -250,53 +250,27 @@ const SixWeeks = () => {
           </div>
           
           {/* Embedded Checkout */}
-          <div id="checkout" className="relative scroll-mt-8">
-            {/* Outer yellow glow */}
-            <div className="absolute -inset-4 rounded-3xl opacity-30 blur-2xl pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, #ffde59 0%, transparent 70%)' }} />
-            
-            <div 
-              className="relative rounded-2xl p-[2px] overflow-hidden"
-              style={{ background: 'linear-gradient(135deg, #ffde59, transparent 60%)' }}
-            >
-              <div 
-                className="rounded-2xl overflow-hidden"
-                style={{ 
-                  background: '#050505',
-                  boxShadow: 'inset 0 0 30px rgba(255, 222, 89, 0.08), inset 0 0 60px rgba(0,0,0,0.5)'
-                }}
-              >
-                {/* Secure slot header */}
-                <div className="bg-[#1a1a1a] px-4 py-2.5 flex items-center justify-center gap-2">
-                  <p className="text-[10px] font-bold text-white uppercase tracking-widest">
-                    🔐 ENCRYPTED SECURE CHECKOUT
+          <div id="checkout" className="glass-card p-4 md:p-8 scroll-mt-8">
+            <div className="relative w-full" style={{ minHeight: '650px' }}>
+              {iframeLoading && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
+                  <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                  <p className="text-[11px] font-semibold text-foreground/40 uppercase tracking-wider">
+                    🔒 Loading Secure Checkout…
                   </p>
                 </div>
-
-                <div className="p-4 md:p-8">
-                  <div className="relative w-full" style={{ minHeight: '650px' }}>
-                    {iframeLoading && (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
-                        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                        <p className="text-[11px] font-semibold text-foreground/40 uppercase tracking-wider">
-                          🔒 Loading Secure Checkout…
-                        </p>
-                      </div>
-                    )}
-                    <iframe
-                      src={PAYMENT_URL}
-                      title="Secure Checkout"
-                      className="w-full rounded-lg h-[800px] md:h-[650px]"
-                      style={{ border: 'none' }}
-                      onLoad={() => setIframeLoading(false)}
-                    />
-                  </div>
-                </div>
-
-                <p className="pb-3 text-[10px] font-semibold text-slate-500 text-center">
-                  🔒 SECURE CHECKOUT VIA FASTPAY
-                </p>
-              </div>
+              )}
+              <iframe
+                src={PAYMENT_URL}
+                title="Secure Checkout"
+                className="w-full rounded-xl"
+                style={{ height: '650px', border: 'none' }}
+                onLoad={() => setIframeLoading(false)}
+              />
             </div>
+            <p className="pt-3 text-[10px] font-semibold text-slate-500 text-center">
+              🔒 SECURE CHECKOUT VIA FASTPAY
+            </p>
           </div>
           
           <p className="text-foreground/40 text-sm text-center pt-4">
