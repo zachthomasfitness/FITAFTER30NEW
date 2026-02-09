@@ -15,87 +15,118 @@ import jagTransformation from "@/assets/jag-stack-transformation.jpg";
 import edTransformation from "@/assets/ed-stack-transformation.jpg";
 import appScreenshot from "@/assets/app-screenshot.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
-
 const PAYMENT_URL = "https://link.fastpaydirect.com/payment-link/69845a993533382a86c60462";
-
 const SixWeeks = () => {
   const [iframeLoading, setIframeLoading] = useState(true);
-  const transformations = [
-    { name: "Hollie", result: "-23lbs", image: hollieTransformation, story: "Had never stepped foot in a gym before" },
-    { name: "Callum", result: "+10kg Muscle", image: callumTransformation, story: "Stayed consistent despite 12 hour work days" },
-    { name: "Lawson", result: "-18lbs", image: lawsonTransformation, story: "Gained the energy to power through long days on his feet" },
-    { name: "Immy", result: "-20lbs", image: immyTransformation, story: "Hectic schedule running her own company" },
-    { name: "Cian", result: "-26lbs", image: cianTransformation, story: "Stopped training daily and followed a regimented plan" },
-    { name: "Ed", result: "-52lbs", image: edTransformation, story: "Lost weight 52lbs and transformed his confidence" },
-    { name: "Sarah", result: "Total Transformation", image: sarahTransformation, story: "From complete beginner to fitness lover" },
-    { name: "Henry", result: "-19lbs", image: henryTransformation, story: "Still gets to enjoy a few drinks at the weekend" },
-    { name: "Jon", result: "-43lbs", image: jonTransformation, story: "Lost 43lbs to regain his confidence" },
-    { name: "Jag", result: "+15lbs Muscle", image: jagTransformation, story: "Gained 15lbs of muscle whilst running his own business" },
-    { name: "Tom", result: "-24lbs", image: tomTransformation, story: "Feels great in his work shirts again" },
-    { name: "Eisa", result: "-82lbs", image: eisaTransformation, story: "Changed his life with simple changes to his diet" },
-  ];
-
-  const blueprintCards = [
-    {
-      number: "01",
-      title: "Lean Build Programme",
-      description: "Personalised training programme to get maximum results from limited gym time.",
-    },
-    {
-      number: "02",
-      title: "Foodie-Flex Framework",
-      description: "A framework for foodie's like myself to still get lean and feel great whilst eating the foods they love.",
-    },
-    {
-      number: "03",
-      title: "Confident Lifter Blueprint",
-      description: "Stop feeling lost in the gym - learn the mechanics to lift effectively and maximise muscle gain.",
-    },
-    {
-      number: "04",
-      title: "Consistency Compass",
-      description: "This is your strategy for staying lean & in control for life. No more inconsistent, stop-start cycle. The last plan you'll ever need.",
-    },
-  ];
-
-  const appFeatures = [
-    {
-      number: "01",
-      title: "Personalised Programme & Workout Videos",
-      description: "Training optimised to fit your ability, schedule, and equipment access. No random workouts. No guesswork.",
-    },
-    {
-      number: "02",
-      title: "Open Door Accountability",
-      description: "I coach you, check in on you, and support you with live adjustments as and when needed.",
-    },
-    {
-      number: "03",
-      title: "Private Group Support",
-      description: "Weekly group calls hosted to answer questions and overcome immediate hurdles.",
-    },
-    {
-      number: "04",
-      title: "Food Journal",
-      description: "Implement the foodie-flex framework in the app to keep you accountable to the plan we create.",
-    },
-  ];
+  const transformations = [{
+    name: "Hollie",
+    result: "-23lbs",
+    image: hollieTransformation,
+    story: "Had never stepped foot in a gym before"
+  }, {
+    name: "Callum",
+    result: "+10kg Muscle",
+    image: callumTransformation,
+    story: "Stayed consistent despite 12 hour work days"
+  }, {
+    name: "Lawson",
+    result: "-18lbs",
+    image: lawsonTransformation,
+    story: "Gained the energy to power through long days on his feet"
+  }, {
+    name: "Immy",
+    result: "-20lbs",
+    image: immyTransformation,
+    story: "Hectic schedule running her own company"
+  }, {
+    name: "Cian",
+    result: "-26lbs",
+    image: cianTransformation,
+    story: "Stopped training daily and followed a regimented plan"
+  }, {
+    name: "Ed",
+    result: "-52lbs",
+    image: edTransformation,
+    story: "Lost weight 52lbs and transformed his confidence"
+  }, {
+    name: "Sarah",
+    result: "Total Transformation",
+    image: sarahTransformation,
+    story: "From complete beginner to fitness lover"
+  }, {
+    name: "Henry",
+    result: "-19lbs",
+    image: henryTransformation,
+    story: "Still gets to enjoy a few drinks at the weekend"
+  }, {
+    name: "Jon",
+    result: "-43lbs",
+    image: jonTransformation,
+    story: "Lost 43lbs to regain his confidence"
+  }, {
+    name: "Jag",
+    result: "+15lbs Muscle",
+    image: jagTransformation,
+    story: "Gained 15lbs of muscle whilst running his own business"
+  }, {
+    name: "Tom",
+    result: "-24lbs",
+    image: tomTransformation,
+    story: "Feels great in his work shirts again"
+  }, {
+    name: "Eisa",
+    result: "-82lbs",
+    image: eisaTransformation,
+    story: "Changed his life with simple changes to his diet"
+  }];
+  const blueprintCards = [{
+    number: "01",
+    title: "Lean Build Programme",
+    description: "Personalised training programme to get maximum results from limited gym time."
+  }, {
+    number: "02",
+    title: "Foodie-Flex Framework",
+    description: "A framework for foodie's like myself to still get lean and feel great whilst eating the foods they love."
+  }, {
+    number: "03",
+    title: "Confident Lifter Blueprint",
+    description: "Stop feeling lost in the gym - learn the mechanics to lift effectively and maximise muscle gain."
+  }, {
+    number: "04",
+    title: "Consistency Compass",
+    description: "This is your strategy for staying lean & in control for life. No more inconsistent, stop-start cycle. The last plan you'll ever need."
+  }];
+  const appFeatures = [{
+    number: "01",
+    title: "Personalised Programme & Workout Videos",
+    description: "Training optimised to fit your ability, schedule, and equipment access. No random workouts. No guesswork."
+  }, {
+    number: "02",
+    title: "Open Door Accountability",
+    description: "I coach you, check in on you, and support you with live adjustments as and when needed."
+  }, {
+    number: "03",
+    title: "Private Group Support",
+    description: "Weekly group calls hosted to answer questions and overcome immediate hurdles."
+  }, {
+    number: "04",
+    title: "Food Journal",
+    description: "Implement the foodie-flex framework in the app to keep you accountable to the plan we create."
+  }];
 
   // Duplicate the transformations for seamless infinite scroll
   const duplicatedTransformations = [...transformations, ...transformations];
-
-  return (
-    <main className="min-h-screen">
+  return <main className="min-h-screen">
       {/* Above-The-Fold Hero Section */}
       <section className="pt-14 md:pt-24 px-1 md:px-2">
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
-          <h1 className="text-[28px] md:text-5xl lg:text-7xl font-black text-center text-white mb-4 md:mb-6 leading-[1.1] md:leading-[1.05] tracking-tight uppercase">
+          <h1 className="text-[28px] md:text-5xl lg:text-7xl font-black text-center text-white mb-4 md:mb-6 leading-[1.1] md:leading-[1.05] tracking-tight uppercase px-0">
             Give me 6 weeks to install the <span className="text-primary">Habit Stack</span>, and I'll give you a body you're actually <span className="text-primary">proud to own</span>.
           </h1>
           
           {/* Sub-heading */}
-          <p className="text-foreground/60 text-base md:text-lg text-center max-w-3xl mx-auto mb-2">
+          <p className="text-foreground/60 text-base md:text-lg text-center max-w-3xl mx-auto mb-2 px-0 pr-[10px] pl-[10px]">
             These guys stopped trying to be perfect, and finally got results by stacking new habits.
           </p>
         </div>
@@ -103,29 +134,16 @@ const SixWeeks = () => {
 
       {/* Infinite Proof Carousel */}
       <section className="overflow-hidden mt-10 md:mt-16 py-2 md:py-4">
-        <div 
-          className="flex animate-marquee hover:[animation-play-state:paused]"
-          style={{ width: 'max-content' }}
-        >
-          {duplicatedTransformations.map((item, index) => (
-            <div 
-              key={index}
-              className="flex-shrink-0 w-[200px] md:w-[240px] mx-2 md:mx-3"
-            >
+        <div className="flex animate-marquee hover:[animation-play-state:paused]" style={{
+        width: 'max-content'
+      }}>
+          {duplicatedTransformations.map((item, index) => <div key={index} className="flex-shrink-0 w-[200px] md:w-[240px] mx-2 md:mx-3">
               <div className="glass-card overflow-hidden">
                 {/* Photo */}
                 <div className="aspect-square overflow-hidden bg-foreground/5">
-                  {item.image ? (
-                    <img 
-                      src={item.image} 
-                      alt={`${item.name}'s transformation`}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center text-foreground/30 text-xs">
+                  {item.image ? <img src={item.image} alt={`${item.name}'s transformation`} className="w-full h-full object-cover" /> : <div className="w-full h-full flex items-center justify-center text-foreground/30 text-xs">
                       [Photo]
-                    </div>
-                  )}
+                    </div>}
                 </div>
                 
                 {/* Name, Result & Story */}
@@ -138,18 +156,16 @@ const SixWeeks = () => {
                   </p>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
       </section>
 
       {/* Immediate CTA Section - smooth scroll to checkout */}
       <section className="py-4 md:py-6 px-4">
         <div className="max-w-xl mx-auto text-center space-y-3">
-          <button 
-            onClick={() => document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
-          >
+          <button onClick={() => document.getElementById('checkout')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto">
             Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
           </button>
           
@@ -195,10 +211,9 @@ const SixWeeks = () => {
       {/* Mid-Page CTA */}
       <section className="py-6 md:py-8 px-4">
         <div className="text-center">
-          <button
-            onClick={() => document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary bg-transparent hover:bg-primary/10 font-bold text-sm md:text-base px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
-          >
+          <button onClick={() => document.getElementById('checkout')?.scrollIntoView({
+          behavior: 'smooth'
+        })} className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary bg-transparent hover:bg-primary/10 font-bold text-sm md:text-base px-6 py-3 rounded-full transition-all duration-300 hover:scale-105">
             YES, I'M OVERLOADED - START MY STACK →
           </button>
         </div>
@@ -212,13 +227,11 @@ const SixWeeks = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {blueprintCards.map((card) => (
-              <div key={card.number} className="glass-card p-6 md:p-8 text-center">
+            {blueprintCards.map(card => <div key={card.number} className="glass-card p-6 md:p-8 text-center">
                 <span className="text-primary font-black text-4xl">{card.number}</span>
                 <h3 className="text-white font-bold text-xl md:text-2xl mt-4 mb-2">{card.title}</h3>
                 <p className="text-foreground/60">{card.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -239,11 +252,7 @@ const SixWeeks = () => {
                 <div className="absolute left-[-8px] top-4 w-52 h-[440px] bg-black rounded-[2.5rem] border-[3px] border-foreground/30 p-1.5 shadow-2xl -rotate-[10deg] origin-center">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-full z-10"></div>
                   <div className="w-full h-full bg-white rounded-[2.2rem] overflow-hidden">
-                    <img 
-                      src={appScreenshot2} 
-                      alt="Habit Stack App Workout View" 
-                      className="w-full h-full object-cover object-top"
-                    />
+                    <img src={appScreenshot2} alt="Habit Stack App Workout View" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
 
@@ -251,11 +260,7 @@ const SixWeeks = () => {
                 <div className="absolute right-[-8px] top-4 w-52 h-[440px] bg-black rounded-[2.5rem] border-[3px] border-foreground/30 p-1.5 shadow-2xl z-10">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-full z-10"></div>
                   <div className="w-full h-full bg-white rounded-[2.2rem] overflow-hidden">
-                    <img 
-                      src={appScreenshot} 
-                      alt="Habit Stack App" 
-                      className="w-full h-full object-cover object-top"
-                    />
+                    <img src={appScreenshot} alt="Habit Stack App" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
               </div>
@@ -269,15 +274,13 @@ const SixWeeks = () => {
               </h2>
               
               <div className="space-y-6">
-                {appFeatures.map((feature) => (
-                  <div key={feature.number} className="flex gap-4 justify-center lg:justify-start">
+                {appFeatures.map(feature => <div key={feature.number} className="flex gap-4 justify-center lg:justify-start">
                     <span className="text-primary font-black text-xl">{feature.number}</span>
                     <div className="text-left">
                       <h3 className="text-white font-bold text-lg uppercase">{feature.title}</h3>
                       <p className="text-foreground/60">{feature.description}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -310,22 +313,19 @@ const SixWeeks = () => {
           
           {/* Embedded Checkout */}
           <div id="checkout" className="glass-card p-4 md:p-8 scroll-mt-8">
-            <div className="relative w-full" style={{ minHeight: '650px' }}>
-              {iframeLoading && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
+            <div className="relative w-full" style={{
+            minHeight: '650px'
+          }}>
+              {iframeLoading && <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
                   <Loader2 className="h-8 w-8 animate-spin text-primary" />
                   <p className="text-[11px] font-semibold text-foreground/40 uppercase tracking-wider">
                     🔒 Loading Secure Checkout…
                   </p>
-                </div>
-              )}
-              <iframe
-                src={PAYMENT_URL}
-                title="Secure Checkout"
-                className="w-full rounded-xl"
-                style={{ height: '650px', border: 'none' }}
-                onLoad={() => setIframeLoading(false)}
-              />
+                </div>}
+              <iframe src={PAYMENT_URL} title="Secure Checkout" className="w-full rounded-xl" style={{
+              height: '650px',
+              border: 'none'
+            }} onLoad={() => setIframeLoading(false)} />
             </div>
             <p className="pt-3 text-[10px] font-semibold text-slate-500 text-center">
               🔒 SECURE CHECKOUT VIA FASTPAY
@@ -337,8 +337,6 @@ const SixWeeks = () => {
           </p>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default SixWeeks;
