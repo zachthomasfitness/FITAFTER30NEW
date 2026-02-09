@@ -87,7 +87,7 @@ const SixWeeks = () => {
   return (
     <main className="min-h-screen">
       {/* Above-The-Fold Hero Section */}
-      <section className="pt-14 md:pt-24 px-4">
+      <section className="pt-14 md:pt-24 px-2 md:px-4">
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-center text-white mb-4 md:mb-6 leading-[1.05] tracking-tight uppercase">
