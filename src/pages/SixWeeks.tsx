@@ -236,13 +236,13 @@ const SixWeeks = () => {
                 </div>
 
                 {/* Background Phone - right side, tilted, higher */}
-                <div className="absolute right-[-8px] top-[-10px] w-52 h-[440px] bg-[hsl(var(--foreground)/0.15)] rounded-[2.5rem] border-2 border-foreground/20 p-1.5 shadow-2xl rotate-[10deg] origin-center">
-                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-[hsl(var(--foreground)/0.3)] rounded-full z-10"></div>
-                  <div className="w-full h-full bg-white/5 rounded-[2.2rem] overflow-hidden">
+                <div className="absolute right-[-8px] top-[-10px] w-52 h-[440px] bg-black rounded-[2.5rem] border-[3px] border-foreground/30 p-1.5 shadow-2xl rotate-[10deg] origin-center">
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-full z-10"></div>
+                  <div className="w-full h-full bg-white rounded-[2.2rem] overflow-hidden">
                     <img 
                       src={appScreenshot2} 
                       alt="Habit Stack App Workout View" 
-                      className="w-full h-full object-cover object-top opacity-70"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                 </div>
