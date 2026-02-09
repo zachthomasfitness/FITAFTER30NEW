@@ -14,6 +14,7 @@ import sarahTransformation from "@/assets/sarah-stack-transformation.png";
 import jagTransformation from "@/assets/jag-stack-transformation.jpg";
 import edTransformation from "@/assets/ed-stack-transformation.jpg";
 import appScreenshot from "@/assets/app-screenshot.png";
+import appScreenshot2 from "@/assets/app-screenshot-2.png";
 
 const PAYMENT_URL = "https://link.fastpaydirect.com/payment-link/69845a993533382a86c60462";
 
@@ -239,8 +240,8 @@ const SixWeeks = () => {
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-[hsl(var(--foreground)/0.3)] rounded-full z-10"></div>
                   <div className="w-full h-full bg-white/5 rounded-[2.2rem] overflow-hidden">
                     <img 
-                      src={appScreenshot} 
-                      alt="Habit Stack App Background" 
+                      src={appScreenshot2} 
+                      alt="Habit Stack App Workout View" 
                       className="w-full h-full object-cover object-top opacity-70"
                     />
                   </div>
