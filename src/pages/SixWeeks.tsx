@@ -38,22 +38,22 @@ const SixWeeks = () => {
     {
       number: "01",
       title: "Lean Build Programme",
-      description: "Maximum results from minimal gym time.",
+      description: "Personalised training programme to get maximum results from limited gym time.",
     },
     {
       number: "02",
       title: "Foodie-Flex Framework",
-      description: "2 high-calorie days per week. Sustainable fat loss without restricted social life.",
+      description: "A framework for foodie's like myself to still get lean and feel great whilst eating the foods they love.",
     },
     {
       number: "03",
       title: "Confident Lifter Blueprint",
-      description: "Stop swinging weights. Learn the mechanics required for muscle growth.",
+      description: "Stop feeling lost in the gym — learn the mechanics to lift effectively and maximise muscle gain.",
     },
     {
       number: "04",
       title: "Consistency Compass",
-      description: "The permanent strategy to stay lean and in control for life.",
+      description: "This is your strategy for staying lean & in control for life. No more inconsistent, stop-start cycle. The last plan you'll ever need.",
     },
   ];
 
@@ -194,8 +194,8 @@ const SixWeeks = () => {
       {/* 6-Week Blueprint Section */}
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-10 md:mb-12">
-            The 6-Week Blueprint
+          <h2 className="text-3xl md:text-4xl font-bold italic uppercase text-center text-white mb-10 md:mb-12">
+            THE 6-WEEK PILLARS
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
