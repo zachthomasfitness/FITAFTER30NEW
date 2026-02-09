@@ -162,16 +162,14 @@ const SixWeeks = () => {
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="glass-card p-8 md:p-12 text-center space-y-6 md:space-y-8">
-            <p className="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-[#ffde59]">
-              THE REALITY CHECK
-            </p>
+            
             <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
               You aren't lazy. You are{' '}
               <span className="text-[#ffde59]">OVERLOADED</span>.
             </h2>
             <div className="space-y-5 text-foreground/70 text-base md:text-lg text-left leading-relaxed">
               <p>
-                You already know you should eat better and move more. The problem isn't a lack of knowledge — it's a lack of a reliable system &amp; accountability.
+                You already know you should eat better and move more. The problem isn't a lack of knowledge - it's a lack of a reliable system &amp; accountability.
               </p>
               <p>
                 Stress at work, poor sleep, family commitments, and a back-to-back calendar have turned your health into a "someday" project.
@@ -183,11 +181,11 @@ const SixWeeks = () => {
                 That's exactly what the Habit Stack gives you.
               </p>
               <p>
-                You get me in your pocket every day for 6 weeks to navigate the family dinners, late work nights, and the unexpected social plans — ensuring you rebuild your body, mind, and confidence no matter what life throws at you.
+                You get me in your pocket every day for 6 weeks to navigate the family dinners, late work nights, and the unexpected social plans - ensuring you rebuild your body, mind, and confidence no matter what life throws at you.
               </p>
             </div>
             <p className="text-white font-bold text-base md:text-lg text-right">
-              — Zach Thomas
+              - Zach Thomas
             </p>
           </div>
         </div>
