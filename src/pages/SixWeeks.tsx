@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import henryTransformation from "@/assets/henry-stack-transformation.png";
 import cianTransformation from "@/assets/cian-stack-transformation.jpg";
 import tomTransformation from "@/assets/tom-stack-transformation.jpg";
-import reubenTransformation from "@/assets/reuben-transformation.jpg";
+
 import eisaTransformation from "@/assets/eisa-stack-transformation.jpg";
 import immyTransformation from "@/assets/immy-transformation.png";
 import callumTransformation from "@/assets/callum-transformation.jpg";
@@ -16,58 +16,52 @@ const PAYMENT_URL = "https://link.fastpaydirect.com/payment-link/69845a993533382
 const SixWeeks = () => {
   const transformations = [
     { 
-      name: "Tom", 
-      result: "-24lbs", 
-      image: tomTransformation,
-      story: "Trained 2x per week & loves pizza"
-    },
-    { 
-      name: "Henry", 
-      result: "-19lbs", 
-      image: henryTransformation,
-      story: "Busy Director who found his 'Floor'"
-    },
-    { 
-      name: "Cian", 
-      result: "-26lbs", 
-      image: cianTransformation,
-      story: "Dropped 26lbs without the daily gym grind"
-    },
-    { 
-      name: "Eisa", 
-      result: "-82lbs", 
-      image: eisaTransformation,
-      story: "Navigated work travel without stalling"
-    },
-    { 
-      name: "Reuben", 
-      result: "-16lbs", 
-      image: reubenTransformation,
-      story: "Gained muscle while eating family takeaways"
+      name: "Hollie", 
+      result: "-23lbs", 
+      image: hollieTransformation,
+      story: "Had never stepped foot in a gym before"
     },
     { 
       name: "Immy", 
       result: "-20lbs",
       image: immyTransformation,
-      story: "Transformed while balancing a busy schedule"
+      story: "Hectic schedule running her own company"
     },
     { 
       name: "Callum", 
       result: "+10kg Muscle",
       image: callumTransformation,
-      story: "Built lean muscle with minimal gym time"
+      story: "Stayed consistent despite 12 hour work days"
     },
     { 
-      name: "Hollie", 
-      result: "-23lbs",
-      image: hollieTransformation,
-      story: "Gained strength and confidence"
+      name: "Cian", 
+      result: "-26lbs", 
+      image: cianTransformation,
+      story: "Stopped training daily and followed a regimented plan"
+    },
+    { 
+      name: "Henry", 
+      result: "-19lbs", 
+      image: henryTransformation,
+      story: "Still gets to enjoy a few drinks at the weekend"
     },
     { 
       name: "Jon", 
-      result: "-33lbs",
+      result: "-43lbs",
       image: jonTransformation,
-      story: "Complete body transformation"
+      story: "Lost 43lbs to regain his confidence"
+    },
+    { 
+      name: "Tom", 
+      result: "-24lbs", 
+      image: tomTransformation,
+      story: "Feels great in his work shirts again"
+    },
+    { 
+      name: "Eisa", 
+      result: "-82lbs", 
+      image: eisaTransformation,
+      story: "Changed his life with simple changes to his diet"
     },
   ];
 
