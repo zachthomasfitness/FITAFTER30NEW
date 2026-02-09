@@ -302,8 +302,9 @@ const SixWeeks = () => {
             <p className="text-foreground/50 text-lg">
               Retail Price: <span className="line-through">£199</span>
             </p>
-            <p className="text-[#ffde59] font-black text-5xl md:text-7xl">
-              £149
+            <p className="font-black text-4xl md:text-6xl uppercase">
+              <span className="text-white">Your Price: </span>
+              <span className="text-[#ffde59]">£149</span>
             </p>
           </div>
           
