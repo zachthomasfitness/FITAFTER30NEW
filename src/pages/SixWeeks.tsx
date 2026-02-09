@@ -214,16 +214,36 @@ const SixWeeks = () => {
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center">
-            {/* Phone Mockup */}
+            {/* Double Phone Mockup */}
             <div className="flex justify-center order-2 lg:order-1">
-              <div className="relative w-64 h-[520px] bg-black rounded-[3rem] border-4 border-foreground/30 p-2 shadow-2xl">
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-black rounded-full z-10"></div>
-                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                  <img 
-                    src={appScreenshot} 
-                    alt="Habit Stack App" 
-                    className="w-full h-full object-cover object-top"
-                  />
+              <div className="relative w-72 h-[520px]">
+                {/* Yellow glow behind phones */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-48 h-80 bg-[#ffde59]/20 rounded-full blur-3xl"></div>
+                </div>
+                
+                {/* Background Phone - tilted left */}
+                <div className="absolute left-2 top-4 w-56 h-[480px] bg-[hsl(var(--foreground)/0.15)] rounded-[2.5rem] border-2 border-foreground/20 p-1.5 shadow-2xl -rotate-[10deg] origin-center">
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-[hsl(var(--foreground)/0.3)] rounded-full z-10"></div>
+                  <div className="w-full h-full bg-white/5 rounded-[2.2rem] overflow-hidden">
+                    <img 
+                      src={appScreenshot} 
+                      alt="Habit Stack App Background" 
+                      className="w-full h-full object-cover object-top opacity-60"
+                    />
+                  </div>
+                </div>
+
+                {/* Foreground Phone - centered */}
+                <div className="absolute right-2 top-0 w-60 h-[500px] bg-black rounded-[2.8rem] border-[3px] border-foreground/30 p-2 shadow-2xl z-10">
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-18 h-5 bg-black rounded-full z-10"></div>
+                  <div className="w-full h-full bg-white rounded-[2.3rem] overflow-hidden">
+                    <img 
+                      src={appScreenshot} 
+                      alt="Habit Stack App" 
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
