@@ -287,32 +287,24 @@ const SixWeeks = () => {
       {/* Guarantee & Price Section */}
       <section className="py-12 md:py-16 px-4 pb-24">
         <div className="max-w-2xl mx-auto">
-          <div className="glass-card p-8 md:p-12 text-center space-y-8">
-            {/* Guarantee Badge */}
-            <div className="inline-block">
-              <div className="bg-primary text-primary-foreground font-black text-5xl md:text-6xl px-6 py-4 rounded-2xl">
-                5LB
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-white font-bold text-2xl md:text-3xl mb-4">
-                The 5LB Guarantee
-              </h3>
-              <p className="text-foreground/70">
-                If you don't lose at least 5lbs in the 6 weeks using this system, I will continue to work with you FREE OF CHARGE until you do.
-              </p>
-            </div>
-            
-            {/* Price */}
-            <div className="space-y-2">
-              <p className="text-foreground/50 text-lg">
-                Retail Price: <span className="line-through">£199</span>
-              </p>
-              <p className="text-primary font-black text-6xl md:text-8xl">
-                ONLY £149
-              </p>
-            </div>
+          {/* 5LB Guarantee Card */}
+          <div className="glass-card p-8 md:p-12 text-center space-y-6 border-2 border-[#ffde59] rounded-3xl mb-8">
+            <h3 className="text-white font-bold text-2xl md:text-3xl">
+              The 5LB Guarantee
+            </h3>
+            <p className="text-foreground/70">
+              If you don't lose at least 5lbs in the 6 weeks using this system, I will continue to work with you FREE OF CHARGE until you do.
+            </p>
+          </div>
+
+          {/* Price */}
+          <div className="text-center space-y-2 mb-8">
+            <p className="text-foreground/50 text-lg">
+              Retail Price: <span className="line-through">£199</span>
+            </p>
+            <p className="text-[#ffde59] font-black text-5xl md:text-7xl">
+              £149
+            </p>
           </div>
           
           {/* Embedded Checkout */}
