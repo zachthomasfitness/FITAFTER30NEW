@@ -165,8 +165,8 @@ const SixWeeks = () => {
           <div className="glass-card p-8 md:p-12 text-center space-y-6 md:space-y-8">
             
             <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-              You aren't lazy. You are{' '}
-              <span className="text-[#ffde59]">OVERLOADED</span>.
+              You aren't lazy.<br />
+              You're <span className="text-[#ffde59]">OVERLOADED</span>.
             </h2>
             <div className="space-y-5 text-foreground/70 text-base md:text-lg text-left leading-relaxed">
               <p>
