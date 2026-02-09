@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 import henryTransformation from "@/assets/henry-stack-transformation.png";
 import cianTransformation from "@/assets/cian-stack-transformation.jpg";
 import tomTransformation from "@/assets/tom-stack-transformation.jpg";
@@ -17,6 +18,7 @@ import appScreenshot from "@/assets/app-screenshot.png";
 const PAYMENT_URL = "https://link.fastpaydirect.com/payment-link/69845a993533382a86c60462";
 
 const SixWeeks = () => {
+  const [iframeLoading, setIframeLoading] = useState(true);
   const transformations = [
     { name: "Hollie", result: "-23lbs", image: hollieTransformation, story: "Had never stepped foot in a gym before" },
     { name: "Callum", result: "+10kg Muscle", image: callumTransformation, story: "Stayed consistent despite 12 hour work days" },
@@ -140,17 +142,15 @@ const SixWeeks = () => {
         </div>
       </section>
 
-      {/* Immediate CTA Section */}
+      {/* Immediate CTA Section - smooth scroll to checkout */}
       <section className="py-4 md:py-6 px-4">
         <div className="max-w-xl mx-auto text-center space-y-3">
-          <a 
-            href={PAYMENT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button 
+            onClick={() => document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
           >
             Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
-          </a>
+          </button>
           
           <p className="pt-2 text-[10px] font-semibold text-slate-500 text-center">
             🔒 SECURE CHECKOUT VIA FASTPAY
@@ -247,24 +247,35 @@ const SixWeeks = () => {
                 ONLY £149
               </p>
             </div>
-            
-            <a 
-              href={PAYMENT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto"
-            >
-              Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
-            </a>
-            
-            <p className="pt-2 text-[10px] font-semibold text-slate-500 text-center">
+          </div>
+          
+          {/* Embedded Checkout */}
+          <div id="checkout" className="glass-card p-4 md:p-8 scroll-mt-8">
+            <div className="relative w-full" style={{ minHeight: '650px' }}>
+              {iframeLoading && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
+                  <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                  <p className="text-[11px] font-semibold text-foreground/40 uppercase tracking-wider">
+                    🔒 Loading Secure Checkout…
+                  </p>
+                </div>
+              )}
+              <iframe
+                src={PAYMENT_URL}
+                title="Secure Checkout"
+                className="w-full rounded-xl"
+                style={{ height: '650px', border: 'none' }}
+                onLoad={() => setIframeLoading(false)}
+              />
+            </div>
+            <p className="pt-3 text-[10px] font-semibold text-slate-500 text-center">
               🔒 SECURE CHECKOUT VIA FASTPAY
             </p>
-            
-            <p className="text-foreground/40 text-sm">
-              © 2026 Zach Thomas Coaching
-            </p>
           </div>
+          
+          <p className="text-foreground/40 text-sm text-center pt-4">
+            © 2026 Zach Thomas Coaching
+          </p>
         </div>
       </section>
     </main>
