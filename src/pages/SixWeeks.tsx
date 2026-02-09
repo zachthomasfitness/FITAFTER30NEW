@@ -84,7 +84,7 @@ const SixWeeks = () => {
   return (
     <main className="min-h-screen">
       {/* Above-The-Fold Hero Section */}
-      <section className="pt-4 md:pt-8 px-4">
+      <section className="pt-20 md:pt-32 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
           <h1 className="text-2xl md:text-4xl lg:text-6xl font-black text-center text-white mb-4 md:mb-6 leading-[1.1] tracking-tight uppercase">
@@ -99,7 +99,7 @@ const SixWeeks = () => {
       </section>
 
       {/* Infinite Proof Carousel */}
-      <section className="overflow-hidden py-2 md:py-4">
+      <section className="overflow-hidden mt-10 md:mt-16 py-2 md:py-4">
         <div 
           className="flex animate-marquee hover:[animation-play-state:paused]"
           style={{ width: 'max-content' }}
