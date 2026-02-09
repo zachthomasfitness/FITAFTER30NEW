@@ -192,6 +192,18 @@ const SixWeeks = () => {
         </div>
       </section>
 
+      {/* Mid-Page CTA */}
+      <section className="py-6 md:py-8 px-4">
+        <div className="text-center">
+          <button
+            onClick={() => document.getElementById('checkout')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary bg-transparent hover:bg-primary/10 font-bold text-sm md:text-base px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+          >
+            YES, I'M OVERLOADED - START MY STACK →
+          </button>
+        </div>
+      </section>
+
       {/* 6-Week Blueprint Section */}
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto">
