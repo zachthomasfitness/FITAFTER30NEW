@@ -3,66 +3,33 @@ import { ArrowRight } from "lucide-react";
 import henryTransformation from "@/assets/henry-stack-transformation.png";
 import cianTransformation from "@/assets/cian-stack-transformation.jpg";
 import tomTransformation from "@/assets/tom-stack-transformation.jpg";
-
 import eisaTransformation from "@/assets/eisa-stack-transformation.jpg";
 import immyTransformation from "@/assets/immy-transformation.png";
 import callumTransformation from "@/assets/callum-transformation.jpg";
 import hollieTransformation from "@/assets/hollie-transformation.jpg";
 import jonTransformation from "@/assets/jon-stack-transformation.jpg";
+import lawsonTransformation from "@/assets/lawson-stack-transformation.jpg";
+import sarahTransformation from "@/assets/sarah-stack-transformation.png";
+import jagTransformation from "@/assets/jag-stack-transformation.jpg";
+import edTransformation from "@/assets/ed-stack-transformation.jpg";
 import appScreenshot from "@/assets/app-screenshot.png";
 
 const PAYMENT_URL = "https://link.fastpaydirect.com/payment-link/69845a993533382a86c60462";
 
 const SixWeeks = () => {
   const transformations = [
-    { 
-      name: "Hollie", 
-      result: "-23lbs", 
-      image: hollieTransformation,
-      story: "Had never stepped foot in a gym before"
-    },
-    { 
-      name: "Immy", 
-      result: "-20lbs",
-      image: immyTransformation,
-      story: "Hectic schedule running her own company"
-    },
-    { 
-      name: "Callum", 
-      result: "+10kg Muscle",
-      image: callumTransformation,
-      story: "Stayed consistent despite 12 hour work days"
-    },
-    { 
-      name: "Cian", 
-      result: "-26lbs", 
-      image: cianTransformation,
-      story: "Stopped training daily and followed a regimented plan"
-    },
-    { 
-      name: "Henry", 
-      result: "-19lbs", 
-      image: henryTransformation,
-      story: "Still gets to enjoy a few drinks at the weekend"
-    },
-    { 
-      name: "Jon", 
-      result: "-43lbs",
-      image: jonTransformation,
-      story: "Lost 43lbs to regain his confidence"
-    },
-    { 
-      name: "Tom", 
-      result: "-24lbs", 
-      image: tomTransformation,
-      story: "Feels great in his work shirts again"
-    },
-    { 
-      name: "Eisa", 
-      result: "-82lbs", 
-      image: eisaTransformation,
-      story: "Changed his life with simple changes to his diet"
-    },
+    { name: "Hollie", result: "-23lbs", image: hollieTransformation, story: "Had never stepped foot in a gym before" },
+    { name: "Callum", result: "+10kg Muscle", image: callumTransformation, story: "Stayed consistent despite 12 hour work days" },
+    { name: "Lawson", result: "-18lbs", image: lawsonTransformation, story: "Gained the energy to power through long days on his feet" },
+    { name: "Immy", result: "-20lbs", image: immyTransformation, story: "Hectic schedule running her own company" },
+    { name: "Cian", result: "-26lbs", image: cianTransformation, story: "Stopped training daily and followed a regimented plan" },
+    { name: "Ed", result: "-52lbs", image: edTransformation, story: "Lost weight 52lbs and transformed his confidence" },
+    { name: "Sarah", result: "Total Transformation", image: sarahTransformation, story: "From complete beginner to fitness lover" },
+    { name: "Henry", result: "-19lbs", image: henryTransformation, story: "Still gets to enjoy a few drinks at the weekend" },
+    { name: "Jon", result: "-43lbs", image: jonTransformation, story: "Lost 43lbs to regain his confidence" },
+    { name: "Jag", result: "+15lbs Muscle", image: jagTransformation, story: "Gained 15lbs of muscle whilst running his own business" },
+    { name: "Tom", result: "-24lbs", image: tomTransformation, story: "Feels great in his work shirts again" },
+    { name: "Eisa", result: "-82lbs", image: eisaTransformation, story: "Changed his life with simple changes to his diet" },
   ];
 
   const blueprintCards = [
