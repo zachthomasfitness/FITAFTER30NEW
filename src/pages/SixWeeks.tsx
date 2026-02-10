@@ -288,7 +288,7 @@ const SixWeeks = () => {
       </section>
 
       {/* Guarantee & Price Section */}
-      <section className="py-8 md:py-16 px-4 pb-0 md:pb-10">
+      <section className="py-8 md:py-16 px-4 pb-12 md:pb-10">
         <div className="max-w-2xl mx-auto">
           {/* 5LB Guarantee Card */}
           <div className="glass-card p-8 md:p-12 text-center space-y-6 border-2 border-[#ffde59] rounded-3xl mb-8">
@@ -313,14 +313,14 @@ const SixWeeks = () => {
           
           {/* Embedded Checkout */}
           <div id="checkout" className="mt-10 scroll-mt-8">
-            <div className="relative w-full overflow-hidden mb-[-80px] md:mb-5 max-h-[850px] md:max-h-none" style={{ minHeight: '850px', background: '#000000' }}>
+            <div className="relative w-full overflow-hidden mb-[-30px] md:mb-5 max-h-[920px] md:max-h-none" style={{ minHeight: '880px', background: '#000000' }}>
               {iframeLoading && <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
                   <Loader2 className="h-8 w-8 animate-spin text-primary" />
                   <p className="text-[11px] font-semibold text-foreground/40 uppercase tracking-wider">
                     🔒 Loading Secure Checkout…
                   </p>
                 </div>}
-              <iframe src={PAYMENT_URL} title="Secure Checkout" className="w-full h-[850px] md:h-[880px]" scrolling="no" style={{
+              <iframe src={PAYMENT_URL} title="Secure Checkout" className="w-full h-[920px] md:h-[880px]" scrolling="no" style={{
               border: 'none',
               background: 'transparent',
               colorScheme: 'light'
