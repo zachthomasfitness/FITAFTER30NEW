@@ -313,18 +313,17 @@ const SixWeeks = () => {
           
           {/* Embedded Checkout */}
           <div id="checkout" className="mt-10 scroll-mt-8">
-            <div className="relative w-full" style={{
-            minHeight: '800px'
-          }}>
+            <div className="relative w-full" style={{ minHeight: '900px' }}>
               {iframeLoading && <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 z-10">
                   <Loader2 className="h-8 w-8 animate-spin text-primary" />
                   <p className="text-[11px] font-semibold text-foreground/40 uppercase tracking-wider">
                     🔒 Loading Secure Checkout…
                   </p>
                 </div>}
-              <iframe src={PAYMENT_URL} title="Secure Checkout" className="w-full" style={{
-              height: '800px',
-              border: 'none'
+              <iframe src={PAYMENT_URL} title="Secure Checkout" className="w-full h-[1200px] md:h-[900px]" scrolling="no" style={{
+              border: 'none',
+              background: 'transparent',
+              colorScheme: 'light'
             }} onLoad={() => setIframeLoading(false)} />
             </div>
             <p className="pt-3 text-[10px] font-semibold text-slate-500 text-center">
