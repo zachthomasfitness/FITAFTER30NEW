@@ -16,10 +16,10 @@ const SixWeeksThankYou = () => {
             You're on the Fast-Track!
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-            I'll be reaching out to you on WhatsApp within the next 2 hours to book your 1-1 onboarding call.
+            I'll be reaching out to you on WhatsApp within the next 2 hours to discuss next steps.
           </p>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-            Check your inbox for your 6-week Welcome Pack.
+            Check your email inbox as I'll be sending you regular information about your plans and next steps.
           </p>
         </section>
 
@@ -41,13 +41,13 @@ const SixWeeksThankYou = () => {
               <div className="flex items-start gap-3">
                 <span className="text-[#ffde59] font-bold text-base">01.</span>
                 <span className="text-base md:text-lg text-foreground/80">
-                  I'll message you on WhatsApp to schedule your onboarding call
+                  I'll message you on WhatsApp to open up that line of communication, that way you can ask any questions you have immediately.
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-[#ffde59] font-bold text-base">02.</span>
                 <span className="text-base md:text-lg text-foreground/80">
-                  Check your email for the 6-Week Welcome Pack & app access
+                  Check your email, download the coaching app, and I'll get to work on your plans.
                 </span>
               </div>
               <div className="flex items-start gap-3">
