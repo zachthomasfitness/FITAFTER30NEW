@@ -6,10 +6,10 @@ const fitList = [
 ];
 
 const rejectList = [
-  "You're looking for a short cut/magic pill solution.",
-  "You love 2-hour daily gym sessions.",
-  "You want to eat bland food & discipline is nothing to you.",
-  "You only want short term progress.",
+  "You want to get shredded in 6 weeks with an extreme program",
+  "You love training every day and always eating out of Tupperware",
+  "You're looking for a quick fix or magic solution",
+  "You're not willing to show up consistently (even if it's just 2-3 times a week)",
 ];
 
 const MissionFilterSection = () => {

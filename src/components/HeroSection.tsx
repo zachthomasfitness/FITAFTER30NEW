@@ -33,7 +33,7 @@ const HeroSection = () => {
             {/* Start Date + Timer container - pulled up tight to form submit button */}
             <div className="flex flex-col items-center -mt-24 md:-mt-28">
               <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
-                Start Date: January 26th
+              Join the Free 10-Day Kickstart
               </p>
               <div className="mb-2">
                 <CountdownTimer compact />

@@ -14,8 +14,9 @@ const FooterCTA = () => {
           <PulseFormEmbed id="footer-inline-7DTFHh8ZmEmWrmVpsktd" />
         </div>
         
-        <p className="text-muted-foreground text-base italic">
-          Limited spots for the Jan 26th Intake
+        {/* CTA Button */}
+        <p className="text-primary font-bold text-lg mb-2">
+          Join the Free 10-Day Kickstart
         </p>
       </div>
     </footer>
