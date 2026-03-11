@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto">
           {/* Headline - pure white, natural text wrap */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
-            Master the habits every guy over 30 needs to look sharp in their shirts and confident without them.
+          Sick of Falling Off Every Plan You Start? Here's How to Get Stupidly Consistent to Finally Feel Confident in Your Own Skin Again
           </h1>
 
           {/* Subheadline - clean and focused */}
