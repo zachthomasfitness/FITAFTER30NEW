@@ -20,7 +20,7 @@ const HeroSection = () => {
 
           {/* Subheadline - clean and focused */}
           <p className="text-base md:text-xl text-foreground/80 font-semibold">
-            Join the Free 14-Day Habit Kickstart to build a foundation of consistency - without giving up the foods you love or living in the gym.
+          Join the free 10-day Habit Kickstart and learn the system that's helped hundreds of over-30s lose fat, get their energy back, and feel confident again - without training every day or eating bland food.
           </p>
 
           {/* ACTION CLUSTER: Form -> Start Date -> Timer -> Live Line */}
