@@ -350,6 +350,7 @@ const SixWeeks = () => {
           </p>
         </div>
       </section>
-    </main>;
+    </main>
+  </>;
 };
 export default SixWeeks;
