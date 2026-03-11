@@ -1,15 +1,15 @@
 const fitList = [
-  "You've gained weight, but are finally ready to lose the gut.",
-  "You know how to train, but you're inconsistent.",
-  "You love food and don't want to give up your normal life.",
-  "You want to get lean, strong and confident in 2026.",
+  "You've tried the \"train 6 days a week, eat clean\" approach and it didn't stick",
+  "You're sick of feeling guilty every time you miss a workout or have a \"bad\" meal",
+  "You want to get in shape but you're not willing to give up nights out, takeaways, or your social life",
+  "You're ready to build habits that actually fit your life instead of trying to fit your life around extreme fitness plans",
 ];
 
 const rejectList = [
-  "You're looking for a short cut/magic pill solution.",
-  "You love 2-hour daily gym sessions.",
-  "You want to eat bland food & discipline is nothing to you.",
-  "You only want short term progress.",
+  "You want to get shredded in 6 weeks with an extreme program",
+  "You love training every day and always eating out of Tupperware",
+  "You're looking for a quick fix or magic solution",
+  "You're not willing to show up consistently (even if it's just 2-3 times a week)",
 ];
 
 const MissionFilterSection = () => {

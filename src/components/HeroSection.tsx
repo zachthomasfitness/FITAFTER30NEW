@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Top Banner */}
       <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
         <span className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.15em]">
-          A FREE 14-DAY KICKSTART FOR MEN OVER 30
+          A FREE 10-DAY HABIT KICKSTART FOR MEN OVER 30
         </span>
       </div>
 
@@ -15,12 +15,12 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto">
           {/* Headline - pure white, natural text wrap */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
-            Master the habits every guy over 30 needs to look sharp in their shirts and confident without them.
+          Sick of Falling Off Every Plan You Start? Here's How to Get Stupidly Consistent to Finally Feel Confident in Your Own Skin Again
           </h1>
 
           {/* Subheadline - clean and focused */}
           <p className="text-base md:text-xl text-foreground/80 font-semibold">
-            Join the Free 14-Day Habit Kickstart to build a foundation of consistency - without giving up the foods you love or living in the gym.
+          Join the free 10-day Habit Kickstart and learn the system that's helped hundreds of over-30s lose fat, get their energy back, and feel confident again - without training every day or eating bland food.
           </p>
 
           {/* ACTION CLUSTER: Form -> Start Date -> Timer -> Live Line */}
@@ -33,7 +33,7 @@ const HeroSection = () => {
             {/* Start Date + Timer container - pulled up tight to form submit button */}
             <div className="flex flex-col items-center -mt-24 md:-mt-28">
               <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
-                Start Date: January 26th
+              Join the Free 10-Day Kickstart
               </p>
               <div className="mb-2">
                 <CountdownTimer compact />
