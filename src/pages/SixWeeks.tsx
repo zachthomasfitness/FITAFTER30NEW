@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Loader2 } from "lucide-react";
 import henryTransformation from "@/assets/henry-stack-transformation.png";
@@ -116,7 +117,20 @@ const SixWeeks = () => {
 
   // Duplicate the transformations for seamless infinite scroll
   const duplicatedTransformations = [...transformations, ...transformations];
-  return <main className="min-h-screen">
+  return <>
+    <Helmet>
+      <title>6 Week Habit Stack</title>
+      <meta name="description" content="Give me 6 weeks to install the habit stack and I'll give you a body you're actually proud of." />
+      <meta property="og:title" content="6 Week Habit Stack" />
+      <meta property="og:description" content="Give me 6 weeks to install the habit stack and I'll give you a body you're actually proud of." />
+      <meta property="og:image" content="https://habit-kickstart.lovable.app/og-sixweeks.png" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="6 Week Habit Stack" />
+      <meta name="twitter:description" content="Give me 6 weeks to install the habit stack and I'll give you a body you're actually proud of." />
+      <meta name="twitter:image" content="https://habit-kickstart.lovable.app/og-sixweeks.png" />
+    </Helmet>
+    <main className="min-h-screen">
       {/* Above-The-Fold Hero Section */}
       <section className="pt-14 md:pt-24 px-1 md:px-2">
         <div className="max-w-7xl mx-auto">
@@ -336,6 +350,7 @@ const SixWeeks = () => {
           </p>
         </div>
       </section>
-    </main>;
+    </main>
+  </>;
 };
 export default SixWeeks;
