@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Top Banner */}
       <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
         <span className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.15em]">
-          A FREE 14-DAY KICKSTART FOR MEN OVER 30
+          A FREE 10-DAY HABIT KICKSTART FOR MEN OVER 30
         </span>
       </div>
 
