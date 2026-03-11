@@ -4,10 +4,15 @@ const FooterCTA = () => {
   return (
     <footer id="footer-signup-form" className="py-16 md:py-24 px-6 border-t border-border text-center">
       <div className="max-w-xl mx-auto">
-        {/* Section Header - tighter spacing to form */}
-        <h2 className="text-2xl md:text-4xl font-extrabold text-foreground mb-4">
-          Here's what you'll get in the free 10-day Habit Kickstart:
+        {/* Main Headline */}
+        <h2 className="text-2xl md:text-4xl font-extrabold text-foreground mb-6">
+          Ready To Start Day One?
         </h2>
+
+        {/* Section Header - tighter spacing to form */}
+        <p className="text-lg md:text-xl font-semibold text-foreground mb-4">
+          Here's what you'll get in the free 10-day Habit Kickstart:
+        </p>
 
         {/* Benefits List */}
         <ul className="text-left space-y-3 mb-6 text-foreground/90">
