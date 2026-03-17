@@ -4,6 +4,7 @@ import ProofSection from "@/components/ProofSection";
 import FooterCTA from "@/components/FooterCTA";
 import MidPageCTA from "@/components/MidPageCTA";
 import MissionFilterSection from "@/components/MissionFilterSection";
+import FinalCTA from "@/components/FinalCTA";
 
 const HabitKickstart = () => {
   return (
