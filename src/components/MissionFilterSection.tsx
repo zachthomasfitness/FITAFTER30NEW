@@ -17,7 +17,7 @@ const MissionFilterSection = () => {
     <section className="py-16 md:py-24 px-4 md:px-6 text-center">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-10 md:mb-14">
+        <h2 className="text-xl md:text-4xl font-extrabold text-foreground mb-10 md:mb-14">
           Who is this for?
         </h2>
 

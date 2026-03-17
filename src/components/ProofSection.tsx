@@ -43,7 +43,7 @@ const ProofSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
-          <h2 className="text-[26px] md:text-5xl font-extrabold text-foreground leading-tight">
+          <h2 className="text-xl md:text-4xl font-extrabold text-foreground leading-tight">
             Here's What's Possible When You Get Stupidly Consistent:
           </h2>
         </div>
