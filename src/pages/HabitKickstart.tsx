@@ -27,7 +27,7 @@ const HabitKickstart = () => {
         <FooterCTA />
         <MidPageCTA />
         <MissionFilterSection />
-        <FooterCTA />
+        <FinalCTA />
       </main>
     </>
   );
