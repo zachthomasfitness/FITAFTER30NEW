@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/HeroSection";
 import ProofSection from "@/components/ProofSection";
-import MissionFilterSection from "@/components/MissionFilterSection";
 import FooterCTA from "@/components/FooterCTA";
+import MidPageCTA from "@/components/MidPageCTA";
+import MissionFilterSection from "@/components/MissionFilterSection";
 
 const HabitKickstart = () => {
   return (
