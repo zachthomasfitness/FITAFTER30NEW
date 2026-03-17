@@ -1,15 +1,14 @@
 const fitList = [
-  "You've tried the \"train 6 days a week, eat clean\" approach and it didn't stick",
-  "You're sick of feeling guilty every time you miss a workout or have a \"bad\" meal",
-  "You want to get in shape but you're not willing to give up nights out, takeaways, or your social life",
-  "You're ready to build habits that actually fit your life instead of trying to fit your life around extreme fitness plans",
+  "You've tried plans before and fallen off by the end of the week",
+  "You're tired of the all-or-nothing cycle (one bad meal ruins everything)",
+  "You have a job, kids, a life — and you're not giving that up to get in shape",
+  "You want a realistic plan that actually fits your life",
 ];
 
 const rejectList = [
-  "You want to get shredded in 6 weeks with an extreme program",
-  "You love training every day and always eating out of Tupperware",
-  "You're looking for a quick fix or magic solution",
-  "You're not willing to show up consistently (even if it's just 2-3 times a week)",
+  "You're looking for a quick fix or magic pill",
+  "You want to \"get shredded in 6 weeks\"",
+  "You're not willing to show up consistently (even on bad days)",
 ];
 
 const MissionFilterSection = () => {
@@ -25,9 +24,9 @@ const MissionFilterSection = () => {
         <div className="flex md:grid md:grid-cols-2 gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar md:overflow-visible px-[7.5%] md:px-0">
           {/* The Fit Card */}
           <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
-            <div className="text-4xl md:text-5xl text-primary mb-4">✓</div>
+            <div className="text-4xl md:text-5xl text-primary mb-4">✅</div>
             <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
-              This is perfect for you if:
+              This is for you if:
             </h3>
             <ul className="space-y-3 md:space-y-4 text-left">
               {fitList.map((item, index) => (
@@ -40,9 +39,9 @@ const MissionFilterSection = () => {
 
           {/* The Rejection Card */}
           <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
-            <div className="text-4xl md:text-5xl text-destructive mb-4">✕</div>
+            <div className="text-4xl md:text-5xl text-destructive mb-4">❌</div>
             <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
-              This isn't for you if:
+              This is NOT for you if:
             </h3>
             <ul className="space-y-3 md:space-y-4 text-left">
               {rejectList.map((item, index) => (
