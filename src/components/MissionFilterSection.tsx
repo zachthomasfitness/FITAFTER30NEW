@@ -24,9 +24,9 @@ const MissionFilterSection = () => {
         <div className="flex md:grid md:grid-cols-2 gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar md:overflow-visible px-[7.5%] md:px-0">
           {/* The Fit Card */}
           <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
-            <div className="text-4xl md:text-5xl text-primary mb-4">✓</div>
+            <div className="text-4xl md:text-5xl text-primary mb-4">✅</div>
             <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
-              This is perfect for you if:
+              This is for you if:
             </h3>
             <ul className="space-y-3 md:space-y-4 text-left">
               {fitList.map((item, index) => (
