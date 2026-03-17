@@ -1,6 +1,6 @@
 import henryTransformation from "@/assets/henry-transformation.png";
 import immyTransformation from "@/assets/immy-transformation.png";
-import tomTransformation from "@/assets/tom-transformation.png";
+import tomTransformation from "@/assets/tom-transformation.jpg";
 import sarahTransformation from "@/assets/sarah-transformation.png";
 import cianTransformation from "@/assets/cian-transformation.jpg";
 
