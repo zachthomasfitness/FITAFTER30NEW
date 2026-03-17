@@ -38,12 +38,12 @@ const FooterCTA = () => {
           <PulseFormEmbed id="footer-inline-7DTFHh8ZmEmWrmVpsktd" />
         </div>
         
-        <p className="text-primary font-bold text-lg">
-          Join the Free 10-Day Kickstart
-        </p>
+        
+
+        
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default FooterCTA;
