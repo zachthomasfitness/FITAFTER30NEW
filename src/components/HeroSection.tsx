@@ -14,7 +14,7 @@ const HeroSection = () => {
       <header className="relative pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 text-center">
         <div className="max-w-5xl mx-auto">
           {/* Headline - pure white, natural text wrap */}
-          <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
+          <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
           Sick of Falling Off Every Plan You Start? Here's How to Get Stupidly Consistent to Lose Fat, Get Strong, and Feel Like Yourself Again
           </h1>
 
