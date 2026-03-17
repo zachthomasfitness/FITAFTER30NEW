@@ -19,7 +19,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline - clean and focused */}
-          <p className="text-base md:text-xl text-foreground/80 font-semibold">
+          <p className="text-sm md:text-lg text-foreground/80 font-semibold">
           Join the free 10-Day Habit Kickstart and learn the system that's helped hundreds of over-30s lose fat, get their energy back, get strong, and feel like themselves again - without training every day or eating bland food.
           </p>
 
