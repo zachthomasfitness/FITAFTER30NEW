@@ -5,7 +5,7 @@ const FooterCTA = () => {
     <footer id="footer-signup-form" className="py-16 md:py-24 px-6 border-t border-border text-center">
       <div className="max-w-xl mx-auto">
         {/* Section Header - tighter spacing to form */}
-        <h2 className="text-2xl md:text-4xl font-extrabold text-foreground mb-4">
+        <h2 className="text-xl md:text-3xl font-extrabold text-foreground mb-4">
           Here's what you'll get in the free 10-day Habit Kickstart:
         </h2>
 
