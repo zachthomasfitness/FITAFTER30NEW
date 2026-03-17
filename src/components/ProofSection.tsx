@@ -1,28 +1,39 @@
-import tomTransformation from "@/assets/tom-transformation.png";
 import henryTransformation from "@/assets/henry-transformation.png";
-import eisaTransformation from "@/assets/eisa-transformation.jpg";
+import immyTransformation from "@/assets/immy-transformation.png";
+import tomTransformation from "@/assets/tom-transformation.png";
+import sarahTransformation from "@/assets/sarah-transformation.png";
 import cianTransformation from "@/assets/cian-transformation.jpg";
 
 const clients = [
   {
-    name: "Cian",
-    result: "-26lbs",
-    image: cianTransformation,
-  },
-  {
     name: "Henry",
-    result: "-19lbs",
+    result: "Dropped his body fat from 29% to 14% and gained 10lbs of muscle in 10 months",
+    detail: "Training 2x/week. Still goes to Wolves games. Still has beers with his mates.",
     image: henryTransformation,
   },
   {
-    name: "Eisa",
-    result: "-67lbs",
-    image: eisaTransformation,
+    name: "Immy",
+    result: "Lost 8.5kg and dropped her body fat from 36% to 20%",
+    detail: "Got her energy back. Feels strong again. Feels herself again.",
+    image: immyTransformation,
   },
   {
     name: "Tom",
-    result: "-24lbs",
+    result: "Lost 24lbs",
+    detail: '"I don\'t even feel like I\'m on a diet anymore."',
     image: tomTransformation,
+  },
+  {
+    name: "Sarah",
+    result: "Stayed consistent for 6 years, completely transforming not only how she looks, but who she is",
+    detail: "The photos tell the story - from 2020 to 2026, showing up even through the hard times.",
+    image: sarahTransformation,
+  },
+  {
+    name: "Cian",
+    result: "Lost 26lbs and dropped his body fat from 26% to 12% in 6 months",
+    detail: "Training 3x/week. Still eats out. Still enjoys life.",
+    image: cianTransformation,
   },
 ];
 
@@ -33,7 +44,7 @@ const ProofSection = () => {
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
           <h2 className="text-[26px] md:text-5xl font-extrabold text-foreground leading-tight">
-            These guys stopped trying to be perfect, and finally got results by being consistent.
+            Here's What's Possible When You Get Stupidly Consistent:
           </h2>
         </div>
 
@@ -56,10 +67,11 @@ const ProofSection = () => {
                 )}
               </div>
               <div className="p-6 text-center">
-                <h4 className="text-xl font-bold text-foreground mb-1">
+                <h4 className="text-xl font-bold text-foreground mb-2">
                   {client.name}
                 </h4>
-                <span className="text-2xl font-black brand-text">{client.result}</span>
+                <p className="text-sm text-foreground mb-2">{client.result}</p>
+                <p className="text-sm italic text-muted-foreground">{client.detail}</p>
               </div>
             </div>
           ))}
