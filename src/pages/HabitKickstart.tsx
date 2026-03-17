@@ -21,8 +21,8 @@ const HabitKickstart = () => {
       </Helmet>
       <main className="min-h-screen">
         <HeroSection />
-        <MissionFilterSection />
         <ProofSection />
+        <MissionFilterSection />
         <FooterCTA />
       </main>
     </>
