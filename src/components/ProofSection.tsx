@@ -7,32 +7,32 @@ import cianTransformation from "@/assets/cian-transformation.jpg";
 const clients = [
   {
     name: "Henry",
-    result: "Dropped his body fat from 29% to 14% and gained 10lbs of muscle in 10 months",
-    detail: "Training 2x/week. Still goes to Wolves games. Still has beers with his mates.",
+    result: "29% → 14% body fat, +10lbs muscle in 10 months",
+    detail: "2 sessions/week. Still goes for drinks regularly.",
     image: henryTransformation,
   },
   {
     name: "Immy",
-    result: "Lost 8.5kg and dropped her body fat from 36% to 20%",
-    detail: "Got her energy back. Feels strong again. Feels herself again.",
+    result: "Lost 8.5kg, 36% → 20% body fat",
+    detail: "Got her energy back. Feels herself again.",
     image: immyTransformation,
   },
   {
     name: "Tom",
     result: "Lost 24lbs",
-    detail: '"I don\'t even feel like I\'m on a diet anymore."',
+    detail: '"Doesn\'t even feel like a diet anymore."',
     image: tomTransformation,
   },
   {
     name: "Sarah",
-    result: "Stayed consistent for 6 years, completely transforming not only how she looks, but who she is",
-    detail: "The photos tell the story - from 2020 to 2026, showing up even through the hard times.",
+    result: "6 years of consistency.",
+    detail: "Completely transformed. The photos tell the story.",
     image: sarahTransformation,
   },
   {
     name: "Cian",
-    result: "Lost 26lbs and dropped his body fat from 26% to 12% in 6 months",
-    detail: "Training 3x/week. Still eats out. Still enjoys life.",
+    result: "Lost 26lbs, 26% → 12% body fat in 6 months",
+    detail: "3 sessions/week. Still eats out, still enjoys life.",
     image: cianTransformation,
   },
 ];
