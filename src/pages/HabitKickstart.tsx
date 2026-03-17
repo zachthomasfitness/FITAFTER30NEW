@@ -23,6 +23,8 @@ const HabitKickstart = () => {
       <main className="min-h-screen">
         <HeroSection />
         <ProofSection />
+        <FooterCTA />
+        <MidPageCTA />
         <MissionFilterSection />
         <FooterCTA />
       </main>
