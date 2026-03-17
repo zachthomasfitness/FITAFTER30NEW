@@ -16,7 +16,7 @@ const MidPageCTA = () => {
           onClick={scrollToTop}
           className="bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-lg hover:opacity-90 transition-opacity"
         >
-          Join the Free 10-Day Kickstart
+          JOIN THE FREE KICKSTART
         </button>
       </div>
     </section>
