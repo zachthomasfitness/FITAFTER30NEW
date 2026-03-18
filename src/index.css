@@ -89,7 +89,7 @@ input, select, textarea {
     min-height: 100vh;
     /* Layer 1: Diagonal gunmetal gradient */
     background:
-      linear-gradient(135deg, #3f3f46 0%, #27272a 35%, #27272a 65%, #18181b 100%);
+      linear-gradient(135deg, #1a1a1d 0%, #27272a 50%, #3f3f46 100%);
     background-attachment: fixed;
   }
 
