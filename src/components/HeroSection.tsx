@@ -15,12 +15,12 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Headline */}
           <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
-          Tired of Starting Over Every Monday? Here's How to Get Stupidly Consistent to Lose Fat, Get Strong, and Feel Like Yourself Again
+          Tired of Starting Over Every Monday? Here's How to Get Stupidly Consistent with Your Fitness
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm md:text-lg text-secondary-foreground font-semibold">
-          Join the free 10-Day Habit Kickstart - the system that's helped hundreds of over-30s feel lean, strong, and confident again without training every day or eating bland food.
+          Join the free 10-Day Habit Kickstart and learn the system that's helped hundreds of over-30s get lean, strong, and feeling like themselves again - without training every day or eating bland food.
           </p>
 
           {/* ACTION CLUSTER */}
