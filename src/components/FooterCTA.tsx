@@ -13,7 +13,7 @@ const FooterCTA = () => {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
-            <span><strong>Simple daily tasks</strong> — small actions that build momentum (you'll know exactly what to do)</span>
+            <span><strong>Simple daily tasks</strong> - small actions that build momentum (you'll know exactly what to do)</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
