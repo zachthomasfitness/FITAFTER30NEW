@@ -54,24 +54,24 @@ input, select, textarea {
   }
 
   .dark {
-    --background: 220 26% 12%;
+    --background: 240 4% 12%;
     --foreground: 0 0% 90%;
-    --card: 218 22% 20%;
+    --card: 240 5% 20%;
     --card-foreground: 0 0% 90%;
-    --popover: 218 22% 20%;
+    --popover: 240 5% 20%;
     --popover-foreground: 0 0% 90%;
     --primary: 49 100% 67%;
-    --primary-foreground: 220 26% 18%;
-    --secondary: 218 22% 22%;
+    --primary-foreground: 240 4% 16%;
+    --secondary: 240 5% 22%;
     --secondary-foreground: 0 0% 90%;
-    --muted: 218 22% 18%;
+    --muted: 240 4% 18%;
     --muted-foreground: 220 14% 55%;
-    --accent: 218 22% 22%;
+    --accent: 240 5% 22%;
     --accent-foreground: 0 0% 90%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
-    --border: 218 20% 25%;
-    --input: 218 20% 25%;
+    --border: 240 5% 25%;
+    --input: 240 5% 25%;
     --ring: 49 100% 67%;
   }
 }
