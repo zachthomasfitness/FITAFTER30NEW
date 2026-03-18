@@ -3,7 +3,7 @@ const FooterCTA = () => {
     <section className="py-16 md:py-24 px-6 border-t border-border/20 text-center bg-transparent overflow-hidden pb-[25px] pl-[20px] pr-[20px] pt-[30px]">
       <div className="max-w-xl mx-auto relative z-10">
         <h2 className="text-xl md:text-3xl font-extrabold text-foreground mb-4">
-          Here's What You'll Get in the Free 10-Day Kickstart:
+          So What's Actually Inside?
         </h2>
 
         <ul className="text-left space-y-3 mb-6 text-secondary-foreground text-sm">

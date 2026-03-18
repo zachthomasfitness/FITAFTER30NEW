@@ -17,7 +17,7 @@ const MissionFilterSection = () => {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
         <h2 className="text-xl md:text-4xl font-extrabold text-foreground mb-10 md:mb-14">
-          Who is this for?
+          Is This For You?
         </h2>
 
         {/* Mobile: Horizontal snap slider | Desktop: 2-column grid */}
