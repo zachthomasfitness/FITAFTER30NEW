@@ -6,8 +6,8 @@ const HeroSection = () => {
     <>
       {/* Top Banner */}
       <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
-        <span className="text-primary text-[10px] md:text-xs font-bold uppercase tracking-[0.15em]">
-          A FREE 10-DAY HABIT KICKSTART FOR MEN OVER 30
+        <span className="text-primary md:text-xs uppercase tracking-[0.15em] text-xs font-bold">
+          Free Kickstart for Busy Over-30s Who Keep Falling Off
         </span>
       </div>
 
@@ -49,8 +49,8 @@ const HeroSection = () => {
           </div>
         </div>
       </header>
-    </>
-  );
+    </>);
+
 };
 
 export default HeroSection;
