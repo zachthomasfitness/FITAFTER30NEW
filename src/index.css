@@ -140,14 +140,14 @@ input, select, textarea {
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
-    width: 85%;
+    width: 65%;
     scroll-snap-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
   @media (min-width: 768px) {
     .client-card {
-      width: calc(50% - 1rem);
+      width: calc(40% - 1rem);
     }
     .client-card:hover {
       border-color: hsl(162 100% 42% / 0.5);
@@ -157,7 +157,7 @@ input, select, textarea {
 
   @media (min-width: 1024px) {
     .client-card {
-      width: calc(25% - 1.5rem);
+      width: calc(20% - 1.5rem);
     }
   }
 
