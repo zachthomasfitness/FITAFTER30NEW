@@ -13,7 +13,7 @@ const rejectList = [
 
 const MissionFilterSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 text-center bg-background glow-section overflow-hidden pb-[25px] pr-0 pl-0 pt-[50px]">
+    <section className="py-16 md:py-24 px-4 md:px-6 text-center bg-transparent glow-section overflow-hidden pb-[25px] pr-0 pl-0 pt-[50px]">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
         <h2 className="text-xl md:text-4xl font-extrabold text-foreground mb-10 md:mb-14">

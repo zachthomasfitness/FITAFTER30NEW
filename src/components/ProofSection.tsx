@@ -39,7 +39,7 @@ const clients = [
 
 const ProofSection = () => {
   return (
-    <section className="md:pt-10 md:pb-24 bg-secondary border-y border-border pt-[30px] pb-[30px]">
+    <section className="md:pt-10 md:pb-24 bg-transparent border-y border-border/30 pt-[30px] pb-[30px]">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
@@ -52,7 +52,7 @@ const ProofSection = () => {
         <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
           {clients.map((client, index) =>
           <div key={index} className="client-card">
-              <div className="aspect-square bg-muted flex items-center justify-center border-b border-border text-muted-foreground overflow-hidden">
+              <div className="aspect-square bg-muted/30 flex items-center justify-center border-b border-border/20 text-muted-foreground overflow-hidden">
                 {client.image ?
               <img
                 src={client.image}

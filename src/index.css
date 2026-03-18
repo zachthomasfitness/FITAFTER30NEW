@@ -3,14 +3,14 @@
 /* FIX: Ensures form inputs have visible text on dark backgrounds */
 input, select, textarea {
   color: #ffffff !important;
-  background-color: #374151 !important;
+  background-color: rgba(63, 63, 70, 0.8) !important;
 }
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Brand Colors - Charcoal & Yellow */
+    /* Brand Colors - Gunmetal & Yellow */
     --brand-yellow: 49 100% 67%;
     --brand-yellow-glow: 49 100% 67%;
     
@@ -27,7 +27,7 @@ input, select, textarea {
     --primary: 49 100% 67%;
     --primary-foreground: 240 4% 16%;
 
-    --secondary: 240 5% 26%;
+    --secondary: 240 4% 16%;
     --secondary-foreground: 220 14% 91%;
 
     --muted: 240 4% 22%;
@@ -39,7 +39,7 @@ input, select, textarea {
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5% 32%;
+    --border: 240 5% 28%;
     --input: 240 5% 32%;
     --ring: 49 100% 67%;
 
@@ -49,8 +49,8 @@ input, select, textarea {
     --heading: 0 0% 100%;
 
     /* Custom shadows - yellow glow */
-    --shadow-glow: 0 0 40px -10px hsl(49 100% 67% / 0.2);
-    --shadow-btn: 0 10px 30px -5px hsl(49 100% 67% / 0.35);
+    --shadow-glow: 0 0 40px -10px hsl(49 100% 67% / 0.25);
+    --shadow-btn: 0 0 30px rgba(255, 222, 89, 0.4);
   }
 
   .dark {
@@ -62,7 +62,7 @@ input, select, textarea {
     --popover-foreground: 0 0% 90%;
     --primary: 49 100% 67%;
     --primary-foreground: 240 4% 16%;
-    --secondary: 240 5% 22%;
+    --secondary: 240 4% 12%;
     --secondary-foreground: 0 0% 90%;
     --muted: 240 4% 18%;
     --muted-foreground: 220 14% 55%;
@@ -86,9 +86,53 @@ input, select, textarea {
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
+    /* Layer 1: Diagonal gradient */
+    background: linear-gradient(135deg, #2d2d30 0%, #27272a 40%, #27272a 100%);
+    background-attachment: fixed;
+  }
+
+  /* Layer 3: Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+
+  /* Layer 2: Yellow glow orbs on page */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 600px 500px at 20% 5%, rgba(255, 222, 89, 0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 400px at 80% 3%, rgba(255, 222, 89, 0.14) 0%, transparent 70%),
+      radial-gradient(ellipse 400px 300px at 50% 35%, rgba(255, 222, 89, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 350px at 30% 60%, rgba(255, 222, 89, 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 400px at 70% 80%, rgba(255, 222, 89, 0.1) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 500px at 50% 95%, rgba(255, 222, 89, 0.15) 0%, transparent 70%);
+  }
+
+  /* Ensure content sits above glow and noise layers */
+  #root {
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -118,31 +162,35 @@ input, select, textarea {
     scrollbar-width: none;
   }
 
-  /* Clean card style - dark theme */
+  /* Glass card style - semi-transparent */
   .glass-card {
-    background: hsl(240 5% 26%);
-    border: 1px solid hsl(240 5% 34%);
+    background: rgba(63, 63, 70, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
   .glass-card:hover {
-    border-color: hsl(49 100% 67% / 0.4);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-color: hsl(49 100% 67% / 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px hsl(49 100% 67% / 0.08);
   }
 
   .client-card {
-    background: hsl(240 5% 26%);
-    border: 1px solid hsl(240 5% 34%);
+    background: rgba(63, 63, 70, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 65%;
     scroll-snap-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
   @media (min-width: 768px) {
@@ -150,8 +198,8 @@ input, select, textarea {
       width: calc(40% - 1rem);
     }
     .client-card:hover {
-      border-color: hsl(49 100% 67% / 0.5);
-      box-shadow: 0 4px 16px hsl(49 100% 67% / 0.1);
+      border-color: hsl(49 100% 67% / 0.4);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px hsl(49 100% 67% / 0.1);
     }
   }
 
@@ -161,12 +209,14 @@ input, select, textarea {
     }
   }
 
-  /* Feature cards */
+  /* Feature cards - glass */
   .glassmorphism-card {
-    background: hsl(240 5% 26%);
-    border: 1px solid hsl(240 5% 34%);
+    background: rgba(63, 63, 70, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
   /* Form wrapper */
@@ -194,15 +244,17 @@ input, select, textarea {
   }
 
   .feature-card {
-    background: hsl(240 5% 26%);
-    border: 1px solid hsl(240 5% 34%);
+    background: rgba(63, 63, 70, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 85%;
     scroll-snap-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
   @media (min-width: 768px) {
@@ -211,7 +263,7 @@ input, select, textarea {
       flex-shrink: 1;
     }
     .feature-card:hover {
-      border-color: hsl(49 100% 67% / 0.5);
+      border-color: hsl(49 100% 67% / 0.4);
     }
   }
 
@@ -219,31 +271,31 @@ input, select, textarea {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
-  /* Yellow glow background effect */
+  /* Yellow glow background effect - stronger */
   .glow-hero {
     position: relative;
   }
   .glow-hero::before {
     content: '';
     position: absolute;
-    top: -80px;
-    left: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, hsl(49 100% 67% / 0.12) 0%, transparent 70%);
-    filter: blur(80px);
+    top: -120px;
+    left: -150px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 222, 89, 0.25) 0%, transparent 65%);
+    filter: blur(120px);
     pointer-events: none;
     z-index: 0;
   }
   .glow-hero::after {
     content: '';
     position: absolute;
-    top: -60px;
-    right: -80px;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, hsl(49 100% 67% / 0.1) 0%, transparent 70%);
-    filter: blur(100px);
+    top: -80px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 222, 89, 0.2) 0%, transparent 65%);
+    filter: blur(150px);
     pointer-events: none;
     z-index: 0;
   }
@@ -257,10 +309,10 @@ input, select, textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 300px;
-    background: radial-gradient(ellipse, hsl(49 100% 67% / 0.08) 0%, transparent 70%);
-    filter: blur(60px);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(255, 222, 89, 0.15) 0%, transparent 65%);
+    filter: blur(100px);
     pointer-events: none;
     z-index: 0;
   }
@@ -271,13 +323,13 @@ input, select, textarea {
   .glow-section::before {
     content: '';
     position: absolute;
-    bottom: -50px;
+    bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    height: 300px;
-    background: radial-gradient(ellipse, hsl(49 100% 67% / 0.06) 0%, transparent 70%);
-    filter: blur(80px);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(255, 222, 89, 0.1) 0%, transparent 65%);
+    filter: blur(120px);
     pointer-events: none;
     z-index: 0;
   }

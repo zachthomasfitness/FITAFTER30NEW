@@ -1,6 +1,6 @@
 const FooterCTA = () => {
   return (
-    <section className="py-16 md:py-24 px-6 border-t border-border text-center bg-background glow-section overflow-hidden pb-[25px] pl-[20px] pr-[20px] pt-[30px]">
+    <section className="py-16 md:py-24 px-6 border-t border-border/30 text-center bg-transparent glow-section overflow-hidden pb-[25px] pl-[20px] pr-[20px] pt-[30px]">
       <div className="max-w-xl mx-auto relative z-10">
         <h2 className="text-xl md:text-3xl font-extrabold text-foreground mb-4">
           Here's What You'll Get in the Free 10-Day Kickstart:

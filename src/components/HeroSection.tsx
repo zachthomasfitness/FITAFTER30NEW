@@ -11,7 +11,7 @@ const HeroSection = () => {
         </span>
       </div>
 
-      <header className="relative pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 text-center glow-hero overflow-hidden bg-background">
+      <header className="relative pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 text-center glow-hero overflow-hidden bg-transparent">
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Headline */}
           <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
