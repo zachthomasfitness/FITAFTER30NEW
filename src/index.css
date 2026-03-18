@@ -14,33 +14,33 @@ input, select, textarea {
     --brand-yellow: 49 100% 67%;
     --brand-yellow-glow: 49 100% 67%;
     
-    /* Background - Dark Charcoal */
-    --background: 220 26% 18%;
+    /* Background - Gunmetal Grey */
+    --background: 240 4% 16%;
     --foreground: 0 0% 100%;
 
-    --card: 218 22% 27%;
+    --card: 240 5% 26%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 218 22% 27%;
+    --popover: 240 5% 26%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 49 100% 67%;
-    --primary-foreground: 220 26% 18%;
+    --primary-foreground: 240 4% 16%;
 
-    --secondary: 218 22% 27%;
+    --secondary: 240 5% 26%;
     --secondary-foreground: 220 14% 91%;
 
-    --muted: 218 22% 24%;
+    --muted: 240 4% 22%;
     --muted-foreground: 220 14% 75%;
 
-    --accent: 218 22% 30%;
+    --accent: 240 5% 30%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 218 22% 32%;
-    --input: 218 22% 32%;
+    --border: 240 5% 32%;
+    --input: 240 5% 32%;
     --ring: 49 100% 67%;
 
     --radius: 0.75rem;
