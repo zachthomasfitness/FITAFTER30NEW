@@ -5,6 +5,7 @@ import FooterCTA from "@/components/FooterCTA";
 import MidPageCTA from "@/components/MidPageCTA";
 import MissionFilterSection from "@/components/MissionFilterSection";
 import FinalCTA from "@/components/FinalCTA";
+import AboutMeSection from "@/components/AboutMeSection";
 
 const HabitKickstart = () => {
   return (
@@ -27,6 +28,7 @@ const HabitKickstart = () => {
         <FooterCTA />
         <MidPageCTA />
         <MissionFilterSection />
+        <AboutMeSection />
         <FinalCTA />
       </main>
     </>
