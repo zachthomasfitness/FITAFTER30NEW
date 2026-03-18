@@ -4,12 +4,12 @@ const FinalCTA = () => {
   };
 
   return (
-    <footer className="py-16 md:py-24 px-6 border-t border-border text-center bg-[hsl(215,30%,15%)] pt-[25px] pb-[25px] pl-[25px] pr-[25px]">
-      <div className="max-w-xl mx-auto">
-        <h2 className="md:text-3xl font-extrabold text-white mb-4 text-lg">
+    <footer className="py-16 md:py-24 px-6 border-t border-border text-center bg-background glow-cta overflow-hidden pt-[25px] pb-[25px] pl-[25px] pr-[25px]">
+      <div className="max-w-xl mx-auto relative z-10">
+        <h2 className="md:text-3xl font-extrabold text-foreground mb-4 text-lg">
           You made it all the way down here??       
         </h2>
-        <p className="text-white/80 mb-6">
+        <p className="text-secondary-foreground mb-6">
           This kickstart is probably for you then!
    
   
@@ -17,11 +17,11 @@ const FinalCTA = () => {
  
       
         </p>
-        <button onClick={scrollToTop} className="bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-lg hover:bg-[hsl(162,100%,38%)] transition-colors mb-4">
+        <button onClick={scrollToTop} className="bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-lg hover:brightness-95 transition-all hover:shadow-[0_0_20px_hsl(49_100%_67%/0.3)] mb-4">
           
           JOIN THE FREE KICKSTART
         </button>
-        <p className="text-white/50 text-sm">
+        <p className="text-muted-foreground text-sm">
           It's completely free. No credit card required.
         </p>
       </div>

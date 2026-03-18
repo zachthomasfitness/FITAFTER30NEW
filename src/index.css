@@ -1,77 +1,78 @@
 @tailwind base;
 
-/* FIX: Ensures form inputs have visible black text */
+/* FIX: Ensures form inputs have visible text on dark backgrounds */
 input, select, textarea {
-  color: #000000 !important;
+  color: #ffffff !important;
+  background-color: #374151 !important;
 }
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Brand Colors - Navy & Teal */
-    --brand-yellow: 162 100% 42%;
-    --brand-yellow-glow: 162 100% 42%;
+    /* Brand Colors - Charcoal & Yellow */
+    --brand-yellow: 49 100% 67%;
+    --brand-yellow-glow: 49 100% 67%;
     
-    /* Background - White/Light */
-    --background: 210 17% 98%;
-    --foreground: 215 19% 23%;
+    /* Background - Dark Charcoal */
+    --background: 220 26% 18%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 19% 23%;
+    --card: 218 22% 27%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 19% 23%;
+    --popover: 218 22% 27%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 162 100% 42%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 49 100% 67%;
+    --primary-foreground: 220 26% 18%;
 
-    --secondary: 210 17% 98%;
-    --secondary-foreground: 215 30% 15%;
+    --secondary: 218 22% 27%;
+    --secondary-foreground: 220 14% 91%;
 
-    --muted: 210 17% 95%;
-    --muted-foreground: 215 19% 45%;
+    --muted: 218 22% 24%;
+    --muted-foreground: 220 14% 75%;
 
-    --accent: 210 17% 96%;
-    --accent-foreground: 215 30% 15%;
+    --accent: 218 22% 30%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 20% 90%;
-    --input: 215 20% 90%;
-    --ring: 162 100% 42%;
+    --border: 218 22% 32%;
+    --input: 218 22% 32%;
+    --ring: 49 100% 67%;
 
     --radius: 0.75rem;
 
-    /* Heading color token */
-    --heading: 215 30% 15%;
+    /* Heading color token - white on dark */
+    --heading: 0 0% 100%;
 
-    /* Custom shadows - teal glow */
-    --shadow-glow: 0 0 40px -10px hsl(162 100% 42% / 0.15);
-    --shadow-btn: 0 10px 30px -5px hsl(162 100% 42% / 0.35);
+    /* Custom shadows - yellow glow */
+    --shadow-glow: 0 0 40px -10px hsl(49 100% 67% / 0.2);
+    --shadow-btn: 0 10px 30px -5px hsl(49 100% 67% / 0.35);
   }
 
   .dark {
-    --background: 215 30% 15%;
+    --background: 220 26% 12%;
     --foreground: 0 0% 90%;
-    --card: 215 30% 18%;
+    --card: 218 22% 20%;
     --card-foreground: 0 0% 90%;
-    --popover: 215 30% 18%;
+    --popover: 218 22% 20%;
     --popover-foreground: 0 0% 90%;
-    --primary: 162 100% 42%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 215 30% 20%;
+    --primary: 49 100% 67%;
+    --primary-foreground: 220 26% 18%;
+    --secondary: 218 22% 22%;
     --secondary-foreground: 0 0% 90%;
-    --muted: 215 30% 22%;
-    --muted-foreground: 215 15% 55%;
-    --accent: 215 30% 22%;
+    --muted: 218 22% 18%;
+    --muted-foreground: 220 14% 55%;
+    --accent: 218 22% 22%;
     --accent-foreground: 0 0% 90%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
-    --border: 215 20% 25%;
-    --input: 215 20% 25%;
-    --ring: 162 100% 42%;
+    --border: 218 20% 25%;
+    --input: 218 20% 25%;
+    --ring: 49 100% 67%;
   }
 }
 
@@ -87,7 +88,6 @@ input, select, textarea {
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa;
     min-height: 100vh;
   }
 }
@@ -118,31 +118,31 @@ input, select, textarea {
     scrollbar-width: none;
   }
 
-  /* Clean card style */
+  /* Clean card style - dark theme */
   .glass-card {
-    background: #f8f9fa;
-    border: 1px solid hsl(215 20% 90%);
+    background: hsl(218 22% 27%);
+    border: 1px solid hsl(218 22% 35%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
 
   .glass-card:hover {
-    border-color: hsl(162 100% 42% / 0.4);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: hsl(49 100% 67% / 0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
 
   .client-card {
-    background: #f8f9fa;
-    border: 1px solid hsl(215 20% 90%);
+    background: hsl(218 22% 27%);
+    border: 1px solid hsl(218 22% 35%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 65%;
     scroll-snap-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
 
   @media (min-width: 768px) {
@@ -150,8 +150,8 @@ input, select, textarea {
       width: calc(40% - 1rem);
     }
     .client-card:hover {
-      border-color: hsl(162 100% 42% / 0.5);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: hsl(49 100% 67% / 0.5);
+      box-shadow: 0 4px 16px hsl(49 100% 67% / 0.1);
     }
   }
 
@@ -163,10 +163,10 @@ input, select, textarea {
 
   /* Feature cards */
   .glassmorphism-card {
-    background: #f8f9fa;
-    border: 1px solid hsl(215 20% 90%);
+    background: hsl(218 22% 27%);
+    border: 1px solid hsl(218 22% 35%);
     border-radius: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
 
   /* Form wrapper */
@@ -177,8 +177,8 @@ input, select, textarea {
   }
 
   .timer-unit {
-    border: 1px solid hsl(162 100% 42% / 0.3);
-    background: hsl(162 100% 42% / 0.06);
+    border: 1px solid hsl(49 100% 67% / 0.3);
+    background: hsl(49 100% 67% / 0.08);
     padding: 8px 12px;
     border-radius: 12px;
     min-width: 60px;
@@ -186,23 +186,23 @@ input, select, textarea {
 
   /* Compact timer */
   .timer-unit-compact {
-    border: 1px solid hsl(162 100% 42% / 0.25);
-    background: hsl(162 100% 42% / 0.04);
+    border: 1px solid hsl(49 100% 67% / 0.25);
+    background: hsl(49 100% 67% / 0.06);
     padding: 6px;
     border-radius: 10px;
     min-width: 50px;
   }
 
   .feature-card {
-    background: #f8f9fa;
-    border: 1px solid hsl(215 20% 90%);
+    background: hsl(218 22% 27%);
+    border: 1px solid hsl(218 22% 35%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 85%;
     scroll-snap-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
 
   @media (min-width: 768px) {
@@ -211,12 +211,75 @@ input, select, textarea {
       flex-shrink: 1;
     }
     .feature-card:hover {
-      border-color: hsl(162 100% 42% / 0.5);
+      border-color: hsl(49 100% 67% / 0.5);
     }
   }
 
   .animate-ping-slow {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  /* Yellow glow background effect */
+  .glow-hero {
+    position: relative;
+  }
+  .glow-hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, hsl(49 100% 67% / 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .glow-hero::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -80px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, hsl(49 100% 67% / 0.1) 0%, transparent 70%);
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .glow-cta {
+    position: relative;
+  }
+  .glow-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(ellipse, hsl(49 100% 67% / 0.08) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .glow-section {
+    position: relative;
+  }
+  .glow-section::before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(ellipse, hsl(49 100% 67% / 0.06) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
   }
 
   /* Infinite Marquee Animation */
