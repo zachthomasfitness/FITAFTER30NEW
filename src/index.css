@@ -14,33 +14,33 @@ input, select, textarea {
     --brand-yellow: 49 100% 67%;
     --brand-yellow-glow: 49 100% 67%;
     
-    /* Background - Dark Charcoal */
-    --background: 220 26% 18%;
+    /* Background - Gunmetal Grey */
+    --background: 240 4% 16%;
     --foreground: 0 0% 100%;
 
-    --card: 218 22% 27%;
+    --card: 240 5% 26%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 218 22% 27%;
+    --popover: 240 5% 26%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 49 100% 67%;
-    --primary-foreground: 220 26% 18%;
+    --primary-foreground: 240 4% 16%;
 
-    --secondary: 218 22% 27%;
+    --secondary: 240 5% 26%;
     --secondary-foreground: 220 14% 91%;
 
-    --muted: 218 22% 24%;
+    --muted: 240 4% 22%;
     --muted-foreground: 220 14% 75%;
 
-    --accent: 218 22% 30%;
+    --accent: 240 5% 30%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 218 22% 32%;
-    --input: 218 22% 32%;
+    --border: 240 5% 32%;
+    --input: 240 5% 32%;
     --ring: 49 100% 67%;
 
     --radius: 0.75rem;
@@ -54,24 +54,24 @@ input, select, textarea {
   }
 
   .dark {
-    --background: 220 26% 12%;
+    --background: 240 4% 12%;
     --foreground: 0 0% 90%;
-    --card: 218 22% 20%;
+    --card: 240 5% 20%;
     --card-foreground: 0 0% 90%;
-    --popover: 218 22% 20%;
+    --popover: 240 5% 20%;
     --popover-foreground: 0 0% 90%;
     --primary: 49 100% 67%;
-    --primary-foreground: 220 26% 18%;
-    --secondary: 218 22% 22%;
+    --primary-foreground: 240 4% 16%;
+    --secondary: 240 5% 22%;
     --secondary-foreground: 0 0% 90%;
-    --muted: 218 22% 18%;
+    --muted: 240 4% 18%;
     --muted-foreground: 220 14% 55%;
-    --accent: 218 22% 22%;
+    --accent: 240 5% 22%;
     --accent-foreground: 0 0% 90%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
-    --border: 218 20% 25%;
-    --input: 218 20% 25%;
+    --border: 240 5% 25%;
+    --input: 240 5% 25%;
     --ring: 49 100% 67%;
   }
 }
@@ -120,8 +120,8 @@ input, select, textarea {
 
   /* Clean card style - dark theme */
   .glass-card {
-    background: hsl(218 22% 27%);
-    border: 1px solid hsl(218 22% 35%);
+    background: hsl(240 5% 26%);
+    border: 1px solid hsl(240 5% 34%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -134,8 +134,8 @@ input, select, textarea {
   }
 
   .client-card {
-    background: hsl(218 22% 27%);
-    border: 1px solid hsl(218 22% 35%);
+    background: hsl(240 5% 26%);
+    border: 1px solid hsl(240 5% 34%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -163,8 +163,8 @@ input, select, textarea {
 
   /* Feature cards */
   .glassmorphism-card {
-    background: hsl(218 22% 27%);
-    border: 1px solid hsl(218 22% 35%);
+    background: hsl(240 5% 26%);
+    border: 1px solid hsl(240 5% 34%);
     border-radius: 24px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   }
@@ -194,8 +194,8 @@ input, select, textarea {
   }
 
   .feature-card {
-    background: hsl(218 22% 27%);
-    border: 1px solid hsl(218 22% 35%);
+    background: hsl(240 5% 26%);
+    border: 1px solid hsl(240 5% 34%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
