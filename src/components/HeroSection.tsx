@@ -6,7 +6,7 @@ const HeroSection = () => {
     <>
       {/* Top Banner */}
       <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
-        <span className="text-primary uppercase tracking-[0.08em] text-[0.75rem] md:text-[0.875rem] font-bold text-center font-sans">
+        <span className="text-primary uppercase tracking-[0.08em] text-[10px] md:text-[0.875rem] font-bold text-center font-sans">
           Free Kickstart for Busy Over-30s Who Keep Falling Off
         </span>
       </div>
