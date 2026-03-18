@@ -14,7 +14,7 @@ const AboutMeSection = () => {
           Why I Built This
         </h2>
 
-        <div className="text-muted-foreground text-base md:text-lg leading-relaxed space-y-4 text-left">
+        <div className="text-muted-foreground text-sm md:text-base leading-relaxed space-y-4 text-left">
           <p>
             I'm Zach Thomas. I've been coaching for over 10 years, and I've been having the same conversation every day for years:
           </p>
