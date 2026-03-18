@@ -9,66 +9,69 @@ input, select, textarea {
 
 @layer base {
   :root {
-    /* Brand Colors */
-    --brand-yellow: 49 100% 67%;
-    --brand-yellow-glow: 49 100% 67%;
+    /* Brand Colors - Navy & Teal */
+    --brand-yellow: 162 100% 42%;
+    --brand-yellow-glow: 162 100% 42%;
     
-    /* Background - TRUE NEUTRAL (zero blue/navy) */
-    --background: 0 0% 8%;
-    --foreground: 0 0% 85%;
+    /* Background - White/Light */
+    --background: 0 0% 100%;
+    --foreground: 215 19% 23%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 85%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 19% 23%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 85%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 19% 23%;
 
-    --primary: 49 100% 67%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 162 100% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 210 17% 98%;
+    --secondary-foreground: 215 30% 15%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 210 17% 95%;
+    --muted-foreground: 215 19% 45%;
 
-    --accent: 0 0% 18%;
-    --accent-foreground: 0 0% 85%;
+    --accent: 210 17% 96%;
+    --accent-foreground: 215 30% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 100% / 0.1;
-    --input: 0 0% 15%;
-    --ring: 49 100% 67%;
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 162 100% 42%;
 
     --radius: 0.75rem;
 
-    /* Custom shadows */
-    --shadow-glow: 0 0 40px -10px hsl(49 100% 67% / 0.2);
-    --shadow-btn: 0 10px 30px -5px hsl(49 100% 67% / 0.5);
+    /* Heading color token */
+    --heading: 215 30% 15%;
+
+    /* Custom shadows - teal glow */
+    --shadow-glow: 0 0 40px -10px hsl(162 100% 42% / 0.15);
+    --shadow-btn: 0 10px 30px -5px hsl(162 100% 42% / 0.35);
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 85%;
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 85%;
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 85%;
-    --primary: 49 100% 67%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 85%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 0 0% 18%;
-    --accent-foreground: 0 0% 85%;
+    --background: 215 30% 15%;
+    --foreground: 0 0% 90%;
+    --card: 215 30% 18%;
+    --card-foreground: 0 0% 90%;
+    --popover: 215 30% 18%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 162 100% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 30% 20%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 215 30% 22%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 215 30% 22%;
+    --accent-foreground: 0 0% 90%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 100% / 0.1;
-    --input: 0 0% 15%;
-    --ring: 49 100% 67%;
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 162 100% 42%;
   }
 }
 
@@ -84,18 +87,8 @@ input, select, textarea {
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
-    background-color: #000000;
-    /* HIGH-CONTRAST SPOTLIGHT: Dark Steel halo at top, Pure Black below */
-    background-image: radial-gradient(ellipse at 50% 0%, #1a1a1a 0%, #000000 75%);
-    background-attachment: scroll;
+    background-color: #ffffff;
     min-height: 100vh;
-  }
-
-  /* Fixed background only on desktop where it's supported */
-  @media (min-width: 1024px) {
-    body {
-      background-attachment: fixed;
-    }
   }
 }
 
@@ -125,30 +118,31 @@ input, select, textarea {
     scrollbar-width: none;
   }
 
-  /* Steel Glassmorphism Card */
+  /* Clean card style */
   .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
+    background: #ffffff;
+    border: 1px solid hsl(215 20% 90%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
   .glass-card:hover {
-    border-color: hsl(var(--primary) / 0.3);
+    border-color: hsl(162 100% 42% / 0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
 
   .client-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px);
+    background: #ffffff;
+    border: 1px solid hsl(215 20% 90%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 85%;
     scroll-snap-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
   @media (min-width: 768px) {
@@ -156,7 +150,8 @@ input, select, textarea {
       width: calc(50% - 1rem);
     }
     .client-card:hover {
-      border-color: hsl(var(--primary) / 0.4);
+      border-color: hsl(162 100% 42% / 0.5);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
   }
 
@@ -166,15 +161,15 @@ input, select, textarea {
     }
   }
 
-  /* Feature cards - snap slider on mobile, static on desktop */
+  /* Feature cards */
   .glassmorphism-card {
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #ffffff;
+    border: 1px solid hsl(215 20% 90%);
     border-radius: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
-  /* Naked form wrapper - no borders or background */
+  /* Form wrapper */
   .form-embed-wrapper {
     max-width: 480px;
     margin: 0 auto;
@@ -182,32 +177,32 @@ input, select, textarea {
   }
 
   .timer-unit {
-    border: 1px solid rgba(255, 222, 89, 0.3);
-    background: rgba(255, 222, 89, 0.05);
+    border: 1px solid hsl(162 100% 42% / 0.3);
+    background: hsl(162 100% 42% / 0.06);
     padding: 8px 12px;
     border-radius: 12px;
     min-width: 60px;
   }
 
-  /* Compact timer for Action Cluster */
+  /* Compact timer */
   .timer-unit-compact {
-    border: 1px solid rgba(255, 222, 89, 0.2);
-    background: rgba(255, 222, 89, 0.03);
+    border: 1px solid hsl(162 100% 42% / 0.25);
+    background: hsl(162 100% 42% / 0.04);
     padding: 6px;
     border-radius: 10px;
     min-width: 50px;
   }
 
   .feature-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px);
+    background: #ffffff;
+    border: 1px solid hsl(215 20% 90%);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 85%;
     scroll-snap-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
   @media (min-width: 768px) {
@@ -216,7 +211,7 @@ input, select, textarea {
       flex-shrink: 1;
     }
     .feature-card:hover {
-      border-color: hsl(var(--primary) / 0.4);
+      border-color: hsl(162 100% 42% / 0.5);
     }
   }
 

@@ -13,24 +13,22 @@ const HeroSection = () => {
 
       <header className="relative pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* Headline - pure white, natural text wrap */}
-          <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
+          {/* Headline */}
+          <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-[hsl(215,30%,15%)] leading-[1.05] mb-4 md:mb-6">
           Sick of Falling Off Every Plan You Start? Here's How to Get Stupidly Consistent to Lose Fat, Get Strong, and Feel Like Yourself Again
           </h1>
 
-          {/* Subheadline - clean and focused */}
+          {/* Subheadline */}
           <p className="text-sm md:text-lg text-foreground/80 font-semibold">
           Join the free 10-Day Habit Kickstart and learn the system that's helped hundreds of over-30s lose fat, get their energy back, get strong, and feel like themselves again - without training every day or eating bland food.
           </p>
 
-          {/* ACTION CLUSTER: Form -> Start Date -> Timer -> Live Line */}
+          {/* ACTION CLUSTER */}
           <div className="flex flex-col items-center">
-            {/* Sign-up form wrapper - pulled up toward subheadline */}
             <div id="signup-form" className="w-full max-w-[480px] mx-auto -mt-10 md:-mt-12">
               <PulseFormEmbed id="hero-inline-7DTFHh8ZmEmWrmVpsktd" />
             </div>
 
-            {/* Start Date + Timer container - pulled up tight to form submit button */}
             <div className="flex flex-col items-center -mt-24 md:-mt-28">
               <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
               Join the Free 10-Day Kickstart
@@ -40,7 +38,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Live Status - at the bottom of the cluster */}
+            {/* Live Status */}
             <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[12px] md:text-base whitespace-nowrap">
               <span className="relative flex h-3 w-3 flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
