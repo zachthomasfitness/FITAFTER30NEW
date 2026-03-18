@@ -17,7 +17,7 @@ const FooterCTA = () => {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
-            <span><strong>WhatsApp group access</strong> — accountability and support from people on the same journey</span>
+            <span><strong>WhatsApp group access</strong> - accountability and support from people on the same journey</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
