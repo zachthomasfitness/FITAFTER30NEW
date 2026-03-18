@@ -21,7 +21,7 @@ const FooterCTA = () => {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
-            <span><strong>The Habit Layering framework</strong> — the system that's helped hundreds of people lose fat, get their energy back, and stay consistent for life</span>
+            <span><strong>The Habit Layering framework</strong> - the system that's helped hundreds of people lose fat, get their energy back, and stay consistent for life</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
