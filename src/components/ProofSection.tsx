@@ -39,7 +39,7 @@ const clients = [
 
 const ProofSection = () => {
   return (
-    <section className="md:pt-10 md:pb-24 bg-transparent border-y border-border/30 pt-[30px] pb-[30px]">
+    <section className="md:pt-10 md:pb-24 bg-transparent border-y border-border/20 pt-[30px] pb-[30px]">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
@@ -58,7 +58,6 @@ const ProofSection = () => {
                 src={client.image}
                 alt={`${client.name}'s transformation`}
                 className="w-full h-full object-cover" /> :
-
 
               <div className="text-center">
                     <div className="text-6xl mb-2">📸</div>
