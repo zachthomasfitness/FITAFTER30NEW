@@ -45,12 +45,10 @@ input, select, textarea {
 
     --radius: 0.75rem;
 
-    /* Heading color token - white on dark */
     --heading: 0 0% 100%;
 
-    /* Custom shadows - yellow glow */
-    --shadow-glow: 0 0 40px -10px hsl(49 100% 67% / 0.25);
-    --shadow-btn: 0 0 30px rgba(255, 222, 89, 0.4);
+    --shadow-glow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-btn: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
   .dark {
@@ -89,9 +87,29 @@ input, select, textarea {
     @apply text-foreground antialiased;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
-    /* Layer 1: Diagonal gradient */
-    background: linear-gradient(135deg, #2d2d30 0%, #27272a 40%, #27272a 100%);
+    /* Layer 1: Diagonal gunmetal gradient */
+    background:
+      linear-gradient(135deg, #3f3f46 0%, #27272a 35%, #27272a 65%, #18181b 100%);
     background-attachment: fixed;
+  }
+
+  /* Layer 2: Radial gunmetal gradients for dimension */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 700px 500px at 30% 8%, rgba(82, 82, 91, 0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 400px at 75% 5%, rgba(63, 63, 70, 0.25) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 350px at 50% 30%, rgba(63, 63, 70, 0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 300px at 20% 55%, rgba(82, 82, 91, 0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 400px at 80% 70%, rgba(63, 63, 70, 0.1) 0%, transparent 70%),
+      radial-gradient(ellipse 700px 500px at 40% 90%, rgba(24, 24, 27, 0.3) 0%, transparent 70%);
   }
 
   /* Layer 3: Noise texture overlay */
@@ -110,26 +128,7 @@ input, select, textarea {
     background-size: 256px 256px;
   }
 
-  /* Layer 2: Yellow glow orbs on page */
-  body::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    background:
-      radial-gradient(ellipse 600px 500px at 20% 5%, rgba(255, 222, 89, 0.18) 0%, transparent 70%),
-      radial-gradient(ellipse 500px 400px at 80% 3%, rgba(255, 222, 89, 0.14) 0%, transparent 70%),
-      radial-gradient(ellipse 400px 300px at 50% 35%, rgba(255, 222, 89, 0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 500px 350px at 30% 60%, rgba(255, 222, 89, 0.06) 0%, transparent 70%),
-      radial-gradient(ellipse 600px 400px at 70% 80%, rgba(255, 222, 89, 0.1) 0%, transparent 70%),
-      radial-gradient(ellipse 500px 500px at 50% 95%, rgba(255, 222, 89, 0.15) 0%, transparent 70%);
-  }
-
-  /* Ensure content sits above glow and noise layers */
+  /* Content above effects */
   #root {
     position: relative;
     z-index: 2;
@@ -162,12 +161,12 @@ input, select, textarea {
     scrollbar-width: none;
   }
 
-  /* Glass card style - semi-transparent */
+  /* Glass card style */
   .glass-card {
     background: rgba(63, 63, 70, 0.65);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(82, 82, 91, 0.5);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -175,15 +174,15 @@ input, select, textarea {
   }
 
   .glass-card:hover {
-    border-color: hsl(49 100% 67% / 0.35);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px hsl(49 100% 67% / 0.08);
+    border-color: rgba(82, 82, 91, 0.7);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   }
 
   .client-card {
     background: rgba(63, 63, 70, 0.65);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(82, 82, 91, 0.5);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -198,8 +197,8 @@ input, select, textarea {
       width: calc(40% - 1rem);
     }
     .client-card:hover {
-      border-color: hsl(49 100% 67% / 0.4);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px hsl(49 100% 67% / 0.1);
+      border-color: rgba(82, 82, 91, 0.7);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     }
   }
 
@@ -214,7 +213,7 @@ input, select, textarea {
     background: rgba(63, 63, 70, 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(82, 82, 91, 0.5);
     border-radius: 24px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
@@ -247,7 +246,7 @@ input, select, textarea {
     background: rgba(63, 63, 70, 0.65);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(82, 82, 91, 0.5);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -263,75 +262,12 @@ input, select, textarea {
       flex-shrink: 1;
     }
     .feature-card:hover {
-      border-color: hsl(49 100% 67% / 0.4);
+      border-color: rgba(82, 82, 91, 0.7);
     }
   }
 
   .animate-ping-slow {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
-
-  /* Yellow glow background effect - stronger */
-  .glow-hero {
-    position: relative;
-  }
-  .glow-hero::before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    left: -150px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255, 222, 89, 0.25) 0%, transparent 65%);
-    filter: blur(120px);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .glow-hero::after {
-    content: '';
-    position: absolute;
-    top: -80px;
-    right: -120px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(255, 222, 89, 0.2) 0%, transparent 65%);
-    filter: blur(150px);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .glow-cta {
-    position: relative;
-  }
-  .glow-cta::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 400px;
-    background: radial-gradient(ellipse, rgba(255, 222, 89, 0.15) 0%, transparent 65%);
-    filter: blur(100px);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .glow-section {
-    position: relative;
-  }
-  .glow-section::before {
-    content: '';
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 800px;
-    height: 400px;
-    background: radial-gradient(ellipse, rgba(255, 222, 89, 0.1) 0%, transparent 65%);
-    filter: blur(120px);
-    pointer-events: none;
-    z-index: 0;
   }
 
   /* Infinite Marquee Animation */
