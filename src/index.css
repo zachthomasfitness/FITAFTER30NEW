@@ -15,7 +15,7 @@ input, select, textarea {
     --brand-yellow-glow: 49 100% 67%;
     
     /* Background - Gunmetal Grey */
-    --background: 240 4% 16%;
+    --background: 240 3% 11%;
     --foreground: 0 0% 100%;
 
     --card: 240 5% 26%;
@@ -25,9 +25,9 @@ input, select, textarea {
     --popover-foreground: 0 0% 100%;
 
     --primary: 49 100% 67%;
-    --primary-foreground: 240 4% 16%;
+    --primary-foreground: 240 3% 11%;
 
-    --secondary: 240 4% 16%;
+    --secondary: 240 3% 11%;
     --secondary-foreground: 220 14% 91%;
 
     --muted: 240 4% 22%;
@@ -89,7 +89,7 @@ input, select, textarea {
     min-height: 100vh;
     /* Layer 1: Diagonal gunmetal gradient */
     background:
-      linear-gradient(135deg, #3f3f46 0%, #27272a 35%, #27272a 65%, #18181b 100%);
+      linear-gradient(135deg, #1a1a1d 0%, #27272a 50%, #3f3f46 100%);
     background-attachment: fixed;
   }
 
@@ -104,12 +104,12 @@ input, select, textarea {
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 700px 500px at 30% 8%, rgba(82, 82, 91, 0.35) 0%, transparent 70%),
-      radial-gradient(ellipse 500px 400px at 75% 5%, rgba(63, 63, 70, 0.25) 0%, transparent 70%),
-      radial-gradient(ellipse 600px 350px at 50% 30%, rgba(63, 63, 70, 0.15) 0%, transparent 70%),
-      radial-gradient(ellipse 500px 300px at 20% 55%, rgba(82, 82, 91, 0.12) 0%, transparent 70%),
-      radial-gradient(ellipse 600px 400px at 80% 70%, rgba(63, 63, 70, 0.1) 0%, transparent 70%),
-      radial-gradient(ellipse 700px 500px at 40% 90%, rgba(24, 24, 27, 0.3) 0%, transparent 70%);
+      radial-gradient(ellipse 700px 500px at 30% 8%, rgba(26, 26, 29, 0.4) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 400px at 75% 5%, rgba(39, 39, 42, 0.25) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 350px at 50% 30%, rgba(63, 63, 70, 0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 300px at 20% 55%, rgba(63, 63, 70, 0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 400px at 80% 70%, rgba(82, 82, 91, 0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 700px 500px at 40% 90%, rgba(63, 63, 70, 0.2) 0%, transparent 70%);
   }
 
   /* Layer 3: Noise texture overlay */
