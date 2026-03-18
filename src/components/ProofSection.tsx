@@ -44,7 +44,7 @@ const ProofSection = () => {
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
           <h2 className="md:text-4xl font-extrabold text-foreground leading-tight pl-0 mx-0 text-lg">
-            The Same System These Guys Used:
+            This Actually Works. Just Ask These Lot.
           </h2>
         </div>
 
