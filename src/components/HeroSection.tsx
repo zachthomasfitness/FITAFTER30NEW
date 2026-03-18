@@ -6,20 +6,20 @@ const HeroSection = () => {
     <>
       {/* Top Banner */}
       <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
-        <span className="text-primary uppercase tracking-[0.08em] md:text-[0.875rem] font-bold text-center font-sans text-xs">
+        <span className="text-primary uppercase tracking-[0.08em] text-[10px] md:text-[0.875rem] font-bold text-center font-sans">
           For Busy Over-30s Who Keep Falling Off
         </span>
       </div>
 
-      <header className="relative pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 text-center">
-        <div className="max-w-5xl mx-auto">
+      <header className="relative pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-6 text-center glow-hero overflow-hidden bg-background">
+        <div className="max-w-5xl mx-auto relative z-10">
           {/* Headline */}
-          <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-[hsl(215,30%,15%)] leading-[1.05] mb-4 md:mb-6">
+          <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
           Sick of Falling Off Every Plan You Start? Here's How to Get Stupidly Consistent to Lose Fat, Get Strong, and Feel Like Yourself Again
           </h1>
 
           {/* Subheadline */}
-          <p className="text-sm md:text-lg text-foreground/80 font-semibold">
+          <p className="text-sm md:text-lg text-secondary-foreground font-semibold">
           Join the free 10-Day Habit Kickstart - the system that's helped hundreds of over-30s feel lean, strong, and confident again without training every day or eating bland food.
           </p>
 

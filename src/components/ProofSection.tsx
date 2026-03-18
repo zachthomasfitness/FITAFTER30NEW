@@ -43,7 +43,7 @@ const ProofSection = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
-          <h2 className="md:text-4xl font-extrabold text-[hsl(215,30%,15%)] leading-tight pl-0 mx-0 text-lg">
+          <h2 className="md:text-4xl font-extrabold text-foreground leading-tight pl-0 mx-0 text-lg">
             The Same System These Guys Used:
           </h2>
         </div>
@@ -67,10 +67,10 @@ const ProofSection = () => {
               }
               </div>
               <div className="p-4 text-center">
-                <h4 className="text-base font-bold text-[hsl(215,30%,15%)] mb-1">
+                <h4 className="text-base font-bold text-foreground mb-1">
                   {client.name}
                 </h4>
-                <p className="text-xs text-foreground mb-1">{client.result}</p>
+                <p className="text-xs text-secondary-foreground mb-1">{client.result}</p>
                 <p className="text-xs italic text-muted-foreground">{client.detail}</p>
               </div>
             </div>

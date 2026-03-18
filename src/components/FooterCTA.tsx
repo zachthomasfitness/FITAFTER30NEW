@@ -1,12 +1,12 @@
 const FooterCTA = () => {
   return (
-    <section className="py-16 md:py-24 px-6 border-t border-border text-center bg-background pb-[25px] pl-[20px] pr-[20px] pt-[30px]">
-      <div className="max-w-xl mx-auto">
-        <h2 className="text-xl md:text-3xl font-extrabold text-[hsl(215,30%,15%)] mb-4">
+    <section className="py-16 md:py-24 px-6 border-t border-border text-center bg-background glow-section overflow-hidden pb-[25px] pl-[20px] pr-[20px] pt-[30px]">
+      <div className="max-w-xl mx-auto relative z-10">
+        <h2 className="text-xl md:text-3xl font-extrabold text-foreground mb-4">
           Here's What You'll Get in the Free 10-Day Kickstart:
         </h2>
 
-        <ul className="text-left space-y-3 mb-6 text-foreground/90 text-sm">
+        <ul className="text-left space-y-3 mb-6 text-secondary-foreground text-sm">
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
             <span><strong>Daily video lessons</strong> - one simple habit to focus on each day (no overwhelm, no confusion)</span>
