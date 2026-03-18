@@ -6,7 +6,7 @@ const AboutMeSection = () => {
     <section className="py-16 md:py-24 px-6 bg-background">
       <div className="max-w-2xl mx-auto text-center">
         <Avatar className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 border-4 border-primary/20">
-          <AvatarImage src="/placeholder.svg" alt="Zach Thomas" />
+          <AvatarImage src={zachHeadshot} alt="Zach Thomas" />
           <AvatarFallback className="text-3xl font-bold bg-primary/10 text-primary">ZT</AvatarFallback>
         </Avatar>
 
