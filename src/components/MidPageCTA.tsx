@@ -4,7 +4,7 @@ const MidPageCTA = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-6 border-t border-border text-center bg-secondary">
+    <section className="py-16 md:py-24 px-6 border-t border-border text-center bg-secondary pb-[15px] pt-[15px] pl-[35px] pr-[35px]">
       <div className="max-w-xl mx-auto">
         <h2 className="text-xl md:text-3xl font-extrabold text-[hsl(215,30%,15%)] mb-4">
           Ready to get started?
@@ -14,13 +14,13 @@ const MidPageCTA = () => {
         </p>
         <button
           onClick={scrollToTop}
-          className="bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-lg hover:bg-[hsl(162,100%,38%)] transition-colors"
-        >
+          className="bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-lg hover:bg-[hsl(162,100%,38%)] transition-colors">
+          
           JOIN THE FREE KICKSTART
         </button>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default MidPageCTA;
