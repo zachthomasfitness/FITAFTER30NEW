@@ -20,7 +20,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-sm md:text-lg text-secondary-foreground font-semibold">
-          Join the free 10-Day Habit Kickstart - the system that's helped hundreds of over-30s feel lean, strong, and confident again without training every day or eating bland food.
+          Join the free 10-Day Habit Kickstart and learn the system that's helped hundreds of over-30s get lean, strong, and feeling like themselves again - without training every day or eating bland food.
           </p>
 
           {/* ACTION CLUSTER */}
