@@ -13,7 +13,7 @@ const rejectList = [
 
 const MissionFilterSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 text-center bg-background pt-[25px] pb-[25px] pr-0 pl-0">
+    <section className="py-16 md:py-24 px-4 md:px-6 text-center bg-background pb-[25px] pr-0 pl-0 pt-[50px]">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <h2 className="text-xl md:text-4xl font-extrabold text-[hsl(215,30%,15%)] mb-10 md:mb-14">
@@ -21,7 +21,7 @@ const MissionFilterSection = () => {
         </h2>
 
         {/* Mobile: Horizontal snap slider | Desktop: 2-column grid */}
-        <div className="flex md:grid md:grid-cols-2 gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar md:overflow-visible px-[7.5%] md:px-0">
+        <div className="flex md:grid md:grid-cols-2 gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory no-scrollbar md:overflow-visible px-[7.5%] md:px-0 pt-0">
           {/* The Fit Card */}
           <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
             <div className="text-4xl md:text-5xl text-primary mb-4">✅</div>
