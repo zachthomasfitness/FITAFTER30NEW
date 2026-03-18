@@ -1,4 +1,5 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import zachHeadshot from "@/assets/zach-headshot.png";
 
 const AboutMeSection = () => {
   return (
