@@ -9,19 +9,19 @@ const FooterCTA = () => {
         <ul className="text-left space-y-3 mb-6 text-foreground/90">
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
-            <span><strong>Daily video lessons</strong> — one simple habit to focus on each day (no overwhelm, no confusion)</span>
+            <span><strong>Daily video lessons</strong> - one simple habit to focus on each day (no overwhelm, no confusion)</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
-            <span><strong>Simple daily tasks</strong> — small actions that build momentum (you'll know exactly what to do)</span>
+            <span><strong>Simple daily tasks</strong> - small actions that build momentum (you'll know exactly what to do)</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
-            <span><strong>WhatsApp group access</strong> — accountability and support from people on the same journey</span>
+            <span><strong>WhatsApp group access</strong> - accountability and support from people on the same journey</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
-            <span><strong>The Habit Layering framework</strong> — the system that's helped hundreds of people lose fat, get their energy back, and stay consistent for life</span>
+            <span><strong>The Habit Layering framework</strong> - the system that's helped hundreds of people lose fat, get their energy back, and stay consistent for life</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
