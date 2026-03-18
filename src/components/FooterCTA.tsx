@@ -6,7 +6,7 @@ const FooterCTA = () => {
           Here's What You'll Get in the Free 10-Day Kickstart:
         </h2>
 
-        <ul className="text-left space-y-3 mb-6 text-foreground/90">
+        <ul className="text-left space-y-3 mb-6 text-foreground/90 text-sm">
           <li className="flex items-start gap-2">
             <span className="text-primary font-bold">✓</span>
             <span><strong>Daily video lessons</strong> - one simple habit to focus on each day (no overwhelm, no confusion)</span>
