@@ -13,10 +13,10 @@ const rejectList = [
 
 const MissionFilterSection = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 text-center">
+    <section className="py-16 md:py-24 px-4 md:px-6 text-center bg-background">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <h2 className="text-xl md:text-4xl font-extrabold text-foreground mb-10 md:mb-14">
+        <h2 className="text-xl md:text-4xl font-extrabold text-[hsl(215,30%,15%)] mb-10 md:mb-14">
           Who is this for?
         </h2>
 
@@ -25,7 +25,7 @@ const MissionFilterSection = () => {
           {/* The Fit Card */}
           <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
             <div className="text-4xl md:text-5xl text-primary mb-4">✅</div>
-            <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
+            <h3 className="text-lg md:text-xl font-bold text-[hsl(215,30%,15%)] mb-4 md:mb-6">
               This is for you if:
             </h3>
             <ul className="space-y-3 md:space-y-4 text-left">
@@ -40,7 +40,7 @@ const MissionFilterSection = () => {
           {/* The Rejection Card */}
           <div className="glassmorphism-card p-6 md:p-8 text-center flex-shrink-0 w-[85%] md:w-full snap-center">
             <div className="text-4xl md:text-5xl text-destructive mb-4">❌</div>
-            <h3 className="text-lg md:text-xl font-bold text-foreground mb-4 md:mb-6">
+            <h3 className="text-lg md:text-xl font-bold text-[hsl(215,30%,15%)] mb-4 md:mb-6">
               This is NOT for you if:
             </h3>
             <ul className="space-y-3 md:space-y-4 text-left">
@@ -54,7 +54,7 @@ const MissionFilterSection = () => {
         </div>
 
         {/* Swipe hint - mobile only */}
-        <p className="md:hidden text-foreground/50 text-sm mt-4">
+        <p className="md:hidden text-muted-foreground text-sm mt-4">
           Swipe to see both →
         </p>
       </div>

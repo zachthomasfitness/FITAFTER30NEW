@@ -39,11 +39,11 @@ const clients = [
 
 const ProofSection = () => {
   return (
-    <section className="pt-6 md:pt-10 pb-20 md:pb-24 border-y border-border">
+    <section className="pt-6 md:pt-10 pb-20 md:pb-24 bg-secondary border-y border-border">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center px-4 md:px-6 mb-12 md:mb-16">
-          <h2 className="text-xl md:text-4xl font-extrabold text-foreground leading-tight">
+          <h2 className="text-xl md:text-4xl font-extrabold text-[hsl(215,30%,15%)] leading-tight">
             Here's What's Possible When You Get Stupidly Consistent:
           </h2>
         </div>
@@ -52,7 +52,7 @@ const ProofSection = () => {
         <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
           {clients.map((client, index) => (
             <div key={index} className="client-card">
-              <div className="aspect-square bg-secondary flex items-center justify-center border-b border-border text-muted-foreground overflow-hidden">
+              <div className="aspect-square bg-muted flex items-center justify-center border-b border-border text-muted-foreground overflow-hidden">
                 {client.image ? (
                   <img 
                     src={client.image} 
@@ -67,7 +67,7 @@ const ProofSection = () => {
                 )}
               </div>
               <div className="p-6 text-center">
-                <h4 className="text-xl font-bold text-foreground mb-2">
+                <h4 className="text-xl font-bold text-[hsl(215,30%,15%)] mb-2">
                   {client.name}
                 </h4>
                 <p className="text-sm text-foreground mb-2">{client.result}</p>
