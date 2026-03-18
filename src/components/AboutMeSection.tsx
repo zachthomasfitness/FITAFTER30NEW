@@ -5,7 +5,7 @@ const AboutMeSection = () => {
   return (
     <section className="py-16 md:py-24 px-6 bg-background pt-[25px] pl-[25px] pr-[25px] pb-[25px]">
       <div className="max-w-2xl mx-auto text-center">
-        <Avatar className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 border-4 border-primary/20">
+        <Avatar className="w-40 h-40 md:w-52 md:h-52 mx-auto mb-8 border-4 border-primary/20">
           <AvatarImage src={zachHeadshot} alt="Zach Thomas" />
           <AvatarFallback className="text-3xl font-bold bg-primary/10 text-primary">ZT</AvatarFallback>
         </Avatar>
