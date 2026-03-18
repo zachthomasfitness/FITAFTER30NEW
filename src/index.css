@@ -134,7 +134,7 @@ input, select, textarea {
   }
 
   .client-card {
-    background: #ffffff;
+    background: #f8f9fa;
     border: 1px solid hsl(215 20% 90%);
     border-radius: 20px;
     overflow: hidden;
