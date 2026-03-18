@@ -66,12 +66,12 @@ const ProofSection = () => {
                   </div>
                 )}
               </div>
-              <div className="p-6 text-center">
-                <h4 className="text-xl font-bold text-[hsl(215,30%,15%)] mb-2">
+              <div className="p-4 text-center">
+                <h4 className="text-base font-bold text-[hsl(215,30%,15%)] mb-1">
                   {client.name}
                 </h4>
-                <p className="text-sm text-foreground mb-2">{client.result}</p>
-                <p className="text-sm italic text-muted-foreground">{client.detail}</p>
+                <p className="text-xs text-foreground mb-1">{client.result}</p>
+                <p className="text-xs italic text-muted-foreground">{client.detail}</p>
               </div>
             </div>
           ))}
