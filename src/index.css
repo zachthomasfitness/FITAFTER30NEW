@@ -147,7 +147,7 @@ input, select, textarea {
 
   @media (min-width: 768px) {
     .client-card {
-      width: calc(50% - 1rem);
+      width: calc(40% - 1rem);
     }
     .client-card:hover {
       border-color: hsl(162 100% 42% / 0.5);
