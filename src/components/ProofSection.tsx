@@ -26,7 +26,7 @@ const clients = [
 {
   name: "Sarah",
   result: "Finally feels like she belongs in the gym",
-  detail: "The photos tell the story.",
+  detail: "",
   image: sarahTransformation
 },
 {
