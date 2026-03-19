@@ -7,35 +7,34 @@ import cianTransformation from "@/assets/cian-transformation.jpg";
 const clients = [
 {
   name: "Henry",
-  result: "29% → 14% body fat, +10lbs muscle in 10 months",
-  detail: "2 sessions/week. Still goes for drinks regularly.",
+  result: "Feels attractive and confident around his partner again",
+  detail: "Training 2x/week. Still goes for drinks regularly.",
   image: henryTransformation
 },
 {
   name: "Immy",
-  result: "Lost 8.5kg, 36% → 20% body fat",
-  detail: "Got her energy back. Feels herself again.",
+  result: "From struggling with Endometriosis & Fibroids to running, lifting & feeling like her younger self again",
+  detail: "Got her energy back. Feels strong. Feels confident.",
   image: immyTransformation
 },
 {
   name: "Tom",
-  result: "Lost 24lbs",
-  detail: '"Doesn\'t even feel like a diet anymore."',
+  result: "Finally got his energy back & feels confident in his work shirts again",
+  detail: '"Doesn\'t even feel like I\'m on a diet anymore."',
   image: tomTransformation
 },
 {
   name: "Sarah",
-  result: "6 years of consistency.",
-  detail: "Completely transformed. The photos tell the story.",
+  result: "Finally feels like she belongs in the gym",
+  detail: "The photos tell the story.",
   image: sarahTransformation
 },
 {
   name: "Cian",
-  result: "Lost 26lbs, 26% → 12% body fat in 6 months",
-  detail: "3 sessions/week. Still eats out, still enjoys life.",
+  result: "Finally enjoys holidays without worrying about taking his shirt off",
+  detail: "Training 3x/week. Still eats out, still enjoys life.",
   image: cianTransformation
 }];
-
 
 const ProofSection = () => {
   return (
