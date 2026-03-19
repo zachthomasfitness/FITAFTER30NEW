@@ -20,7 +20,7 @@ const clients = [
 {
   name: "Tom",
   result: "Finally got his energy back & feels confident in his work shirts again",
-  detail: '"Doesn\'t even feel like I\'m on a diet anymore."',
+  detail: "",
   image: tomTransformation
 },
 {
