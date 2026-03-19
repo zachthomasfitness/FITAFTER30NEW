@@ -8,31 +8,31 @@ const clients = [
 {
   name: "Henry",
   result: "Feels attractive and confident around his partner again",
-  detail: "Training 2x/week. Still goes for drinks regularly.",
+  detail: "",
   image: henryTransformation
 },
 {
   name: "Immy",
   result: "From struggling with Endometriosis & Fibroids to running, lifting & feeling like her younger self again",
-  detail: "Got her energy back. Feels strong. Feels confident.",
+  detail: "",
   image: immyTransformation
 },
 {
   name: "Tom",
   result: "Finally got his energy back & feels confident in his work shirts again",
-  detail: '"Doesn\'t even feel like I\'m on a diet anymore."',
+  detail: "",
   image: tomTransformation
 },
 {
   name: "Sarah",
   result: "Finally feels like she belongs in the gym",
-  detail: "The photos tell the story.",
+  detail: "",
   image: sarahTransformation
 },
 {
   name: "Cian",
   result: "Finally enjoys holidays without worrying about taking his shirt off",
-  detail: "Training 3x/week. Still eats out, still enjoys life.",
+  detail: "",
   image: cianTransformation
 }];
 
