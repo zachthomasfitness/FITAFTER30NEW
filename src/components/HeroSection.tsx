@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Headline */}
           <h1 className="text-[26px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
-          Tired of Starting Over Every Monday? Here's How to Get Stupidly Consistent to Lose Fat for Good
+          Tired of Starting Over Every Monday? Here's How to Get Stupidly Consistent and Lose Fat for Good
           </h1>
 
           {/* Subheadline */}
