@@ -8,7 +8,7 @@ const clients = [
 {
   name: "Henry",
   result: "Feels attractive and confident around his partner again",
-  detail: "Training 2x/week. Still goes for drinks regularly.",
+  detail: "",
   image: henryTransformation
 },
 {
