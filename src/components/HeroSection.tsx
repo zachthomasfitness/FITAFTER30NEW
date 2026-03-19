@@ -20,7 +20,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-sm md:text-lg text-secondary-foreground font-semibold">
-          Learn the system that's helped hundreds of over-30s get their energy back, feel confident again, and enjoy life without restriction - without training every day or eating bland food.
+          Learn the system that's helped hundreds of over-30s lose fat, get their energy back, and feel confident again - without training every day or eating bland food.
           </p>
 
           {/* ACTION CLUSTER */}
