@@ -32,7 +32,7 @@ const clients = [
 {
   name: "Cian",
   result: "Finally enjoys holidays without worrying about taking his shirt off",
-  detail: "Training 3x/week. Still eats out, still enjoys life.",
+  detail: "",
   image: cianTransformation
 }];
 
