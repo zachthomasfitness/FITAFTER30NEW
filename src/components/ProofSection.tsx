@@ -14,7 +14,7 @@ const clients = [
 {
   name: "Immy",
   result: "From struggling with Endometriosis & Fibroids to running, lifting & feeling like her younger self again",
-  detail: "Got her energy back. Feels strong. Feels confident.",
+  detail: "",
   image: immyTransformation
 },
 {
