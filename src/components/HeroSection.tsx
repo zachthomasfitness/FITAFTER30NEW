@@ -6,7 +6,7 @@ const HeroSection = () => {
     <>
       {/* Top Banner */}
       <div className="w-full bg-primary/30 border-b-2 border-primary/50 py-2.5 px-4 text-center">
-        <span className="text-foreground uppercase tracking-[0.08em] text-[10px] md:text-[0.875rem] font-black text-center font-sans">
+        <span className="text-foreground uppercase tracking-[0.04em] md:tracking-[0.08em] text-[8.5px] md:text-[0.875rem] font-black text-center font-sans whitespace-nowrap">
           For Over-30s Who Don't Feel Like Themselves Anymore
         </span>
       </div>

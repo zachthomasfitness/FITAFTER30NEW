@@ -48,8 +48,9 @@ const ProofSection = () => {
         </div>
 
         {/* Client Cards Slider */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
-          {clients.map((client, index) =>
+        <div className="relative">
+          <div className="flex overflow-x-auto snap-x snap-mandatory no-scrollbar gap-4 md:gap-6 px-6">
+            {clients.map((client, index) =>
           <div key={index} className="client-card">
               <div className="aspect-square bg-muted/30 flex items-center justify-center border-b border-border/20 text-muted-foreground overflow-hidden">
                 {client.image ?
@@ -73,6 +74,14 @@ const ProofSection = () => {
               </div>
             </div>
           )}
+          </div>
+          {/* Swipe hint */}
+          <div className="flex items-center justify-center gap-1.5 mt-4 md:hidden">
+            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium">Swipe</span>
+            <svg className="w-4 h-4 text-primary animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
         </div>
       </div>
     </section>);
