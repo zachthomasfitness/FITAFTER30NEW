@@ -61,7 +61,7 @@ const LeadCaptureModal = ({ isOpen, onClose }: LeadCaptureModalProps) => {
 
         {/* Header */}
         <div className="text-center mb-4">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#ffde59] mb-2">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#C4622D] mb-2">
             Join the Kickstart
           </h2>
           <p className="text-white/70 text-sm md:text-base">

@@ -135,7 +135,7 @@ const SixWeeks = () => {
       <section className="pt-14 md:pt-24 px-1 md:px-2">
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
-          <h1 className="text-[28px] md:text-5xl lg:text-7xl font-black text-center text-white mb-4 md:mb-6 leading-[1.1] md:leading-[1.05] tracking-tight uppercase px-0">
+          <h1 className="text-[28px] md:text-5xl lg:text-7xl font-black text-center text-foreground mb-4 md:mb-6 leading-[1.1] md:leading-[1.05] tracking-tight uppercase px-0">
             Give me 6 weeks to install the <span className="text-primary">Habit Stack</span>, and I'll give you a body you're actually <span className="text-primary">proud to own</span>.
           </h1>
           
@@ -194,9 +194,9 @@ const SixWeeks = () => {
         <div className="max-w-3xl mx-auto">
           <div className="glass-card p-8 md:p-12 text-center space-y-6 md:space-y-8">
             
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-foreground leading-tight">
               You aren't lazy.<br />
-              You're <span className="text-[#ffde59]">OVERLOADED</span>.
+              You're <span className="text-[#C4622D]">OVERLOADED</span>.
             </h2>
             <div className="space-y-5 text-foreground/70 text-base md:text-lg text-left leading-relaxed">
               <p>
@@ -215,7 +215,7 @@ const SixWeeks = () => {
                 You get me in your pocket every day for 6 weeks to navigate the family dinners, late work nights, and the unexpected social plans - ensuring you rebuild your body, mind, and confidence no matter what life throws at you.
               </p>
             </div>
-            <p className="text-white font-bold text-base md:text-lg text-right">
+            <p className="text-foreground font-bold text-base md:text-lg text-right">
               - Zach Thomas
             </p>
           </div>
@@ -236,14 +236,14 @@ const SixWeeks = () => {
       {/* 6-Week Blueprint Section */}
       <section className="py-12 md:py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold italic uppercase text-center text-white mb-10 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold italic uppercase text-center text-foreground mb-10 md:mb-12">
             THE 6-WEEK PILLARS
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {blueprintCards.map(card => <div key={card.number} className="glass-card p-6 md:p-8 text-center">
                 <span className="text-primary font-black text-4xl">{card.number}</span>
-                <h3 className="text-white font-bold text-xl md:text-2xl mt-4 mb-2">{card.title}</h3>
+                <h3 className="text-foreground font-bold text-xl md:text-2xl mt-4 mb-2">{card.title}</h3>
                 <p className="text-foreground/60">{card.description}</p>
               </div>)}
           </div>
@@ -259,7 +259,7 @@ const SixWeeks = () => {
               <div className="relative w-80 h-[480px]">
                 {/* Yellow glow behind phones */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-56 h-72 bg-[#ffde59]/20 rounded-full blur-3xl"></div>
+                  <div className="w-56 h-72 bg-[#C4622D]/20 rounded-full blur-3xl"></div>
                 </div>
                 
                 {/* Background Phone - left side, tilted */}
@@ -282,7 +282,7 @@ const SixWeeks = () => {
             
             {/* Features List */}
             <div className="space-y-6 text-center lg:text-left order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Everything you need<br />
                 <span className="text-primary">inside my app</span>
               </h2>
@@ -291,7 +291,7 @@ const SixWeeks = () => {
                 {appFeatures.map(feature => <div key={feature.number} className="flex gap-4 justify-center lg:justify-start">
                     <span className="text-primary font-black text-xl">{feature.number}</span>
                     <div className="text-left">
-                      <h3 className="text-white font-bold text-lg uppercase">{feature.title}</h3>
+                      <h3 className="text-foreground font-bold text-lg uppercase">{feature.title}</h3>
                       <p className="text-foreground/60">{feature.description}</p>
                     </div>
                   </div>)}
@@ -305,8 +305,8 @@ const SixWeeks = () => {
       <section className="py-8 md:py-16 px-4 pb-20 md:pb-10">
         <div className="max-w-2xl mx-auto">
           {/* 5LB Guarantee Card */}
-          <div className="glass-card p-8 md:p-12 text-center space-y-6 border-2 border-[#ffde59] rounded-3xl mb-8">
-            <h3 className="text-white font-bold text-2xl md:text-3xl">
+          <div className="glass-card p-8 md:p-12 text-center space-y-6 border-2 border-[#C4622D] rounded-3xl mb-8">
+            <h3 className="text-foreground font-bold text-2xl md:text-3xl">
               The 5LB Guarantee
             </h3>
             <p className="text-foreground/70">
@@ -320,8 +320,8 @@ const SixWeeks = () => {
               Retail Price: <span className="line-through">£199</span>
             </p>
             <p className="font-black text-4xl md:text-6xl uppercase">
-              <span className="text-white">Your Price: </span>
-              <span className="text-[#ffde59]">£149</span>
+              <span className="text-foreground">Your Price: </span>
+              <span className="text-[#C4622D]">£149</span>
             </p>
           </div>
           
