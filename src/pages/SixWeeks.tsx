@@ -28,7 +28,7 @@ const SixWeeks = () => {
     name: "Callum",
     result: "+10kg Muscle",
     image: callumTransformation,
-    story: "Stayed consistent despite 12 hour work days"
+    story: "Couldn't get over 65kg for years, but now sits at 80kg"
   }, {
     name: "Lawson",
     result: "-18lbs",
@@ -76,9 +76,9 @@ const SixWeeks = () => {
     story: "Feels great in his work shirts again"
   }, {
     name: "Eisa",
-    result: "-82lbs",
+    result: "-93lbs",
     image: eisaTransformation,
-    story: "Changed his life with simple changes to his diet"
+    story: "Changed his life and found a new passion in the gym"
   }];
   const blueprintCards = [{
     number: "01",
@@ -119,14 +119,14 @@ const SixWeeks = () => {
   const duplicatedTransformations = [...transformations, ...transformations];
   return <>
     <Helmet>
-      <title>6 Week Habit Stack</title>
+      <title>6 Week The Accelerator</title>
       <meta name="description" content="Give me 6 weeks to install the habit stack and I'll give you a body you're actually proud of." />
-      <meta property="og:title" content="6 Week Habit Stack" />
+      <meta property="og:title" content="6 Week The Accelerator" />
       <meta property="og:description" content="Give me 6 weeks to install the habit stack and I'll give you a body you're actually proud of." />
       <meta property="og:image" content="https://habit-kickstart.lovable.app/og-sixweeks.png" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="6 Week Habit Stack" />
+      <meta name="twitter:title" content="6 Week The Accelerator" />
       <meta name="twitter:description" content="Give me 6 weeks to install the habit stack and I'll give you a body you're actually proud of." />
       <meta name="twitter:image" content="https://habit-kickstart.lovable.app/og-sixweeks.png" />
     </Helmet>
@@ -136,7 +136,7 @@ const SixWeeks = () => {
         <div className="max-w-7xl mx-auto">
           {/* Compact Headline */}
           <h1 className="text-[28px] md:text-5xl lg:text-7xl font-black text-center text-foreground mb-4 md:mb-6 leading-[1.1] md:leading-[1.05] tracking-tight uppercase px-0">
-            Give me 6 weeks to install the <span className="text-primary">Habit Stack</span>, and I'll give you a body you're actually <span className="text-primary">proud to own</span>.
+            Give me 6 weeks to install <span className="text-primary">The Accelerator</span>, and I'll give you a body you're actually <span className="text-primary">proud to own</span>.
           </h1>
           
           {/* Sub-heading */}
@@ -161,8 +161,8 @@ const SixWeeks = () => {
                 </div>
                 
                 {/* Name, Result & Story */}
-                <div className="p-3 md:p-4 text-center">
-                  <p className="text-primary font-black text-base md:text-lg">
+                <div className="p-3 md:p-4 text-center h-[100px] md:h-[110px] flex flex-col justify-center overflow-hidden">
+                  <p className="text-primary font-black text-base md:text-lg line-clamp-2">
                     {item.name}: {item.result}
                   </p>
                   <p className="text-foreground/60 text-xs md:text-sm mt-1 line-clamp-2">
@@ -180,7 +180,7 @@ const SixWeeks = () => {
           <button onClick={() => document.getElementById('checkout')?.scrollIntoView({
           behavior: 'smooth'
         })} className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base md:text-lg px-6 md:px-8 py-5 md:py-6 rounded-full btn-shadow transition-all duration-300 hover:scale-105 w-full md:w-auto">
-            Join The Habit Stack Today <ArrowRight className="h-5 w-5" />
+            Join The Accelerator Today <ArrowRight className="h-5 w-5" />
           </button>
           
           <p className="pt-2 text-[10px] font-semibold text-slate-500 text-center">
@@ -209,7 +209,7 @@ const SixWeeks = () => {
                 You aren't struggling because you lack willpower. You're struggling because you've never had a system designed to work when life gets pressured.
               </p>
               <p>
-                That's exactly what the Habit Stack gives you.
+                That's exactly what The Accelerator gives you.
               </p>
               <p>
                 You get me in your pocket every day for 6 weeks to navigate the family dinners, late work nights, and the unexpected social plans - ensuring you rebuild your body, mind, and confidence no matter what life throws at you.
@@ -266,7 +266,7 @@ const SixWeeks = () => {
                 <div className="absolute left-[-8px] top-4 w-52 h-[440px] bg-black rounded-[2.5rem] border-[3px] border-foreground/30 p-1.5 shadow-2xl -rotate-[10deg] origin-center">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-full z-10"></div>
                   <div className="w-full h-full bg-white rounded-[2.2rem] overflow-hidden">
-                    <img src={appScreenshot2} alt="Habit Stack App Workout View" className="w-full h-full object-cover object-top" />
+                    <img src={appScreenshot2} alt="The Accelerator App Workout View" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
 
@@ -274,7 +274,7 @@ const SixWeeks = () => {
                 <div className="absolute right-[-8px] top-4 w-52 h-[440px] bg-black rounded-[2.5rem] border-[3px] border-foreground/30 p-1.5 shadow-2xl z-10">
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-full z-10"></div>
                   <div className="w-full h-full bg-white rounded-[2.2rem] overflow-hidden">
-                    <img src={appScreenshot} alt="Habit Stack App" className="w-full h-full object-cover object-top" />
+                    <img src={appScreenshot} alt="The Accelerator App" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
               </div>
