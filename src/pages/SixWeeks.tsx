@@ -196,7 +196,7 @@ const SixWeeks = () => {
             
             <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
               You aren't lazy.<br />
-              You're <span className="text-[#ffde59]">OVERLOADED</span>.
+              You're <span className="text-[#C4622D]">OVERLOADED</span>.
             </h2>
             <div className="space-y-5 text-foreground/70 text-base md:text-lg text-left leading-relaxed">
               <p>
@@ -259,7 +259,7 @@ const SixWeeks = () => {
               <div className="relative w-80 h-[480px]">
                 {/* Yellow glow behind phones */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-56 h-72 bg-[#ffde59]/20 rounded-full blur-3xl"></div>
+                  <div className="w-56 h-72 bg-[#C4622D]/20 rounded-full blur-3xl"></div>
                 </div>
                 
                 {/* Background Phone - left side, tilted */}
@@ -305,7 +305,7 @@ const SixWeeks = () => {
       <section className="py-8 md:py-16 px-4 pb-20 md:pb-10">
         <div className="max-w-2xl mx-auto">
           {/* 5LB Guarantee Card */}
-          <div className="glass-card p-8 md:p-12 text-center space-y-6 border-2 border-[#ffde59] rounded-3xl mb-8">
+          <div className="glass-card p-8 md:p-12 text-center space-y-6 border-2 border-[#C4622D] rounded-3xl mb-8">
             <h3 className="text-white font-bold text-2xl md:text-3xl">
               The 5LB Guarantee
             </h3>
@@ -321,7 +321,7 @@ const SixWeeks = () => {
             </p>
             <p className="font-black text-4xl md:text-6xl uppercase">
               <span className="text-white">Your Price: </span>
-              <span className="text-[#ffde59]">£149</span>
+              <span className="text-[#C4622D]">£149</span>
             </p>
           </div>
           

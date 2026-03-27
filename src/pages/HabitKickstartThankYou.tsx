@@ -36,7 +36,7 @@ const HabitKickstartThankYou = () => {
         
         {/* Section 1: The Confirmation */}
         <section className="text-center space-y-4">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-[#ffde59] uppercase tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-[#C4622D] uppercase tracking-tight">
             You're In!
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-lg mx-auto">
@@ -48,12 +48,12 @@ const HabitKickstartThankYou = () => {
         {/* Step 1 - WhatsApp Group (Primary Card - Yellow Outline) */}
         <section className="relative">
           {/* Subtle glow effect */}
-          <div className="absolute -inset-1 bg-[#ffde59] rounded-3xl opacity-20 blur-md"></div>
+          <div className="absolute -inset-1 bg-[#C4622D] rounded-3xl opacity-20 blur-md"></div>
           <div 
             className="relative rounded-3xl p-6 md:p-10 text-center space-y-5"
             style={{
-              background: 'rgba(255, 222, 89, 0.05)',
-              border: '2px solid #ffde59',
+              background: 'rgba(196, 98, 45, 0.05)',
+              border: '2px solid #C4622D',
               backdropFilter: 'blur(12px)',
             }}
           >
@@ -68,9 +68,9 @@ const HabitKickstartThankYou = () => {
               href="https://chat.whatsapp.com/DU7kpcndcae0P91DjesQS3"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#ffde59] hover:scale-105 text-[#0a0a0a] text-base md:text-lg font-bold py-4 px-8 md:px-12 rounded-xl transform transition tracking-wide"
+              className="inline-block bg-[#C4622D] hover:scale-105 text-[#0a0a0a] text-base md:text-lg font-bold py-4 px-8 md:px-12 rounded-xl transform transition tracking-wide"
               style={{
-                boxShadow: '0 0 30px 5px rgba(255, 222, 89, 0.5), 0 10px 40px -10px rgba(255, 222, 89, 0.6)',
+                boxShadow: '0 0 30px 5px rgba(196, 98, 45, 0.5), 0 10px 40px -10px rgba(196, 98, 45, 0.6)',
               }}
             >
               Join the Challenge Group
@@ -93,7 +93,7 @@ const HabitKickstartThankYou = () => {
           <ul className="space-y-3 max-w-md mx-auto">
             {checklistItems.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
-                <span className="text-[#ffde59] font-bold text-base">{item.num}</span>
+                <span className="text-[#C4622D] font-bold text-base">{item.num}</span>
                 <span className="text-base md:text-lg text-foreground/80 text-left">{item.text}</span>
               </li>
             ))}
@@ -121,7 +121,7 @@ const HabitKickstartThankYou = () => {
             href="https://wa.me/message/4G7GYPALNFDGD1"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border-2 border-[#ffde59] text-[#ffde59] hover:bg-[#ffde59] hover:text-[#0a0a0a] text-base md:text-lg font-semibold py-3 px-8 rounded-xl transform transition hover:scale-105"
+            className="inline-block border-2 border-[#C4622D] text-[#C4622D] hover:bg-[#C4622D] hover:text-[#0a0a0a] text-base md:text-lg font-semibold py-3 px-8 rounded-xl transform transition hover:scale-105"
           >
             Apply for 1-1 Coaching
           </a>
@@ -131,7 +131,7 @@ const HabitKickstartThankYou = () => {
         <footer className="text-center pt-6 space-y-4">
           <a
             href="/habitkickstart"
-            className="text-[#ffde59] hover:text-[#ffde59]/80 font-semibold text-sm md:text-base transition underline underline-offset-4"
+            className="text-[#C4622D] hover:text-[#C4622D]/80 font-semibold text-sm md:text-base transition underline underline-offset-4"
           >
             ← Back to Habit Kickstart
           </a>
