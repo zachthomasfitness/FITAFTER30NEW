@@ -5,7 +5,7 @@ const AboutMeSection = () => {
   return (
     <section className="py-16 md:py-24 px-6 bg-transparent pt-[25px] pl-[25px] pr-[25px] pb-[25px]">
       <div className="max-w-2xl mx-auto text-center">
-        <Avatar className="w-40 h-40 md:w-52 md:h-52 mx-auto mb-8 border-4 border-primary/20">
+        <Avatar className="w-52 h-52 md:w-64 md:h-64 mx-auto mb-8">
           <AvatarImage src={zachHeadshot} alt="Zach Thomas" />
           <AvatarFallback className="text-3xl font-bold bg-primary/10 text-primary">ZT</AvatarFallback>
         </Avatar>
@@ -14,11 +14,11 @@ const AboutMeSection = () => {
           Why I Built This
         </h2>
 
-        <div className="text-muted-foreground text-sm md:text-base leading-relaxed space-y-4 text-left">
+        <div className="text-foreground text-sm md:text-base leading-relaxed space-y-4 text-left">
           <p>
             I'm Zach Thomas. I've been coaching for over 10 years, and I've been having the same conversation every day for years:
           </p>
-          <p className="italic text-primary font-medium">
+          <p className="italic text-orange-700 font-medium">
             "I know what to do. I just can't stick to it."
           </p>
           <p>

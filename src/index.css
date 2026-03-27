@@ -1,76 +1,76 @@
 @tailwind base;
 
-/* FIX: Ensures form inputs have visible text on dark backgrounds */
+/* Ensures form inputs have visible text on light backgrounds */
 input, select, textarea {
-  color: #ffffff !important;
-  background-color: rgba(63, 63, 70, 0.8) !important;
+  color: #1a1a1d !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
 }
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Brand Colors - Gunmetal & Yellow */
-    --brand-yellow: 49 100% 67%;
-    --brand-yellow-glow: 49 100% 67%;
-    
-    /* Background - Gunmetal Grey */
-    --background: 240 3% 11%;
-    --foreground: 0 0% 100%;
+    /* Brand Colors - Yellow accent */
+    --brand-yellow: 20 65% 52%;
+    --brand-yellow-glow: 20 65% 52%;
 
-    --card: 240 5% 26%;
-    --card-foreground: 0 0% 100%;
+    /* Background - Light off-white */
+    --background: 40 20% 97%;
+    --foreground: 240 5% 12%;
 
-    --popover: 240 5% 26%;
-    --popover-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 5% 12%;
 
-    --primary: 49 100% 67%;
-    --primary-foreground: 240 3% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5% 12%;
 
-    --secondary: 240 3% 11%;
-    --secondary-foreground: 220 14% 91%;
+    --primary: 20 65% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --muted: 240 4% 22%;
-    --muted-foreground: 220 14% 75%;
+    --secondary: 20 15% 93%;
+    --secondary-foreground: 240 5% 25%;
 
-    --accent: 240 5% 30%;
-    --accent-foreground: 0 0% 100%;
+    --muted: 20 10% 92%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 20 15% 90%;
+    --accent-foreground: 240 5% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5% 28%;
-    --input: 240 5% 32%;
-    --ring: 49 100% 67%;
+    --border: 20 8% 86%;
+    --input: 0 0% 100%;
+    --ring: 20 65% 52%;
 
     --radius: 0.75rem;
 
-    --heading: 0 0% 100%;
+    --heading: 240 5% 12%;
 
-    --shadow-glow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --shadow-btn: 0 4px 16px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-btn: 0 4px 16px rgba(0, 0, 0, 0.12);
   }
 
   .dark {
-    --background: 240 4% 12%;
-    --foreground: 0 0% 90%;
-    --card: 240 5% 20%;
-    --card-foreground: 0 0% 90%;
-    --popover: 240 5% 20%;
-    --popover-foreground: 0 0% 90%;
-    --primary: 49 100% 67%;
-    --primary-foreground: 240 4% 16%;
-    --secondary: 240 4% 12%;
-    --secondary-foreground: 0 0% 90%;
-    --muted: 240 4% 18%;
-    --muted-foreground: 220 14% 55%;
-    --accent: 240 5% 22%;
-    --accent-foreground: 0 0% 90%;
+    --background: 40 20% 97%;
+    --foreground: 240 5% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 5% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5% 12%;
+    --primary: 20 65% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 15% 93%;
+    --secondary-foreground: 240 5% 25%;
+    --muted: 40 10% 92%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 40 15% 90%;
+    --accent-foreground: 240 5% 12%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5% 25%;
-    --input: 240 5% 25%;
-    --ring: 49 100% 67%;
+    --border: 40 8% 86%;
+    --input: 0 0% 100%;
+    --ring: 49 100% 57%;
   }
 }
 
@@ -87,13 +87,12 @@ input, select, textarea {
     @apply text-foreground antialiased;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
-    /* Layer 1: Diagonal gunmetal gradient */
-    background:
-      linear-gradient(135deg, #1a1a1d 0%, #27272a 50%, #3f3f46 100%);
+    /* Layer 1: Warm off-white base */
+    background: #f7f5f0;
     background-attachment: fixed;
   }
 
-  /* Layer 2: Radial gunmetal gradients for dimension */
+  /* Layer 2: Subtle warm gradients for depth */
   body::after {
     content: '';
     position: fixed;
@@ -104,15 +103,13 @@ input, select, textarea {
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(ellipse 700px 500px at 30% 8%, rgba(26, 26, 29, 0.4) 0%, transparent 70%),
-      radial-gradient(ellipse 500px 400px at 75% 5%, rgba(39, 39, 42, 0.25) 0%, transparent 70%),
-      radial-gradient(ellipse 600px 350px at 50% 30%, rgba(63, 63, 70, 0.12) 0%, transparent 70%),
-      radial-gradient(ellipse 500px 300px at 20% 55%, rgba(63, 63, 70, 0.15) 0%, transparent 70%),
-      radial-gradient(ellipse 600px 400px at 80% 70%, rgba(82, 82, 91, 0.18) 0%, transparent 70%),
-      radial-gradient(ellipse 700px 500px at 40% 90%, rgba(63, 63, 70, 0.2) 0%, transparent 70%);
+      radial-gradient(ellipse 700px 500px at 30% 8%, rgba(240, 235, 220, 0.5) 0%, transparent 70%),
+      radial-gradient(ellipse 500px 400px at 75% 5%, rgba(245, 240, 230, 0.3) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 350px at 50% 30%, rgba(255, 250, 240, 0.2) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 400px at 80% 70%, rgba(235, 230, 220, 0.25) 0%, transparent 70%);
   }
 
-  /* Layer 3: Noise texture overlay */
+  /* Layer 3: Paper texture overlay */
   body::before {
     content: '';
     position: fixed;
@@ -120,10 +117,10 @@ input, select, textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.06;
+    opacity: 0.035;
     pointer-events: none;
     z-index: 1;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 256px 256px;
   }
@@ -163,33 +160,33 @@ input, select, textarea {
 
   /* Glass card style */
   .glass-card {
-    background: rgba(63, 63, 70, 0.65);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(82, 82, 91, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   }
 
   .glass-card:hover {
-    border-color: rgba(82, 82, 91, 0.7);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   }
 
   .client-card {
-    background: rgba(63, 63, 70, 0.65);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(82, 82, 91, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 65%;
     scroll-snap-align: center;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   }
 
   @media (min-width: 768px) {
@@ -197,8 +194,8 @@ input, select, textarea {
       width: calc(40% - 1rem);
     }
     .client-card:hover {
-      border-color: rgba(82, 82, 91, 0.7);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      border-color: rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -210,12 +207,12 @@ input, select, textarea {
 
   /* Feature cards - glass */
   .glassmorphism-card {
-    background: rgba(63, 63, 70, 0.6);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(82, 82, 91, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 24px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   }
 
   /* Form wrapper */
@@ -226,8 +223,8 @@ input, select, textarea {
   }
 
   .timer-unit {
-    border: 1px solid hsl(49 100% 67% / 0.3);
-    background: hsl(49 100% 67% / 0.08);
+    border: 1px solid hsl(20 65% 52% / 0.4);
+    background: hsl(20 65% 52% / 0.1);
     padding: 8px 12px;
     border-radius: 12px;
     min-width: 60px;
@@ -235,25 +232,25 @@ input, select, textarea {
 
   /* Compact timer */
   .timer-unit-compact {
-    border: 1px solid hsl(49 100% 67% / 0.25);
-    background: hsl(49 100% 67% / 0.06);
+    border: 1px solid hsl(20 65% 52% / 0.35);
+    background: hsl(20 65% 52% / 0.08);
     padding: 6px;
     border-radius: 10px;
     min-width: 50px;
   }
 
   .feature-card {
-    background: rgba(63, 63, 70, 0.65);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(82, 82, 91, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 85%;
     scroll-snap-align: center;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   }
 
   @media (min-width: 768px) {
@@ -262,7 +259,7 @@ input, select, textarea {
       flex-shrink: 1;
     }
     .feature-card:hover {
-      border-color: rgba(82, 82, 91, 0.7);
+      border-color: rgba(0, 0, 0, 0.12);
     }
   }
 
