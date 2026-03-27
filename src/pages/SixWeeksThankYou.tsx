@@ -58,7 +58,7 @@ const SixWeeksThankYou = () => {
             href="/sixweeks"
             className="text-[#C4622D] hover:text-[#C4622D]/80 font-semibold text-sm md:text-base transition underline underline-offset-4"
           >
-            ← Back to 6 Week Habit Stack
+            ← Back to The Accelerator
           </a>
           <p className="text-foreground/40 text-sm">
             © 2026 Zach Thomas Coaching

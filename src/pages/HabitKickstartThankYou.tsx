@@ -18,9 +18,9 @@ const HabitKickstartThankYou = () => {
   }, []);
 
   const checklistItems = [
-    { num: "01.", text: "Search your inbox for \"The Habit Kickstart\"" },
-    { num: "02.", text: "Move the email to your 'Primary' folder" },
-    { num: "03.", text: "Reply 'READY' to the email so I know you are active" },
+    { num: "01.", text: "Search your inbox for \"You're in ✅ Here's what happens next\"." },
+    { num: "02.", text: "Can't find it? Check junk and move it to your inbox so you don't miss the daily emails." },
+    { num: "03.", text: "Reply 'READY' to the email so I know you are active." },
   ];
 
   return (
@@ -56,7 +56,7 @@ const HabitKickstartThankYou = () => {
               If you aren't in the group, you aren't in the challenge.
             </p>
             <a
-              href="https://chat.whatsapp.com/DU7kpcndcae0P91DjesQS3"
+              href="https://chat.whatsapp.com/BQlTpYVGAib3sU1RxHXyIX?mode=gi_t"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#C4622D] hover:scale-105 text-white text-base md:text-lg font-bold py-4 px-8 md:px-12 rounded-xl transform transition tracking-wide"
@@ -64,7 +64,7 @@ const HabitKickstartThankYou = () => {
                 boxShadow: '0 0 30px 5px rgba(196, 98, 45, 0.3), 0 10px 40px -10px rgba(196, 98, 45, 0.4)',
               }}
             >
-              Join the Challenge Group
+              Join the Kickstart Group
             </a>
           </div>
         </section>
@@ -101,12 +101,10 @@ const HabitKickstartThankYou = () => {
           }}
         >
           <h2 className="text-xl md:text-2xl font-semibold text-foreground">
-            Looking for the Elite Fast-Track?
+            Looking for 1-on-1 Support?
           </h2>
           <p className="text-base md:text-lg text-foreground/70 leading-relaxed max-w-xl mx-auto">
-            If you're ready to take action today, you can work 1-on-1 with me as a client in my
-            online coaching programme to get a custom roadmap and daily accountability that
-            guarantees your results.
+            If you're ready, you can work with me in my private online coaching programme. For more details click below ↓
           </p>
           <a
             href="https://wa.me/message/4G7GYPALNFDGD1"
