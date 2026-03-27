@@ -267,6 +267,15 @@ input, select, textarea {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 
+  /* Swipe hint arrow animation */
+  @keyframes bounce-x {
+    0%, 100% { transform: translateX(0); opacity: 0.5; }
+    50% { transform: translateX(4px); opacity: 1; }
+  }
+  .animate-bounce-x {
+    animation: bounce-x 1.2s ease-in-out infinite;
+  }
+
   /* Infinite Marquee Animation */
   @keyframes marquee {
     0% {
