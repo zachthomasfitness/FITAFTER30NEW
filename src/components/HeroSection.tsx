@@ -5,8 +5,8 @@ const HeroSection = () => {
   return (
     <>
       {/* Top Banner */}
-      <div className="w-full bg-primary/10 border-b border-primary/20 py-2.5 px-4 text-center">
-        <span className="text-primary uppercase tracking-[0.08em] text-[10px] md:text-[0.875rem] font-bold text-center font-sans">
+      <div className="w-full bg-primary/30 border-b-2 border-primary/50 py-2.5 px-4 text-center">
+        <span className="text-foreground uppercase tracking-[0.08em] text-[10px] md:text-[0.875rem] font-black text-center font-sans">
           For Over-30s Who Don't Feel Like Themselves Anymore
         </span>
       </div>
@@ -30,7 +30,7 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col items-center -mt-24 md:-mt-28">
-              <p className="text-primary font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
+              <p className="text-foreground font-bold text-[10px] md:text-xs uppercase tracking-wider mb-1">
               Join the Free 10-Day Kickstart
               </p>
               <div className="mb-2">
