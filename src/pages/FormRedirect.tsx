@@ -1,25 +1,13 @@
 import { useEffect } from "react";
 
-declare global {
-  interface Window {
-    fbq: (...args: unknown[]) => void;
-  }
-}
-
 /**
  * Relay page for GHL iframe form redirect.
  * GHL redirects the iframe to this page (same domain), which then
  * breaks out of the iframe and navigates the full browser window
- * to the thank you page. This is the only reliable way to handle
- * iframe-based form redirects cross-origin.
+ * to the thank you page. Tracking fires on the thank you page itself.
  */
 const FormRedirect = () => {
   useEffect(() => {
-    // Fire Meta pixel
-    if (typeof window.fbq === 'function') {
-      window.fbq('track', 'CompleteRegistration');
-    }
-
     // Break out of the iframe and redirect the full browser window
     if (window.top) {
       window.top.location.href = '/habitkickstart-thankyou';
