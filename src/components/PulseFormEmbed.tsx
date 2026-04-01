@@ -58,7 +58,6 @@ const PulseFormEmbed = ({ id }: PulseFormEmbedProps) => {
     iframe.setAttribute('data-layout-iframe-id', id);
     iframe.setAttribute('data-form-id', '7DTFHh8ZmEmWrmVpsktd');
     iframe.title = 'Challenge Opt-in';
-    iframe.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox');
     iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
     
     containerRef.current.appendChild(iframe);
