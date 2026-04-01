@@ -6,7 +6,7 @@ const HeroSection = () => {
     <>
       {/* Top Banner */}
       <div className="w-full bg-primary/30 border-b-2 border-primary/50 py-2.5 px-4 text-center">
-        <span className="text-foreground uppercase tracking-[0.04em] md:tracking-[0.08em] text-[11px] md:text-[0.875rem] font-black text-center font-sans whitespace-nowrap">
+        <span className="text-foreground uppercase tracking-[0.04em] md:tracking-[0.08em] text-[10px] md:text-[0.875rem] font-black text-center font-sans whitespace-nowrap">
           For Over-30s Who Don't Feel Like Themselves Anymore
         </span>
       </div>
@@ -14,12 +14,12 @@ const HeroSection = () => {
       <header className="relative pt-8 md:pt-20 pb-2 md:pb-12 px-4 md:px-6 text-center bg-transparent overflow-hidden">
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Headline */}
-          <h1 className="text-[24px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-3 md:mb-6">
+          <h1 className="text-[24px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-4 md:mb-6">
           Tired of Starting Over Every Monday? Here's How to Get Stupidly Consistent and Lose Fat for Good
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xs md:text-lg text-secondary-foreground font-semibold mb-3 md:mb-0">
+          <p className="text-xs md:text-lg text-secondary-foreground font-semibold mb-4 md:mb-0">
           Learn the system that's helped hundreds of over-30s lose fat, get their energy back, and feel confident again - without training every day or eating bland food.
           </p>
 
