@@ -14,7 +14,7 @@ const MidPageCTA = () => {
         </p>
         <button
           onClick={scrollToTop}
-          className="bg-primary text-primary-foreground font-bold text-sm px-6 py-3 rounded-lg hover:brightness-95 transition-all shadow-lg hover:shadow-xl">
+          className="bg-primary text-primary-foreground font-bold text-base px-7 py-3.5 rounded-lg hover:brightness-95 transition-all shadow-lg hover:shadow-xl">
           
           JOIN THE FREE KICKSTART
         </button>
