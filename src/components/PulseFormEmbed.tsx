@@ -12,28 +12,6 @@ interface PulseFormEmbedProps {
 const PulseFormEmbed = ({ id }: PulseFormEmbedProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Listen for GHL form submission postMessage and fire Meta pixel Lead event
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      const data = event.data;
-      const isSubmission =
-        data?.event === 'form_submitted' ||
-        data?.event === 'form.submitted' ||
-        data?.type === 'form_submission_succeeded' ||
-        data?.event_type === 'form_submission_succeeded' ||
-        (typeof data === 'string' && data.includes('form_submit'));
-
-      if (isSubmission) {
-        if (typeof (window as any).fbq === 'function') {
-          (window as any).fbq('track', 'CompleteRegistration');
-        }
-        window.location.href = '/habitkickstart-thankyou';
-      }
-    };
-
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
 
   useEffect(() => {
     if (!containerRef.current) return;
