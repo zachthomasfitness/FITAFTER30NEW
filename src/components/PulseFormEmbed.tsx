@@ -24,7 +24,7 @@ const PulseFormEmbed = ({ id }: PulseFormEmbedProps) => {
         (typeof data === 'string' && data.includes('form_submit'));
 
       if (isSubmission && typeof (window as any).fbq === 'function') {
-        (window as any).fbq('track', 'Lead');
+        (window as any).fbq('track', 'CompleteRegistration');
       }
     };
 

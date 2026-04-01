@@ -12,7 +12,6 @@ const HabitKickstartThankYou = () => {
 
     // Track conversion events for Meta Pixel
     if (typeof window.fbq === 'function') {
-      window.fbq('track', 'Lead');
       window.fbq('track', 'CompleteRegistration');
     }
   }, []);
