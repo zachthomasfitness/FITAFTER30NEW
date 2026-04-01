@@ -11,21 +11,21 @@ const HeroSection = () => {
         </span>
       </div>
 
-      <header className="relative pt-4 md:pt-20 pb-2 md:pb-12 px-4 md:px-6 text-center bg-transparent overflow-hidden">
+      <header className="relative pt-8 md:pt-20 pb-2 md:pb-12 px-4 md:px-6 text-center bg-transparent overflow-hidden">
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Headline */}
-          <h1 className="text-[24px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-2 md:mb-6">
+          <h1 className="text-[24px] md:text-4xl lg:text-6xl font-black text-foreground leading-[1.05] mb-3 md:mb-6">
           Tired of Starting Over Every Monday? Here's How to Get Stupidly Consistent and Lose Fat for Good
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xs md:text-lg text-secondary-foreground font-semibold mb-0">
+          <p className="text-xs md:text-lg text-secondary-foreground font-semibold mb-3 md:mb-0">
           Learn the system that's helped hundreds of over-30s lose fat, get their energy back, and feel confident again - without training every day or eating bland food.
           </p>
 
           {/* ACTION CLUSTER */}
           <div className="flex flex-col items-center gap-1 mt-2 md:mt-6 md:gap-3">
-            <div id="signup-form" className="w-full max-w-[480px] mx-auto overflow-hidden" style={{ height: '335px' }}>
+            <div id="signup-form" className="w-full max-w-[480px] mx-auto overflow-hidden" style={{ height: '270px' }}>
               <div style={{ marginTop: '-48px', transform: 'scale(0.88)', transformOrigin: 'top center' }}>
                 <PulseFormEmbed id="hero-inline-7DTFHh8ZmEmWrmVpsktd" />
               </div>
