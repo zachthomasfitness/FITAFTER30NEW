@@ -6,7 +6,7 @@ const HeroSection = () => {
     <>
       {/* Top Banner */}
       <div className="w-full bg-primary/30 border-b-2 border-primary/50 py-2.5 px-4 text-center">
-        <span className="text-foreground uppercase tracking-[0.04em] md:tracking-[0.08em] text-[8.5px] md:text-[0.875rem] font-black text-center font-sans whitespace-nowrap">
+        <span className="text-foreground uppercase tracking-[0.04em] md:tracking-[0.08em] text-[11px] md:text-[0.875rem] font-black text-center font-sans whitespace-nowrap">
           For Over-30s Who Don't Feel Like Themselves Anymore
         </span>
       </div>
@@ -40,7 +40,7 @@ const HeroSection = () => {
             </div>
 
             {/* Live Status */}
-            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[11px] md:text-base whitespace-nowrap">
+            <div className="flex items-center justify-center gap-2 md:gap-3 text-muted-foreground font-medium text-[11px] md:text-base whitespace-nowrap mb-4 md:mb-6">
               <span className="relative flex h-2.5 w-2.5 md:h-3 md:w-3 flex-shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 md:h-3 md:w-3 bg-[#22c55e]"></span>

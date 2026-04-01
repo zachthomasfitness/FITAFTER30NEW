@@ -17,7 +17,7 @@ const FinalCTA = () => {
  
       
         </p>
-        <button onClick={scrollToTop} className="bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-lg hover:brightness-95 transition-all shadow-lg hover:shadow-xl mb-4">
+        <button onClick={scrollToTop} className="bg-primary text-primary-foreground font-bold text-sm px-6 py-3 rounded-lg hover:brightness-95 transition-all shadow-lg hover:shadow-xl mb-4">
           
           JOIN THE FREE KICKSTART
         </button>
