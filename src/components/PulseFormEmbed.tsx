@@ -23,8 +23,11 @@ const PulseFormEmbed = ({ id }: PulseFormEmbedProps) => {
         data?.event_type === 'form_submission_succeeded' ||
         (typeof data === 'string' && data.includes('form_submit'));
 
-      if (isSubmission && typeof (window as any).fbq === 'function') {
-        (window as any).fbq('track', 'CompleteRegistration');
+      if (isSubmission) {
+        if (typeof (window as any).fbq === 'function') {
+          (window as any).fbq('track', 'CompleteRegistration');
+        }
+        window.location.href = '/habitkickstart-thankyou';
       }
     };
 
