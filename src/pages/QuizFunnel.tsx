@@ -155,7 +155,7 @@ const QuizFunnel = () => {
     try {
       await fetch(GHL_WEBHOOK_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
         body: JSON.stringify(payload),
       });
     } catch {
