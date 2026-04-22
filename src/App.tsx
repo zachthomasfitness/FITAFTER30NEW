@@ -9,6 +9,7 @@ import HabitKickstartThankYou from "./pages/HabitKickstartThankYou";
 import SixWeeks from "./pages/SixWeeks";
 import SixWeeksThankYou from "./pages/SixWeeksThankYou";
 import FormRedirect from "./pages/FormRedirect";
+import QuizFunnel from "./pages/QuizFunnel";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const AppContent = () => {
           <Route path="/sixweeks-thankyou" element={<SixWeeksThankYou />} />
           
           <Route path="/form-redirect" element={<FormRedirect />} />
+          <Route path="/quiz" element={<QuizFunnel />} />
 
           {/* Legacy redirects */}
           <Route path="/" element={<Navigate to="/habitkickstart" replace />} />
