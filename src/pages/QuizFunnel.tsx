@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Loader2 } from "lucide-react";
 
-const GHL_WEBHOOK_URL = "[INSERT GHL WEBHOOK URL]";
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/FmSt47hINB4PxwmdJ5Ik/webhook-trigger/7f760187-1a54-48dd-b022-4caf3288c217";
 const BOOKING_LINK = "[INSERT BOOKING LINK]";
 
 const questions = [
