@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Loader2 } from "lucide-react";
 
 const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/FmSt47hINB4PxwmdJ5Ik/webhook-trigger/06fbd633-b937-4ddc-b9c7-4913a3841d9d";
-const BOOKING_LINK = "[INSERT BOOKING LINK]";
+const BOOKING_LINK = "https://api.leadconnectorhq.com/widget/bookings/quiz-consultation-xe5w8";
 
 const questions = [
   {
