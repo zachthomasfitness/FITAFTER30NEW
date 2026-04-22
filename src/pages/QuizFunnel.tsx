@@ -103,10 +103,10 @@ const questions = [
 
 const TOTAL_QUESTIONS = questions.length;
 
-type Step = "quiz" | "capture" | "results";
+type Step = "intro" | "quiz" | "capture" | "results";
 
 const QuizFunnel = () => {
-  const [step, setStep] = useState<Step>("quiz");
+  const [step, setStep] = useState<Step>("intro");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [selected, setSelected] = useState<number | null>(null);
@@ -203,6 +203,10 @@ const QuizFunnel = () => {
 
         {/* Main content */}
         <div className="flex-1 flex flex-col justify-center px-5 py-8 max-w-lg mx-auto w-full">
+          {step === "intro" && (
+            <IntroStep onStart={() => setStep("quiz")} />
+          )}
+
           {step === "quiz" && (
             <QuizStep
               question={questions[currentQuestion]}
@@ -230,6 +234,35 @@ const QuizFunnel = () => {
     </>
   );
 };
+
+/* ─── Intro Step ────────────────────────────────────────────────────────── */
+
+const IntroStep = ({ onStart }: { onStart: () => void }) => (
+  <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-5">
+      <div className="inline-block bg-[#f97316]/20 text-[#f97316] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full w-fit">
+        2 minute quiz
+      </div>
+      <h1 className="text-3xl font-bold leading-tight tracking-tight">
+        Find out why you can't shift the belly fat — no matter how hard you try.
+      </h1>
+      <p className="text-white/60 text-[15px] leading-relaxed">
+        10 quick questions. No fluff. Just an honest look at what's actually been getting in your way.
+      </p>
+    </div>
+
+    <button
+      onClick={onStart}
+      className="w-full bg-[#f97316] text-white font-bold text-[16px] py-4 rounded-xl flex items-center justify-center active:scale-[0.98] transition-all duration-150"
+    >
+      Take the quiz →
+    </button>
+
+    <p className="text-white/30 text-xs text-center">
+      Takes less than 2 minutes
+    </p>
+  </div>
+);
 
 /* ─── Quiz Step ─────────────────────────────────────────────────────────── */
 
