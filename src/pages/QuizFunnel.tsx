@@ -408,7 +408,7 @@ const ResultsStep = () => (
       <p className="text-white/80">
         You're capable of discipline — but only when the circumstances are reasonable. And based on your answers? It's never been reasonable.
       </p>
-      <p className="text-white font-semibold text-lg">
+      <p className="text-white/80">
         The problem isn't you. It never was.
       </p>
 
