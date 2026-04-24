@@ -340,20 +340,26 @@ const CaptureStep = ({
     </div>
 
     <form onSubmit={onSubmit} className="flex flex-col gap-4">
-      <input
-        type="text"
-        placeholder="Your first name"
-        value={name}
-        onChange={(e) => onNameChange(e.target.value)}
-        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-[#f97316] transition-colors"
-      />
-      <input
-        type="email"
-        placeholder="Your email address"
-        value={email}
-        onChange={(e) => onEmailChange(e.target.value)}
-        className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-[#f97316] transition-colors"
-      />
+      <div className="flex flex-col gap-1.5">
+        <label className="text-sm font-medium text-white/70">Name</label>
+        <input
+          type="text"
+          placeholder="Your first name"
+          value={name}
+          onChange={(e) => onNameChange(e.target.value)}
+          className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-[#f97316] transition-colors"
+        />
+      </div>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-sm font-medium text-white/70">Email address</label>
+        <input
+          type="email"
+          placeholder="Your email address"
+          value={email}
+          onChange={(e) => onEmailChange(e.target.value)}
+          className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-[15px] placeholder:text-white/30 focus:outline-none focus:border-[#f97316] transition-colors"
+        />
+      </div>
 
       {error && <p className="text-red-400 text-sm">{error}</p>}
 
@@ -388,25 +394,76 @@ const ResultsStep = () => (
         Your results
       </div>
       <h2 className="text-2xl font-bold leading-snug tracking-tight">
-        Here's what your answers tell us
+        Here's what's actually going on
       </h2>
     </div>
 
-    {/* Placeholder result content */}
-    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
-      <p className="text-white/70 text-[15px] leading-relaxed">
-        [Results copy placeholder — Zach will fill this in.]
+    <div className="flex flex-col gap-6 text-[15px] leading-relaxed">
+      <p className="text-white/80">
+        Right, based on your answers, here's what's actually going on.
       </p>
-      <p className="text-white/70 text-[15px] leading-relaxed">
-        [Additional context and explanation placeholder.]
+      <p className="text-white/80">
+        It might look like a discipline problem from the outside. But that's not what's going on.
       </p>
-      <p className="text-white/70 text-[15px] leading-relaxed">
-        [Call to action setup copy placeholder.]
+      <p className="text-white/80">
+        You're capable of discipline — but only when the circumstances are reasonable. And based on your answers? It's never been reasonable.
+      </p>
+      <p className="text-white font-semibold text-lg">
+        The problem isn't you. It never was.
+      </p>
+
+      <div className="w-full h-px bg-white/10" />
+
+      <p className="text-white font-semibold">Here's what's actually going on.</p>
+      <p className="text-white/80">
+        You got out of shape because life took over. The gym fell away, your eating quietly got worse, and before you knew it you'd completely lost track of it all.
+      </p>
+      <p className="text-white/80">
+        Then when the motivation hits, it hits hard. Gym every day, eating clean, full overhaul. And for the first week or two it works. You're flying. You feel brilliant — because you do have discipline.
+      </p>
+      <p className="text-white/80">
+        But then you have a bad day at work, a missed session, or a weekend that gets away from you. And instead of just getting back on it, you write the whole thing off. Start again Monday. Start again next month. Start again in January.
+      </p>
+      <p className="text-white/80">
+        You think that not being perfect means it's not even worth it.
+      </p>
+      <p className="text-white font-semibold">
+        It's your all or nothing mindset that's the problem.
+      </p>
+
+      <div className="w-full h-px bg-white/10" />
+
+      <p className="text-white/80">
+        Here's the good news: you don't need to be perfect to make incredible progress.
+      </p>
+      <p className="text-white/80">
+        You don't need to go to the gym every day. You don't need to eat nothing but chicken and rice. Working harder doesn't mean you get faster results. The version of you that actually shifts this belly for good isn't grinding every day and resenting it — he's found a way to enjoy the process.
+      </p>
+
+      <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-3">
+        <p className="text-white/80">
+          In practice, this is what it can look like for someone in your position.
+        </p>
+        <p className="text-white/80">
+          Tom came to me very similar to yourself. A couple of years of "belly creep" had left him at the heaviest he'd ever been, shattered by 4pm and wearing a jumper to the office just to feel comfortable. He'd tried to sort it countless times over the years and it never stuck.
+        </p>
+        <p className="text-white/80">
+          Since I introduced him to habit layering he's lost almost 15kg and consistently tells me he doesn't even feel like he's on a diet. His shirts fit great, he has the energy he had at 25 and he's still able to enjoy a pizza out or a few drinks from time to time.
+        </p>
+        <p className="text-white/80">
+          He's now able to show up week after week. Consistently, even when he's not perfect.
+        </p>
+      </div>
+
+      <p className="text-white/80">
+        If you want to understand exactly how this applies to your specific situation, book a free call and we'll figure out together what that actually looks like for you. No hard sell or generic advice. Just an honest conversation about where you're at and whether I can help.
       </p>
     </div>
 
     <a
       href={BOOKING_LINK}
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-full bg-[#f97316] text-white font-bold text-[16px] py-4 rounded-xl flex items-center justify-center active:scale-[0.98] transition-all duration-150"
     >
       Book your free call →
