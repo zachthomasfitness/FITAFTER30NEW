@@ -409,7 +409,7 @@ const ResultsStep = () => (
 
       <div className="w-full h-px bg-white/10" />
 
-      <p className="text-white font-semibold">Here's what's actually going on.</p>
+      <p className="text-white font-semibold">The real problem:</p>
       <p className="text-white/80">
         You got out of shape because life took over. The gym fell away, your eating quietly got worse, and before you knew it you'd completely lost track of it all.
       </p>
