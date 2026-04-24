@@ -422,14 +422,15 @@ const ResultsStep = () => (
       <p className="text-white/80">
         You think that not being perfect means it's not even worth it.
       </p>
-      <p className="text-white font-semibold">
+      <p className="text-white/80">
         It's your all or nothing mindset that's the problem.
       </p>
 
       <div className="w-full h-px bg-white/10" />
 
+      <p className="text-white font-semibold">Here's the good news:</p>
       <p className="text-white/80">
-        Here's the good news: you don't need to be perfect to make incredible progress.
+        You don't need to be perfect to make incredible progress.
       </p>
       <p className="text-white/80">
         You don't need to go to the gym every day. You don't need to eat nothing but chicken and rice. Working harder doesn't mean you get faster results. The version of you that actually shifts this belly for good isn't grinding every day and resenting it — he's found a way to enjoy the process.
