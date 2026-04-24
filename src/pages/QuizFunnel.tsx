@@ -389,13 +389,8 @@ const CaptureStep = ({
 
 const ResultsStep = () => (
   <div className="flex flex-col gap-8">
-    <div className="flex flex-col gap-4">
-      <div className="inline-block bg-[#f97316]/20 text-[#f97316] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full w-fit">
-        Your results
-      </div>
-      <h2 className="text-2xl font-bold leading-snug tracking-tight">
-        Here's what's actually going on
-      </h2>
+    <div className="inline-block bg-[#f97316]/20 text-[#f97316] text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full w-fit">
+      Your results
     </div>
 
     <div className="flex flex-col gap-6 text-[15px] leading-relaxed">
