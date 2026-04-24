@@ -440,6 +440,9 @@ const ResultsStep = () => (
         <p className="text-white/80">
           In practice, this is what it can look like for someone in your position.
         </p>
+        <div className="w-full aspect-[4/3] rounded-xl bg-white/10 border border-white/10 flex items-center justify-center">
+          <span className="text-white/30 text-sm">Tom's transformation photo</span>
+        </div>
         <p className="text-white/80">
           Tom came to me very similar to yourself. A couple of years of "belly creep" had left him at the heaviest he'd ever been, shattered by 4pm and wearing a jumper to the office just to feel comfortable. He'd tried to sort it countless times over the years and it never stuck.
         </p>
