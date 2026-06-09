@@ -8,12 +8,18 @@ import { useEffect } from "react";
  */
 const FormRedirect = () => {
   useEffect(() => {
-    // Break out of the iframe and redirect the full browser window
-    if (window.top) {
-      window.top.location.href = '/habitkickstart-thankyou';
-    } else {
-      window.location.href = '/habitkickstart-thankyou';
+    const target = '/habitkickstart-thankyou';
+    // Try to break out of the iframe; fall back to self-navigation
+    // if cross-origin restrictions block access to window.top (e.g. preview).
+    try {
+      if (window.top && window.top !== window.self) {
+        window.top.location.href = target;
+        return;
+      }
+    } catch {
+      // Cross-origin — can't touch top. Fall through to self navigation.
     }
+    window.location.href = target;
   }, []);
 
   return (
