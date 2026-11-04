@@ -1,11 +1,14 @@
-import { lazy } from "react";
 import { useEffect } from "react";
+import { useRouter } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 
 function RootErrorBoundary({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
-  const message = error instanceof Error ? error.message : String(error);
-  void reset;
+  const router = useRouter();
+  useEffect(() => {
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -16,17 +19,26 @@ function RootErrorBoundary({ error, reset }: { error: Error; reset: () => void }
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
-        {message ? (
-          <p className="mt-4 text-xs text-muted-foreground/70">{message}</p>
-        ) : null}
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          <button
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Try again
+          </button>
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Go home
+          </a>
+        </div>
       </div>
     </div>
   );
 }
 
-export default lazy(async () => {
-  useEffect(() => {
-    void reportLovableError;
-  });
-  return { default: RootErrorBoundary };
-});
+export default RootErrorBoundary;
