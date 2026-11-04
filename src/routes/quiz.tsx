@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { createFileRoute } from "@tanstack/react-router";
 import { Loader2 } from "lucide-react";
 import tomBanner from "@/assets/TomBanner.jpg";
 
@@ -168,71 +168,59 @@ const QuizFunnel = () => {
   };
 
   return (
-    <>
-      <Helmet>
-        <title>Belly Fat Quiz — Find Out Why You Can't Shift It</title>
-        <meta
-          name="description"
-          content="Take the 2 minute quiz to find out why you can't shift belly fat — no matter how many times you've tried."
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-[#0d0d0d] text-white flex flex-col">
-        {/* Header */}
-        <div className="px-5 pt-6 pb-4 flex items-center justify-between max-w-lg mx-auto w-full">
-          <span className="text-sm font-medium tracking-wide text-white/50 uppercase">
-            Body Fat Quiz
-          </span>
-          {step === "quiz" && (
-            <span className="text-sm font-medium text-white/50">
-              {currentQuestion + 1} / {TOTAL_QUESTIONS}
-            </span>
-          )}
-        </div>
-
-        {/* Progress bar — only during quiz */}
+    <div className="min-h-screen bg-[#0d0d0d] text-white flex flex-col">
+      {/* Header */}
+      <div className="px-5 pt-6 pb-4 flex items-center justify-between max-w-lg mx-auto w-full">
+        <span className="text-sm font-medium tracking-wide text-white/50 uppercase">
+          Body Fat Quiz
+        </span>
         {step === "quiz" && (
-          <div className="px-5 max-w-lg mx-auto w-full">
-            <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-[#f97316] rounded-full transition-all duration-500 ease-out"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
+          <span className="text-sm font-medium text-white/50">
+            {currentQuestion + 1} / {TOTAL_QUESTIONS}
+          </span>
+        )}
+      </div>
+
+      {/* Progress bar — only during quiz */}
+      {step === "quiz" && (
+        <div className="px-5 max-w-lg mx-auto w-full">
+          <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-[#f97316] rounded-full transition-all duration-500 ease-out"
+              style={{ width: `${progress}%` }}
+            />
           </div>
+        </div>
+      )}
+
+      {/* Main content */}
+      <div className="flex-1 flex flex-col justify-center px-5 py-8 max-w-lg mx-auto w-full">
+        {step === "intro" && <IntroStep onStart={() => setStep("quiz")} />}
+
+        {step === "quiz" && (
+          <QuizStep
+            question={questions[currentQuestion]}
+            questionNumber={currentQuestion + 1}
+            selected={selected}
+            onAnswer={handleAnswer}
+          />
         )}
 
-        {/* Main content */}
-        <div className="flex-1 flex flex-col justify-center px-5 py-8 max-w-lg mx-auto w-full">
-          {step === "intro" && (
-            <IntroStep onStart={() => setStep("quiz")} />
-          )}
+        {step === "capture" && (
+          <CaptureStep
+            name={name}
+            email={email}
+            error={error}
+            submitting={submitting}
+            onNameChange={setName}
+            onEmailChange={setEmail}
+            onSubmit={handleCapture}
+          />
+        )}
 
-          {step === "quiz" && (
-            <QuizStep
-              question={questions[currentQuestion]}
-              questionNumber={currentQuestion + 1}
-              selected={selected}
-              onAnswer={handleAnswer}
-            />
-          )}
-
-          {step === "capture" && (
-            <CaptureStep
-              name={name}
-              email={email}
-              error={error}
-              submitting={submitting}
-              onNameChange={setName}
-              onEmailChange={setEmail}
-              onSubmit={handleCapture}
-            />
-          )}
-
-          {step === "results" && <ResultsStep />}
-        </div>
+        {step === "results" && <ResultsStep />}
       </div>
-    </>
+    </div>
   );
 };
 
@@ -473,4 +461,16 @@ const ResultsStep = () => (
   </div>
 );
 
-export default QuizFunnel;
+export const Route = createFileRoute("/quiz")({
+  head: () => ({
+    meta: [
+      { title: "Belly Fat Quiz — Find Out Why You Can't Shift It" },
+      {
+        name: "description",
+        content:
+          "Take the 2 minute quiz to find out why you can't shift belly fat — no matter how many times you've tried.",
+      },
+    ],
+  }),
+  component: QuizFunnel,
+});
