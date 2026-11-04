@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useRouter } from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
 
 function RootErrorBoundary({ error, reset }: { error: Error; reset: () => void }) {
