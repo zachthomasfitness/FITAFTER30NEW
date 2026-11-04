@@ -1,0 +1,209 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --font-display: "Archivo Black", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Hind", ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: "Playfair Display", ui-serif, Georgia, serif;
+  --font-alt: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-strong: var(--brand-strong);
+  --color-ink: #0a0a0a;
+  --color-cream: #f5f0e8;
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Warm graphite-to-cream editorial theme */
+  --radius: 0.875rem;
+  --background: #0a0a0a;
+  --foreground: #f5f0e8;
+  --surface: oklch(0.205 0.014 80);
+  --surface-2: oklch(0.25 0.016 80);
+  --brand: #c9a84c;
+  --brand-foreground: #0a0a0a;
+  --brand-strong: #c9a84c;
+  --card: oklch(0.205 0.014 80);
+  --card-foreground: #f5f0e8;
+  --popover: oklch(0.205 0.014 80);
+  --popover-foreground: #f5f0e8;
+  --primary: #c9a84c;
+  --primary-foreground: #0a0a0a;
+  --secondary: oklch(0.25 0.016 80);
+  --secondary-foreground: #f5f0e8;
+  --muted: oklch(0.25 0.016 80);
+  --muted-foreground: oklch(0.65 0.014 80);
+  --accent: oklch(0.25 0.016 80);
+  --accent-foreground: #f5f0e8;
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: #f5f0e8;
+  --border: oklch(1 0 0 / 0.07);
+  --input: oklch(1 0 0 / 0.1);
+  --ring: #c9a84c;
+  --chart-1: #c9a84c;
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.205 0.004 286);
+  --sidebar-foreground: oklch(0.97 0 0);
+  --sidebar-primary: oklch(0.96 0.18 115);
+  --sidebar-primary-foreground: oklch(0.16 0.004 286);
+  --sidebar-accent: oklch(0.235 0.004 286);
+  --sidebar-accent-foreground: oklch(0.97 0 0);
+  --sidebar-border: oklch(1 0 0 / 0.06);
+  --sidebar-ring: oklch(0.96 0.18 115);
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --background: #0a0a0a;
+  --brand-strong: #c9a84c;
+  --foreground: #f5f0e8;
+  --surface: oklch(0.205 0.014 80);
+  --surface-2: oklch(0.25 0.016 80);
+  --card: oklch(0.205 0.014 80);
+  --card-foreground: #f5f0e8;
+  --popover: oklch(0.205 0.014 80);
+  --popover-foreground: #f5f0e8;
+  --secondary: oklch(0.25 0.016 80);
+  --secondary-foreground: #f5f0e8;
+  --muted: oklch(0.25 0.016 80);
+  --muted-foreground: oklch(0.65 0.014 80);
+  --accent: oklch(0.25 0.016 80);
+  --accent-foreground: #f5f0e8;
+  --border: oklch(1 0 0 / 0.07);
+  --input: oklch(1 0 0 / 0.1);
+}
+
+.theme-light {
+  color-scheme: light;
+  --background: #f5f0e8;
+  --brand-strong: #c9a84c;
+  --foreground: oklch(0.2 0.014 75);
+  --surface: oklch(0.945 0.02 78);
+  --surface-2: oklch(0.905 0.024 75);
+  --card: #f5f0e8;
+  --card-foreground: oklch(0.2 0.014 75);
+  --popover: #f5f0e8;
+  --popover-foreground: oklch(0.2 0.014 75);
+  --secondary: oklch(0.945 0.02 78);
+  --secondary-foreground: oklch(0.2 0.014 75);
+  --muted: oklch(0.945 0.02 78);
+  --muted-foreground: oklch(0.47 0.02 75);
+  --accent: oklch(0.945 0.02 78);
+  --accent-foreground: oklch(0.2 0.014 75);
+  --border: oklch(0.3 0.03 75 / 0.1);
+  --input: oklch(0.3 0.03 75 / 0.12);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility marquee {
+  animation: marquee 36s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
