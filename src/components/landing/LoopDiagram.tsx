@@ -42,10 +42,10 @@ export function LoopDiagram() {
         {/* direction arrows on the ring */}
         {[36, 108, 180, 252, 324].map((a) => {
           const rad = (a * Math.PI) / 180;
-          const x = 50 + R * Math.sin(rad);
-          const y = 50 - R * Math.cos(rad);
-          const tx = 50 + R * Math.sin(rad + 0.14);
-          const ty = 50 - R * Math.cos(rad + 0.14);
+          const x = (50 + R * Math.sin(rad)).toFixed(4);
+          const y = (50 - R * Math.cos(rad)).toFixed(4);
+          const tx = (50 + R * Math.sin(rad + 0.14)).toFixed(4);
+          const ty = (50 - R * Math.cos(rad + 0.14)).toFixed(4);
           return (
             <line
               key={a}
@@ -69,8 +69,8 @@ export function LoopDiagram() {
       {/* nodes */}
       {steps.map((s, i) => {
         const rad = (i * 72 * Math.PI) / 180;
-        const left = 50 + R * Math.sin(rad);
-        const top = 50 - R * Math.cos(rad);
+        const left = (50 + R * Math.sin(rad)).toFixed(4);
+        const top = (50 - R * Math.cos(rad)).toFixed(4);
         const Icon = s.icon;
         return (
           <div
